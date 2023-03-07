@@ -1,0 +1,108 @@
+* {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+/*Fast Variable*/
+:root {
+    --text-color: #fff;
+    --textt-color: #000;
+}
+
+body {
+    background: url("VistraChat.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    text-align: center;
+    padding: 0.5rem;
+    background: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+}
+
+.btn1 {
+    color: #fff;
+}
+
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn1:hover {
+    color: #000;
+}
+
+.contents {
+    text-align: center;
+}
+
+.contents span {
+    position: absolute;
+    font-size: 43px;
+    right: 350px;
+    top: 11rem;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    gap: 15rem;
+    margin-top: 16rem;
+    color: #fff;
+}
+
+.info .box {
+    text-align: center;
+    padding: 10px;
+    backdrop-filter: blur(1.3px);
+    border-radius: 0.5rem;
+}
+
+.info .box .bx {
+    font-size: 39px;
+    padding: 10px;
+}
+
+.info .box h2 {
+    font-size: 1.3rem;
+}
+
+.strt {
+    position: absolute;
+    right: 45rem;
+    top: 30rem;
+    padding: 0.5rem;
+    background: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+}
+
+.strt:hover {
+    background: #000;
+    color: #fff;
+}
