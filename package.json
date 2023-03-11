@@ -1,0 +1,29 @@
+{
+  "name": "vistra",
+  "version": "1.0.0",
+  "description": "Jest Intro",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/V1rs999/Vistra.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "jest",
+    "unit",
+    "testing"
+  ],
+  "author": "Roman <romadraguca@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/V1rs999/Vistra/issues"
+  },
+  "homepage": "https://github.com/V1rs999/Vistra#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
