@@ -109,7 +109,7 @@ body {
 .bodyLog {
 	position: absolute;
 	width: 757px;
-	height: 869px;
+	height: 900px;
 	left: calc(50% - 378.5px + 0.5px);
 	top: calc(50% - 434.5px + 0.5px);
 	background: linear-gradient(
@@ -126,7 +126,7 @@ body {
 }
 
 .h1 {
-	/* WELCOME BACK */
+	/*! CREATE NEW ACCOUNT */
 	position: absolute;
 	width: 405px;
 	height: 49px;
@@ -141,6 +141,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+	text-align: center;
 	color: #ffffff;
 }
 
@@ -153,9 +154,9 @@ body {
 	color: #fffbfb;
 }
 .text .email {
-	/* Email */
+	/*! Email */
 	position: absolute;
-	width: 224px;
+	width: 324px;
 	height: 45px;
 	left: 74px;
 	display: flex;
@@ -164,15 +165,26 @@ body {
 	top: 150px;
 }
 .text .password {
-	/* Password */
+	/*! Password */
 	position: absolute;
-	width: 224px;
+	width: 324px;
 	height: 45px;
 	left: 74px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
 	top: 300px;
+}
+.text .confirmPassword {
+	/*!Confirm Password */
+	position: absolute;
+	width: 324px;
+	height: 45px;
+	left: 74px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	top: 450px;
 }
 
 .setDiv .inputDivEmail {
@@ -199,6 +211,18 @@ body {
 	border-radius: 19px;
 	top: 350px;
 }
+.setDiv .inputDivConfirmPassworld {
+	position: absolute;
+	width: 608px;
+	height: 77px;
+	left: 74px;
+	display: flex;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.39);
+	border: 1px solid #ffffff;
+	border-radius: 19px;
+	top: 500px;
+}
 
 .input {
 	position: absolute;
@@ -210,7 +234,6 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 27px;
-
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
@@ -220,12 +243,12 @@ body {
 	font-size: 27px;
 }
 
-.log {
+.sign {
 	position: absolute;
 	width: 608px;
 	height: 77px;
 	left: 72px;
-	top: 500px;
+	top: 615px;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 700;
@@ -237,12 +260,11 @@ body {
 }
 
 .logG {
-	/* Rectangle 19 */
 	position: absolute;
 	width: 608px;
 	height: 77px;
 	left: calc(50% - 304px);
-	top: calc(50% - 38.5px + 245.5px);
+	top: calc(50% - 38.5px + 300.5px);
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 700;
@@ -254,12 +276,11 @@ body {
 }
 
 .singUp {
-	/* Don’t have an account? Sign Up. */
 	position: absolute;
 	width: 424px;
-	height: 31px;
+	height: 35px;
 	left: calc(50% - 212px);
-	top: calc(50% - 15.5px + 325.5px);
+	top: calc(50% - 15.5px + 625.5px);
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
@@ -272,13 +293,12 @@ body {
 	color: #fffbfb;
 }
 
-.forget {
-	/* Forgot password? */
+.logIn {
 	position: absolute;
-	width: 228px;
+	width: 400px;
 	height: 31px;
-	left: calc(50% - 114px);
-	top: calc(50% - 15.5px + 382.5px);
+	left: calc(50% - 114px - 90px);
+	top: calc(50% - 15.5px + 412.5px);
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
