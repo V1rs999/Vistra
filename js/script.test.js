@@ -1,4 +1,4 @@
-const { sumCubes, n, nativeNull } = require('./script');
+const { sumCubes, nativeNull } = require('./script');
 describe('Function should return', () => {
   test('should return sum values', () => {
     expect(sumCubes(3)).toBe(36);
@@ -11,11 +11,6 @@ describe('Function should return', () => {
 
 describe('Native null function', () => {
   test('Native null should return null', () => {
-    expect(nativeNull()).toBe();
+    expect(nativeNull()).toBe(null);
   });
-});
-const { sumCubes } = require('./script');
-
-test('should return sum values', () => {
-  expect(sumCubes(3)).toBe(36);
 });

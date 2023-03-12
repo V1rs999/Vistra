@@ -11,5 +11,7 @@ function sumCubes(n) {
   }
   return result.map(el => Math.pow(el, 3)).reduce((a, b) => a + b);
 }
-module.exports = { sumCubes };
+
+const nativeNull = () => null;
+module.exports = { sumCubes, nativeNull };
 // expect(sum(41, 1)).toBe(42);
