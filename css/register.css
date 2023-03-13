@@ -292,7 +292,10 @@ body {
 	align-items: flex-end;
 	color: #fffbfb;
 }
-
+a{
+	padding-left: 10px;
+	color: #fffbfb;
+}
 .logIn {
 	position: absolute;
 	width: 400px;
