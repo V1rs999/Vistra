@@ -1,10 +1,10 @@
-function togglePasswordVisibility() {
-  var passwordInput = document.querySelectorAll(".password");
-  for (const i of [...passwordInput]) {
-    if (i.type === "password") {
-      i.type = "text";
-    } else {
-      i.type = "password";
-    }
+`use strict`;
+
+function togglePasswordVisibility(pass) {
+  var passwordInput = document.getElementById(pass);
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
   }
 }

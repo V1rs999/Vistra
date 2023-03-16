@@ -522,8 +522,7 @@ a:hover {
   color: red;
 }
  .input-field  {
-	padding-top:0px;
-	width: 300px;
+	width: 290px;
 	height: 40px;
 	border: none;
 	border-radius: 50px;
@@ -541,5 +540,21 @@ a:hover {
 	}
 	&.password{
 		background-image: url('/img/icons8-lock-50.svg') ;
-	}
+	} 
+
  }
+.hide{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 60px;
+	height: 40px;
+	border: none;
+	border-radius: 50px;
+	padding-left: 40px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-position-x: 10px;
+	background-size: 20px 20px;
+
+}
