@@ -1,0 +1,16 @@
+{
+	"editor.mouseWheelZoom": true,
+	"liveSassCompile.settings.generateMap": false,
+	"liveSassCompile.settings.formats": [
+	  {
+		 "format": "expanded",
+		 "extensionName": ".css",
+		 "savePath": "/css"
+	  }
+	],
+	"liveServer.settings.port": 5501,
+ 
+	"[javascript]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+ }
