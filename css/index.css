@@ -413,6 +413,11 @@ header .slider_btns h6:nth-child(1) {
     transform: rotate(-90deg);
 }
 
+.cato_bx .cato_left_right:hover {
+    color: red;
+    transition: .3s linear;
+}
+
 
 .movie_bx_1 {
     /* position: relative; */
