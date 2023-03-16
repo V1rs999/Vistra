@@ -78,24 +78,21 @@
 	<div class="setDiv">
 		<div class="inputDivName">
 			<div class="input text">
-				<img src="/img/mdi_user-circle-outline.png" alt="">
-				<input type="email" placeholder="Name" />
+				<input type="text" class="input-field name" placeholder="Name" >
 		</div>
 	</div>
 
 	<div class="setDiv">
 		<div class="inputDivEmail">
 			<div class="input text">
-				<img src="/img/Email.png" alt="">
-				<input type="email" placeholder="Email address" />
+				 <input type="text" class="input-field email" placeholder="Email">
 		</div>
 	</div>
 
 	<div class="setDiv">
 		<div class="inputDivPassworld">
 			<div class="input text">
-				<img src="/img/mdi_password-outline.png" alt="">
-				<input type="password" placeholder="Password" />
+				<input type="password" class="input-field password	" placeholder="Password" />
 			</div>
 		</div>
 	</div>
@@ -103,14 +100,14 @@
 	<div class="setDiv">
 		<div class="inputDivConfirmPassworld">
 			<div class="input text">
-				<img src="/img/mdi_password-outline.png" alt="">
-				<input type="password" placeholder="Confirm Password" />
+				<input type="password" class="input-field password" placeholder="Confirm Password" />
 			</div>
 		</div>
 	</div>
 
-	<button class="Register Reg" type="button">Register</button>
+	<button onclick="togglePasswordVisibility()" class="Register Reg" type="button">Register</button>
 	<button class="Alredy Alr" type="button">Already have an account?<a  href=""> Log in.</a></button>
    </div>
+	<script src="/js/index.js"></script>
   </body>
 </html>
