@@ -9,7 +9,7 @@ function sumCubes(n) {
   for (let i = 1; i <= n; i++) {
     result.push(i);
   }
-  return result.map(el => Math.pow(el, 3)).reduce((a, b) => a + b);
+  return result.map((el) => Math.pow(el, 3)).reduce((a, b) => a + b);
 }
 
 const nativeNull = () => null;

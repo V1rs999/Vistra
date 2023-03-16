@@ -101,9 +101,6 @@ h6 {
 body {
 	position: absolute;
 	background-size: cover;
-	background-image: url(/img/Log\ In.png);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
 }
 
 .bodyLog {
@@ -126,7 +123,7 @@ body {
 }
 
 .h1 {
-	/*! CREATE NEW ACCOUNT */
+	/* WELCOME BACK */
 	position: absolute;
 	width: 405px;
 	height: 49px;
@@ -154,7 +151,7 @@ body {
 	color: #fffbfb;
 }
 .text .email {
-	/*! Email */
+	/* Email */
 	position: absolute;
 	width: 324px;
 	height: 45px;
@@ -165,7 +162,7 @@ body {
 	top: 150px;
 }
 .text .password {
-	/*! Password */
+	/* Password */
 	position: absolute;
 	width: 324px;
 	height: 45px;
@@ -176,7 +173,6 @@ body {
 	top: 300px;
 }
 .text .confirmPassword {
-	/*!Confirm Password */
 	position: absolute;
 	width: 324px;
 	height: 45px;

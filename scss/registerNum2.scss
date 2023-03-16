@@ -1,0 +1,559 @@
+@import "Null.scss";
+
+$bg-color: rgb(0, 217, 255);
+$blur-val: 20px;
+$color-1: rgba(0, 204, 255, 0.2);
+$color-2: rgba(0, 229, 255, 0.4);
+$color-3: rgba(0, 213, 255, 0.5);
+$color-4: rgba(0, 221, 255, 0.6);
+$color-5: rgba(0, 217, 255, 0.7);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #050505;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-25deg) rotateY(50deg);
+  }
+  50% {
+    transform: rotateX(+25deg) rotateY(360deg);
+  }
+  100% {
+    transform: rotateX(-25deg) rotateY(50deg);
+  }
+}
+.cube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.cube div span,
+.first div span,
+.tree div span,
+.four div span,
+.five div span,
+.second div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+}
+
+.cube div span {
+  background: url(/img/Rectangle\ 53.png);
+}
+
+.first div span {
+  background: url(/img/Rectangle.png);
+}
+
+.second div span {
+  background: url(/img/clown.png);
+}
+
+.tree div span {
+  background: url(/img/del.png);
+}
+
+.four div span {
+  background: url(/img/VR.png);
+}
+
+.five div span {
+  background: url(/img/random.png);
+}
+
+.topfirst,
+.bottomfirst {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: url(/img/Rectangle.png);
+  &.top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+}
+.topsecond,
+.bottomsecond {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: url(/img/clown.png);
+  &.top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+}
+.toptree,
+.bottomtree {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: url(/img/del.png);
+  &.top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+}
+.topfour,
+.bottomfour {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: url(/img/VR.png);
+  &.top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+}
+.topfive,
+.bottomfive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: url(/img/random.png);
+  &.top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+}
+.topsix,
+.bottomsix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: url(/img/Rectangle\ 53.png);
+  &.top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+}
+.top,
+.bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  &.top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+  &.bottom {
+    transform: rotateX(90deg) translateZ(-75px);
+  }
+}
+
+.first .top::before,
+.second .top::before,
+.three .top::before,
+.top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: rgb(26, 44, 52);
+  transform: translateZ(-190px);
+  filter: blur($blur-val);
+  box-shadow: 0 0 120px $color-1, 0 0 200px $color-2, 0 0 300px $color-3,
+    0 0 400px $color-4, 0 0 500px $color-5;
+}
+
+.cube {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transform: rotateX(-25deg) rotateY(+50deg);
+
+
+  &.first {
+    top: 0px;
+    left: 1050px;
+  }
+
+  &.second {
+    top: 0px;
+    right: 500px;
+  }
+
+  &.tree {
+    top: 250px;
+    right: 460px;
+  }
+
+  &.four {
+    top: -250px;
+    right: 600px;
+  }
+
+  &.five {
+    top: -250px;
+    left: 300px;
+  }
+
+  &.six {
+    top: 250px;
+    left: 160px;
+  }
+}
+
+// !-------------------------------------Registration form-------------------------------------------------------------
+.bodyLog {
+  /* background register */
+
+  position: absolute;
+  width: 511px;
+  height: 616px;
+
+  background: #212226;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 18px 18px;
+  border-radius: 10px;
+}
+
+.text {
+  width: 74px;
+  height: 19px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #c7c7c7;
+}
+.AutoLayout {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 30px;
+
+  margin: 40px 0 0 84px;
+  position: absolute;
+  width: 343px;
+  height: 419px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 7px 0px;
+
+  width: 343px;
+  height: 58px;
+
+  border-radius: 10px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.h1 {
+  /* Create account! */
+
+  width: 199px;
+  height: 31px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+
+  color: #169c89;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.getStart {
+  width: 200px;
+  height: 22px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #999999;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.setDiv {
+  margin: 10px 0px;
+}
+
+input{
+	background: transparent;
+}
+.input{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	width: 320px;
+	height: 33px;
+
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 27px;
+	background: #f8f8f8;
+}
+.setDiv .inputDivName {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 7px 5px;
+  gap: 10px;
+
+  width: 343px;
+  height: 58px;
+
+  background: #f8f8f8;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.inputDivName {
+  /* Name */
+
+  width: 45px;
+  height: 19px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #c7c7c7;
+
+  /* Inside auto layout */
+
+  flex: none;
+  flex-wrap: wrap;
+  order: 1;
+  flex-grow: 0;
+}
+
+.inputDivEmail {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px 5px;
+  gap: 10px;
+
+  width: 343px;
+  height: 58px;
+
+  background: #f8f8f8;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.inputDivPassworld {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 5px;
+  gap: 10px;
+
+  width: 343px;
+  height: 58px;
+
+  background: #f8f8f8;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.inputDivConfirmPassworld {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 5px;
+  gap: 10px;
+
+  width: 343px;
+  height: 58px;
+
+  background: #f8f8f8;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+.Register {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 5px;
+  gap: 10px;
+
+  position: absolute;
+  width: 343px;
+  height: 58px;
+  bottom: -30px;
+
+  background: #169c89;
+  border-radius: 10px;
+}
+.Alredy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px;
+  gap: 10px;
+
+  position: absolute;
+  width: 509px;
+  height: 59px;
+  left: -82px;
+  bottom: -170px;
+  background: #e8f3f2;
+  border-radius: 0px 0px 10px 10px;
+
+}
+.Alr{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #999999;
+}
+.Reg {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  order: 0;
+
+}
+a {
+  color: #169c89;
+}
+a:hover {
+  color: red;
+}
+ .input-field  {
+	width: 290px;
+	height: 40px;
+	border: none;
+	border-radius: 50px;
+	padding-left: 40px;
+	font-size: 16px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-position-x: 10px;
+	background-size: 20px;
+	&.name{
+		background-image: url('/img/icons8-male-user-50.svg');
+	}
+	&.email{
+		background-image: url('/img/icons8-email-64.svg');
+	}
+	&.password{
+		background-image: url('/img/icons8-lock-50.svg') ;
+	} 
+
+ }
+.hide{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 22px;
+	height: 40px;
+	border: none;
+	border-radius: 50px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-position-x: 10px;
+	background-size: 20px 20px;
+
+}
