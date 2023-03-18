@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vistra</title>
 
-    <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="/css/index.css">
     <!-- 
     - google font link
     -->
@@ -21,23 +20,296 @@
     <header>
         
         <nav>
-            <a href="" class="logo"><img src="/img/Vectorr.png" alt=""></a>
+            <a href="#" class="logo"><img src="/img/Vectorlogo.png" alt=""></a>
             <div class="end_bx">
                 <ul>
                     <li><a href="#">Home</a></li>
+                    <li><a href="#">TV Shows</a></li>
                     <li><a href="#">Movies</a></li>
-                    <li><a href="#">Series</a></li>
-                    <li><a href="#">Categoery</a></li>
+                    <li><a href="#">My Friends</a></li>
+                    <li><a href="#">My List</a></li>
                 </ul>
                 <div class="search">
                     <input type="text" placeholder="Search movies..." id="search">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search" id="search_icon"></i>
+                </div>
+
+                <div class="bell">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="user">
+                    <img src="/img/user.png" alt="Andrew" title="Andrew">
                 </div>
             </div>
         </nav>
 
+        <div class="content">
+            <h6>Duration: <span>1h 47min</span></h6>
+            <h3><i class="fas fa-star">6.5</i>
+                <span>Action / Adventure / Sci-Fi</span>
+            </h3>
+            <h1>Rampage</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum earum harum error labore quis? Inventore.</p>
+            <div class="btns">
+                <button><i class="fas fa-play"></i>WATCH</button>
+                <button><i class="fas fa-plus"></i>ADD LIST</button>
+                <button><i class="fas fa-share-alt"></i>SHARING</button>
+
+            </div>
+        </div>
+
+        <div class="slider_btns">
+
+            <h6 class="slider"></h6>
+            <h6 class="slider"></h6>
+            <h6 class="slider"></h6>
+
+        </div>
     </header>
+
+    <!-- trending box start -->
+
+    <div class="tranding_bx">
+        <li><a href="#" class="active"><i class="fas fa-angle-double-up"></i> Trends Now <span></span></a></li>
+        <!-- <li><a href="#"><i class="fas fa-fire"></i> Popular <span></span></a></li>
+        <li><a href="#"><i class="fas fa-star"></i> Prefrenes <span></span></a></li> -->
+        <li><a href="#"><i class="fas fa-chevron-down"></i> All Movies <span></span></a></li>
+    </div>
+
+    <!-- category box start -->
+    <div class="cato_bx" id="cato_bx">
+        <button>Action</button>
+        <button>Crime</button>
+        <button>Adeventure</button>
+        <button>Biography</button>
+        <button>Animation</button>
+        <button>Comady</button>
+        <button>Documentary</button>
+        <button>Drama</button>
+        <button>WebSeries</button>
+        <button>18+</button>
+        <button>SciFi</button>
+        <button>Horor</button>
+        <div class="cato_left_right">
+            <i class="fas fa-angle-down" id="left_scroll"></i>
+        </div>
+        <div class="cato_left_right">
+            <i class="fas fa-angle-down" id="right_scroll"></i>
+        </div>
+    </div>
+
+    <!-- movies box start -->
+
+    <div class="movie_bx_1" id="mvoes_bx_1">
+        <button id="left_scrolll"><i class="fas fa-angle-down"></i></button>
+        <button id="right_scrolll"><i class="fas fa-angle-down"></i></button>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/img/venom2.webp" alt="">
+                <div class="content">
+                    <h5>Venom 2</h5>
+                    <h6>
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <h6>6.5</h6>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+    </div>
     
+    <script src="/js/script.js"></script>
 </body>
 
 
