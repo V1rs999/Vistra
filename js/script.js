@@ -453,6 +453,28 @@ const movies = [{
             tppr: "trend",
             msot: "movie"
         },
+        {
+            id: 35,
+            img: "/img/comndo.jpg",
+            title: "Comndo",
+            letter: "c",
+            genre1: "action",
+            genre2: "none",
+            genre3: "none",
+            genre4: "biography",
+            genre5: "animation",
+            genre6: "none",
+            genre7: "documentary",
+            genre8: "none",
+            genre9: "18+",
+            genre10: "scifi",
+            genre11: "horor",
+            year: 2020,
+            rate: 9.3,
+            url: "themanor.html",
+            tppr: "trend",
+            msot: "movie"
+        },
     ]
     // all array copyed!
 
