@@ -7,7 +7,7 @@ const version = '1.0.0';
 
 app.get('/', (req, res) => {})
 
-app.listen(port, () => {})
+app.listen(port, () => {});
 
 let search = document.getElementById("search");
 let search_icon = document.getElementById("search_icon");
