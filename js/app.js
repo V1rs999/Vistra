@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const hostname = '13.42.126.133';
-const port = 3005;
+const port = 3000;
 
 const version = '1.0.0';
 
