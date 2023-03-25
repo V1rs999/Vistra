@@ -1,11 +1,13 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const hostname = "13.42.126.133";
+const hostname = '13.42.126.133';
 const port = 3000;
 
-app.get("/", (req, res) => {});
+const version = '1.0.0';
 
-app.listen(port, () => {});
+app.get('/', (req, res) => {})
+
+app.listen(port, () => {})
 
 let search = document.getElementById("search");
 let search_icon = document.getElementById("search_icon");
