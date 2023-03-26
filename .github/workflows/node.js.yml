@@ -23,7 +23,7 @@ jobs:
         AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
         
     - name: Deploy to prod server
-      uses: 
+      uses: appleboy/ssh-action@main
       with:
         host: ${{ secrets.HOST_IP }}
         username: ubuntu
