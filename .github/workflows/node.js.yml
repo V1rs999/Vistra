@@ -11,9 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: checkout
-       uses: actions/checkout@v3
-       with:
-       path: ${{}}
+       uses: actions/checkout@nain
 
 
     - name: Get Github action IP
