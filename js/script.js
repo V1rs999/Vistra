@@ -98,3 +98,4 @@ if (a_z) {
 // right_scroll.addEventListener('click', () => {
 //     cato_bx.scrollLeft += 100;
 // })
+
