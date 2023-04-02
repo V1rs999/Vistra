@@ -92,20 +92,19 @@
 	<div class="setDiv">
 		<div class="inputDivPassworld">
 			<div class="input text">
-				<img onclick="togglePasswordVisibility('pass1')" src="/img/icons8-eye-50.svg" class="hide" alt="">
+				<span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide" src="/img/icons8-eye-64.svg"></span>
 				<input id="pass1" type="password" class="input-field password" placeholder="Password" />
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="setDiv">
 		<div class="inputDivConfirmPassworld">
 			<div class="input text">
-				<img onclick="togglePasswordVisibility('pass2')" src="/img/icons8-eye-50.svg" class="hide" alt="">
+				<span id="show-pass2" onclick="togglePasswordVisibility('pass2')"><img class="hide" src="/img/icons8-eye-64.svg"></span>
 				<input id="pass2" type="password" class="input-field password " placeholder="Confirm Password" />
 			</div>
 		</div>
-	</div>
 
 	<button  class="Register Reg" type="button">Register</button>
 	<button class="Alredy Alr" type="button">Already have an account?<a  href=""> Log in.</a></button>
