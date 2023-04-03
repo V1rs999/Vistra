@@ -1,5 +1,4 @@
 `use strict`;
-
 function togglePasswordVisibility(passwordId) {
   const passwordField = document.getElementById(passwordId);
   const showPasswordButton = document.getElementById(`show-${passwordId}`);
