@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: rgb(17, 16, 16);
+    /* background: rgb(17, 16, 16); */
 }
 
 header {
@@ -1000,3 +1000,38 @@ button:nth-child(5) {
 
 /* javascript classes end */
 
+/* PlayerWindow */
+
+.container {
+    min-height: 100%;
+    width: 100%;
+}
+
+.container .video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .video .video_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 20px;
+    z-index: 10;
+}
+
+.container .video .video_container .info {
+    background: #f5f2f2;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
