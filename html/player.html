@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link href="/css/player.css" rel="stylesheet">
+	<script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.0/Youtube.min.js"></script>
+  </head>
+  <body>
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      preload="auto"
+      width="840"
+      height="464"
+      data-setup="{}"
+    >
+      <source src="" type="video/youtube" />
+    </video>
+
+    <script>
+      var player = videojs('my-video', {
+        techOrder: ['youtube'],
+        sources: [
+          { type: 'video/youtube', src: 'https://www.youtube.com/watch?v=ns8K-egSLzo' }
+        ],
+        youtube: {
+          iv_load_policy: 3, // Приховувати підказки
+          modestbranding: 1, // Приховувати логотип YouTube
+          controls: 1, // Відображати елементи керування
+          rel: 0 // Відключити рекомендації на закінчення відео
+        },
+        controlBar: {
+            progressControl: false // Відключити відображення прогрес бара
+        }
+
+      });
+    </script>
+  </body>
+</html>
