@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    /* background: rgb(17, 16, 16); */
+    background: rgb(17, 16, 16);
 }
 
 header {
@@ -1020,6 +1020,7 @@ button:nth-child(5) {
     position: absolute;
     top: 0;
     left: 0;
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1035,3 +1036,37 @@ button:nth-child(5) {
     display: flex;
     justify-content: space-between;
 }
+
+.container .video .video_container .info p {
+    color: #555050;
+}
+
+.container .video .video_container .info .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .video .video_container .info .icons a {
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4em;
+    margin-right: 10px;
+    box-shadow: 0.2rem 0.2rem 1rem rgb(51, 51, 51 0.2);
+    transition: 0.5s ease;
+}
+
+.container .video .video_container .info .icons a:hover {
+    background: #333;
+    color: #fff;
+
+}
+
+

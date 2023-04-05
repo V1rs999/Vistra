@@ -9,16 +9,58 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- font-awesome cdn link  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/index.css">
+    <!-- <link rel="stylesheet" href="/css/index.css"> -->
+    <link rel="stylesheet" href="/css/playerWindow.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     <title>Advanced Level Movies Website</title>
 </head>
 
 <body>
+
+    <div class="app-container">
+        <div class="app-main">
+            <div class="video_container">
+                <!-- <a href="#" class="logo">Vistra</a> -->
+                <div class="info">
+                    <div>
+                        <h4>Room Name</h4>
+                        <!-- <p>Venom 2</p> -->
+                    </div>
+                    <div class="user">
+                        <img src="/img/user.png">
+                        <img src="/img/user.png">
+                        <img src="/img/user.png">
+                        <img src="/img/user.png">
+                    </div>
+                    <div class="icons">
+                        <a href="#"><i class="bx bx-cog"></i></a>
+                        <a href="#"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="video-wrapper">
+            <!-- Video Participant 1 -->
+                <div class="video-participant">
+                    <video
+                        id="my-video"
+                        class="video-js"
+                        controls
+                        preload="auto"
+                        width="1302px"
+                        height="850px"
+                        data-setup="{}"
+                    >
+                        <source src="" type="video/youtube" />
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    <div class="container">
+    <!-- <div class="container">
         <div class="video">
             <div class="video_container">
+                <a href="#" class="logo">Vistra</a>
                 <div class="info">
                     <div>
                         <h4>VideoWindow</h4>
@@ -30,8 +72,32 @@
                     </div>
                 </div>
             </div>
+            <div class="videoBx">
+                <div class="image">
+                    <img src="/img/Rampage.jpg" class="user">
+                </div>
+            </div>
         </div>
-    </div>
+    </div> -->
+
+    <script>
+        var player = videojs('my-video', {
+          techOrder: ['youtube'],
+          sources: [
+            { type: 'video/youtube', src: 'https://www.youtube.com/watch?v=noSgubaK8G8' }
+          ],
+          youtube: {
+            iv_load_policy: 3, // Приховувати підказки
+            modestbranding: 1, // Приховувати логотип YouTube
+            controls: 1, // Відображати елементи керування
+            rel: 0 // Відключити рекомендації на закінчення відео
+          },
+          controlBar: {
+              progressControl: false // Відключити відображення прогрес бара
+          }
+  
+        });
+      </script>
 
     <script src="/js/script.js"></script>
 </body>
