@@ -97,14 +97,3 @@ if (a_z) {
     a_z.classList.toggle("show_a_z1");
   });
 }
-
-// let cato_bx = document.getElementById('cato_bx');
-// let left_scroll = document.getElementById('left_scroll');
-// let right_scroll = document.getElementById('right_scroll');
-
-// left_scroll.addEventListener('click', () => {
-//     cato_bx.scrollLeft -= 100;
-// })
-// right_scroll.addEventListener('click', () => {
-//     cato_bx.scrollLeft += 100;
-// })
