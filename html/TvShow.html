@@ -11,6 +11,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
     <title>Advanced Level Movies Website</title>
+
+    <!--Import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -35,7 +40,7 @@
                     <i class="fas fa-bell"></i>
                 </div>
                 <div class="user">
-                    <img src="/img/user.png" onclick="toggleMenu()">
+                    <img src="/img/user.png" alt="User" onclick="toggleMenu()">
                 </div>
                 <div class="sub-menu-wrap" id="subMenu">
                     <div class="sub-menu">
@@ -60,7 +65,7 @@
                             <p>Help & Support</p>
                             <span>></span>
                         </a>
-                        <a href="main.html" class="sub-menu-link">
+                        <a href="index.html" class="sub-menu-link">
                             <img src="/img/arrow-right-from-bracket-solid.svg" alt="">
                             <p>Logout</p>
                             <span>></span>
@@ -86,15 +91,15 @@
             </div>
         </div>
         <div class="slider_btns">
-            <h6 class="slider"></h6>
-            <h6 class="slider"></h6>
-            <h6 class="slider"></h6>
+            <div class="slider"></div>
+            <div class="slider"></div>
+            <div class="slider"></div>
         </div>
     </header>
 
      <!-- trending box2 start  -->
      <div class="tranding_bx" style="margin-top: 20px;">
-        <li><a href="#" class="active"><i class="fas fa-photo-video"></i>Tv Show<span></span></a></li>
+        <a href="#" class="active"><i class="fas fa-photo-video"></i>Tv Show<span></span></a>
         <!-- <li><a href="#"><i class="fas fa-film"></i> Series <span></span></a></li>
         <li><a href="#"><i class="fas fa-check"></i> Original Series <span></span></a></li>
         <li><a href="#"> Tralier <span></span></a></li> -->
@@ -106,52 +111,85 @@
             <button>Latest</button>
             <button id="year">Year<i class="fas fa-angle-down" ></i>
             <div class="year_bx">
-                <li>2022</li>
-                <li>2021</li>
-                <li>2020</li>
-                <li>2019</li>
-                <li>2018</li>
-                <li>2017</li>
-                <li>2016</li>
-                <li>2015</li>
-                <li>2014</li>
+                <div>2022</div>
+                <div>2021</div>
+                <div>2020</div>
+                <div>2019</div>
+                <div>2018</div>
+                <div>2017</div>
+                <div>2016</div>
+                <div>2015</div>
+                <div>2014</div>
+                <div>2013</div>
+                <div>2012</div>
+                <div>2011</div>
+                <div>2010</div>
+                <div>2009</div>
+                <div>2008</div>
+                <div>2007</div>
+                <div>2006</div>
+                <div>2005</div>
+                <div>2004</div>
+                <div>2003</div>
+                <div>2002</div>
+                <div>2001</div>
+                <div>2000</div>
             </div>
             </button>
             <button id="a_z">A-Z <i class="fas fa-angle-down" ></i>
                 <div class="year_bx letter_bx">
-                    <li>A</li>
-                    <li>B</li>
-                    <li>C</li>
-                    <li>E</li>
-                    <li>F</li>
-                    <li>G</li>
-                    <li>H</li>
-                    <li>T</li>
-                    <li>Z</li>
-                </div></button>
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                    <div>E</div>
+                    <div>D</div>
+                    <div>F</div>
+                    <div>G</div>
+                    <div>H</div>
+                    <div>I</div>
+                    <div>J</div>
+                    <div>K</div>
+                    <div>L</div>
+                    <div>M</div>
+                    <div>N</div>
+                    <div>O</div>
+                    <div>P</div>
+                    <div>Q</div>
+                    <div>R</div>
+                    <div>S</div>
+                    <div>T</div>
+                    <div>U</div>
+                    <div>V</div>
+                    <div>W</div>
+                    <div>X</div>
+                    <div>Y</div>
+                    <div>Z</div>
+                </div>
+            </button>
         </div>
         <div class="right_cato">
             <i class="fas fa-star"></i>
-            <input type="range" name="" id="change_input" min="4.2" max="9.9">
+            <input type="range" name="RangeChange" id="change_input" min="4.2" max="9.9">
             <span>7.0</span>
         </div>
     </div>
 
+    <!-- movies box strat  -->
     <div class="movie_bx_1 movie_bx_2">
         <div class="card">
             <a href="#">
                 <img src="/img/LockwoodAndCo.jpg" alt="">
                 <div class="content">
-                    <h5>Lockwood & Co</h5>
-                    <h6>
+                    <h2>Lockwood & Co</h2>
+                    <div class="metadata">
                         <span>2018</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>6.5</h6>
+                            <span>6.5</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -159,16 +197,16 @@
             <a href="#">
                 <img src="/img/Carnival_Row.jpg" alt="">
                 <div class="content">
-                    <h5>Carnival Row</h5>
-                    <h6>
+                    <h2>Carnival Row</h2>
+                    <div class="metadata">
                         <span>2022</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.3</h6>
+                            <span>9.3</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -176,16 +214,16 @@
             <a href="#">
                 <img src="/img/TheConnection.jpg" alt="">
                 <div class="content">
-                    <h5>The Connection</h5>
-                    <h6>
+                    <h2>The Connection</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.1</h6>
+                            <span>9.1</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -193,16 +231,16 @@
             <a href="#">
                 <img src="/img/1899.jpg" alt="">
                 <div class="content">
-                    <h5>1899</h5>
-                    <h6>
+                    <h2>1899</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.7</h6>
+                            <span>9.7</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -210,16 +248,16 @@
             <a href="#">
                 <img src="/img/ShadowAndBone.jpg" alt="">
                 <div class="content">
-                    <h5>Shadow And Bone</h5>
-                    <h6>
+                    <h2>Shadow And Bone</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>7.7</h6>
+                            <span>7.7</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -227,16 +265,16 @@
             <a href="#">
                 <img src="/img/oz.webp" alt="">
                 <div class="content">
-                    <h5>OZ</h5>
-                    <h6>
+                    <h2>OZ</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>7.9</h6>
+                            <span>7.9</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -244,16 +282,16 @@
             <a href="#">
                 <img src="/img/paul.webp" alt="">
                 <div class="content">
-                    <h5>Paul</h5>
-                    <h6>
+                    <h2>Paul</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>8.9</h6>
+                            <span>8.9</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -261,16 +299,16 @@
             <a href="#">
                 <img src="/img/bagi.jpg" alt="">
                 <div class="content">
-                    <h5>Bagi</h5>
-                    <h6>
+                    <h2>Bagi</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>8.8</h6>
+                            <span>8.8</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -278,16 +316,16 @@
             <a href="#">
                 <img src="/img/pixels.webp" alt="">
                 <div class="content">
-                    <h5>Pixels</h5>
-                    <h6>
+                    <h2>Pixels</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>6.8</h6>
+                            <span>6.8</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -295,16 +333,16 @@
             <a href="#">
                 <img src="/img/Qismat_2.webp" alt="">
                 <div class="content">
-                    <h5>Qismat</h5>
-                    <h6>
+                    <h2>Qismat</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.7</h6>
+                            <span>9.7</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -312,16 +350,16 @@
             <a href="#">
                 <img src="/img/aqwaman.jpg" alt="">
                 <div class="content">
-                    <h5>Aqwaman</h5>
-                    <h6>
+                    <h2>Aqwaman</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.6</h6>
+                            <span>9.6</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -329,16 +367,16 @@
             <a href="#">
                 <img src="/img/red_notice.jpg" alt="">
                 <div class="content">
-                    <h5>Red Notice</h5>
-                    <h6>
+                    <h2>Red Notice</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>8.8</h6>
+                            <span>8.8</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -346,16 +384,16 @@
             <a href="#">
                 <img src="/img/shershaah.webp" alt="">
                 <div class="content">
-                    <h5>Shershaah</h5>
-                    <h6>
+                    <h2>Shershaah</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>8.2</h6>
+                            <span>8.2</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -363,16 +401,16 @@
             <a href="#">
                 <img src="/img/shiddat.webp" alt="">
                 <div class="content">
-                    <h5>Shiddat</h5>
-                    <h6>
+                    <h2>Shiddat</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.1</h6>
+                            <span>9.1</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -380,16 +418,16 @@
             <a href="#">
                 <img src="/img/snakeeyes.webp" alt="">
                 <div class="content">
-                    <h5>Snake Eyes</h5>
-                    <h6>
+                    <h2>Snake Eyes</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.9</h6>
+                            <span>9.9</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -397,16 +435,16 @@
             <a href="#">
                 <img src="/img/takepoint.webp" alt="">
                 <div class="content">
-                    <h5>Take Point</h5>
-                    <h6>
+                    <h2>Take Point</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>7.9</h6>
+                            <span>7.9</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -415,16 +453,16 @@
             <a href="#">
                 <img src="/img/The-Manor.webp" alt="">
                 <div class="content">
-                    <h5>The Manor</h5>
-                    <h6>
+                    <h2>The Manor</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>6.9</h6>
+                            <span>6.9</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -432,16 +470,16 @@
             <a href="#">
                 <img src="/img/theblackwater.webp" alt="">
                 <div class="content">
-                    <h5>The Black Water</h5>
-                    <h6>
+                    <h2>The Black Water</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>9.2</h6>
+                            <span>9.2</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -449,16 +487,16 @@
             <a href="#">
                 <img src="/img/theoutpost.webp" alt="">
                 <div class="content">
-                    <h5>The Out Post</h5>
-                    <h6>
+                    <h2>The Out Post</h2>
+                    <div class="metadata">
                         <span>2020</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>8.2</h6>
+                            <span>8.2</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>
@@ -466,16 +504,16 @@
             <a href="#">
                 <img src="/img/thevault.webp" alt="">
                 <div class="content">
-                    <h5>The Vault</h5>
-                    <h6>
+                    <h2>The Vault</h2>
+                    <div class="metadata">
                         <span>2021</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
-                            <h6>8.5</h6>
+                            <span>8.5</span>
                         </div>
-                    </h6>
+                    </div>
                 </div>
             </a>
         </div>

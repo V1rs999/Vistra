@@ -6,7 +6,7 @@ search_icon.addEventListener("click", () => {
   search.classList.toggle("search_input");
 });
 
-subMenu.addEventListener("click", toggleMenu);
+// subMenu.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   subMenu.classList.toggle("open-menu");
@@ -67,6 +67,7 @@ const slider_load = () => {
 };
 
 setInterval(slider_load, 15000);
+slider_load();
 
 //cato
 
