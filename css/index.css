@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    outline: none;
+	border: none;
+	text-decoration: none;
 }
 
 html {
@@ -10,8 +12,9 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: rgb(17, 16, 16);
+    
 }
 
 header {
@@ -386,6 +389,7 @@ header nav .end_bx .user img {
     cursor: pointer;
 }
 
+
 header .content {
     width: 77%;
     height: auto;
@@ -460,6 +464,7 @@ header .content .btns button {
     z-index: 999;
 }
 
+
 header .content .btns button:nth-child(2) {
     border: 2px solid #000;
     color: #fff;
@@ -506,7 +511,7 @@ header nav .btns {
     align-items: center;
 }
 
-header nav .btns a button {
+header nav .btns button {
     padding: 6px 12px;
     border-radius: 20px;
     background: rgb(218, 25, 25);
@@ -524,7 +529,7 @@ header nav .btns a button {
 
 
 
-header nav .btns a button:hover {
+header nav .btns button:hover {
     border: 2px solid #000;
     color: #fff;
     background: #000;
@@ -549,7 +554,7 @@ header .slider_btns {
     justify-content: center;
 }
 
-header .slider_btns h6 {
+header .slider_btns div {
     width: 30px;
     height: 3px;
     margin-right: 5px;
@@ -572,28 +577,29 @@ header .slider_btns h6:nth-child(1) {
     justify-content: space-between;
 }
 
-.tranding_bx li {
+/* .tranding_bx li {
     list-style: none;
     transition: .3s linear;
-}
+} */
 
-.tranding_bx li a {
+.tranding_bx a {
     position: relative;
     text-decoration: none;
     color: rgb(255, 255, 255, .7);
     font-size: 13px;
-    transition: .3 linear;
+    /* transition: 0.3 linear; */
+    list-style: none;
 }
 
-.tranding_bx li a:hover {
+.tranding_bx  a:hover {
     color: #fff;
 }
 
-.tranding_bx li .fas {
+.tranding_bx  .fas {
     margin-right: 5px;
 }
 
-.tranding_bx li a span {
+.tranding_bx  a span {
     position: absolute;
     width: 5px;
     height: 5px;
@@ -606,12 +612,12 @@ header .slider_btns h6:nth-child(1) {
 
 /* tranding box active classes start  */
 
-.tranding_bx li .active {
+.tranding_bx  .active {
     font-size: 15px;
     color: #fff;
 }
 
-.tranding_bx li .active span {
+.tranding_bx .active span {
     background: red;
 }
 
@@ -750,7 +756,7 @@ header .slider_btns h6:nth-child(1) {
     margin-top: 5px;
 }
 
-.movie_bx_1 .card a .content h5 {
+.movie_bx_1 .card a .content h2 {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -758,38 +764,43 @@ header .slider_btns h6:nth-child(1) {
     font-size: 12px;
 }
 
-.movie_bx_1 .card a .content h6 {
+.movie_bx_1 .card a .content .metadata {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.movie_bx_1 .card a .content h6 span {
+.movie_bx_1 .card a .content .metadata span {
     color: rgb(255, 255, 255, .6);
-    font-weight: lighter
+    /* font-weight: lighter; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 12px;
 }
 
-.movie_bx_1 .card a .content h6 .rate {
+.movie_bx_1 .card a .content .metadata .rate {
     display: flex;
     align-items: center;
 }
 
-.movie_bx_1 .card a .content h6 .rate .fas {
+.movie_bx_1 .card a .content .metadata .rate .fas {
     margin-right: 7px;
     font-size: 9px;
     color: rgb(255, 255, 255, .5);
 }
 
-.movie_bx_1 .card a .content h6 .rate .fas:nth-last-child(2) {
+.movie_bx_1 .card a .content .metadata .rate .fas:nth-last-child(2) {
     color: yellow;
     margin: 1px;
 }
 
-.movie_bx_1 .card a .content h6 .rate h6 {
+.movie_bx_1 .card a .content .metadata .rate span {
     color: yellow;
-    margin-top: 3px;
+    margin-top: -1px;
     font-size: 11px;
-    height: 5px;
+    height: 15px;
 }
 
 .movie_bx_1 button {
@@ -900,7 +911,7 @@ button:nth-child(5) {
 }
 
 .cato_bx2 .right_cato input[type="range"] {
-    -webkit-appearance: none;
+    appearance: none;
     background: red;
     border-radius: 20px;
     height: 7px;
@@ -952,7 +963,7 @@ button:nth-child(5) {
     border-radius: 20px;
 }
 
-.cato_bx2 button .year_bx li {
+.cato_bx2 button .year_bx div {
     list-style-type: none;
     font-size: 15px;
     font-weight: 600;
@@ -961,7 +972,7 @@ button:nth-child(5) {
     transition: .3s linear;
 }
 
-.cato_bx2 button .year_bx li:hover {
+.cato_bx2 button .year_bx div:hover {
     color: red;
 }
 
@@ -969,7 +980,7 @@ button:nth-child(5) {
     width: 40px;
 }
 
-.cato_bx2 button .letter_bx li {
+.cato_bx2 button .letter_bx div {
     font-size: 16px;
     font-weight: 600;
 }
@@ -1002,7 +1013,7 @@ button:nth-child(5) {
 
 /* PlayerWindow */
 
-.container {
+/* .container {
     min-height: 100%;
     width: 100%;
 }
@@ -1069,4 +1080,6 @@ button:nth-child(5) {
 
 }
 
+ */
 
+ 
