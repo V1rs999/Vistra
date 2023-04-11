@@ -5,7 +5,7 @@ const Post = require("./Post.js");
 const Port = 5000;
 
 const DB_URL =
-  "mongodb+srv://Virus999:CDNcTSDSM967BX7C@vistra.vmi0ogl.mongodb.net/test";
+"mongodb+srv://AnotherUser:rRxKWXdGNwr3pbzC@vistra.vmi0ogl.mongodb.net/test";
 
 const app = express();
 
