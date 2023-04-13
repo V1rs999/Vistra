@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const PostModel = require("./Post.js");
+const router = require("./router.js");
 
 const Port = 5000;
 
@@ -10,17 +10,7 @@ const DB_URL =
 const app = express();
 
 app.use(express.json());
-
-app.post("/", async (req, res) => {
-  try {
-    const { author, title, content, picture } = req.body;
-    const post = await PostModel.create({ author, title, content, picture });
-    console.log(req.body);
-    res.json(post);
-  } catch (e) {
-    res.status(500).json(e);
-  }
-});
+app.use("/api", router);
 
 async function startApp() {
   try {
@@ -34,4 +24,3 @@ async function startApp() {
   }
 }
 startApp();
-// "mongodb+srv://Virus999:cwfJs8W3epcjpMIT@vistra.vmi0ogl.mongodb.net/test"
