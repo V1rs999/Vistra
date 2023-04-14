@@ -1,5 +1,5 @@
 const PostModel = require("./Post.js");
-const fileService = require("./Fileservice.js");
+const fileService = require("./ImageService.js");
 
 class PostService {
   async create(post, picture) {

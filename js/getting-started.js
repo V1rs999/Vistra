@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./router.js");
 const fileupload = require("express-fileupload");
+const path = require("path");
 
 const Port = 5000;
 
@@ -12,7 +13,7 @@ const DB_URL =
 const app = express();
 
 app.use(express.json());
-app.use(express.static("static"));
+app.use(express.static(path.join(__dirname, "static")));
 app.use(fileupload({}));
 app.use("/api", router);
 
