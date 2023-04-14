@@ -1,6 +1,8 @@
+// підключення БД
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./router.js");
+const fileupload = require("express-fileupload");
 
 const Port = 5000;
 
@@ -10,6 +12,8 @@ const DB_URL =
 const app = express();
 
 app.use(express.json());
+app.use(express.static("static"));
+app.use(fileupload({}));
 app.use("/api", router);
 
 async function startApp() {

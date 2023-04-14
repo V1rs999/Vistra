@@ -3,7 +3,8 @@ const PostService = require("./PostService.js");
 class PostConroller {
   async create(req, res) {
     try {
-      const post = await PostService.create(req.body);
+      console.log(req.files);
+      const post = await PostService.create(req.body, req.files.picture);
       res.json(post);
     } catch (e) {
       res.status(500).json(e);
@@ -30,7 +31,7 @@ class PostConroller {
       const updatePost = await PostService.update(req.body);
       return res.json(updatePost);
     } catch (e) {
-      res.status(500).json(e);
+      res.status(500).json(e.message);
     }
   }
   async delete(req, res) {
