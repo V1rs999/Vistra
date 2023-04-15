@@ -4,7 +4,7 @@ class ImageService {
   saveFile(file) {
     try {
       const fileName = uuid.v4() + ".jpg";
-      const filePath = path.resolve(__dirname, "static", fileName);
+      const filePath = path.resolve("D:/web/html/Vistra/public/img", fileName);
       file.mv(filePath);
       return fileName;
     } catch (e) {

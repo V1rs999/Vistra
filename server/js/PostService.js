@@ -1,4 +1,4 @@
-const PostModel = require("./Post.js");
+const PostModel = require("../models/Post.js");
 const fileService = require("./ImageService.js");
 
 class PostService {
