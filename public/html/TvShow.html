@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- font-awesome cdn link  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <title>Advanced Level Movies Website</title>
+
+    <!--Import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo"><img src="/public/img/Vectorr.png" alt=""></a>
+            <div class="end_bx">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="TvShow.html">TV Shows</a></li>
+                    <li><a href="movie.html">Movies</a></li>
+                    <li><a href="#">My Friends</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Search movies..." id="search">
+                    <i class="fas fa-search" id="search_icon"></i>
+                    <div class="search_bx2">
+                    </div>
+                </div>
+                <div class="bell">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="user">
+                    <img src="/public/img/user.png" alt="User" onclick="toggleMenu()">
+                </div>
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="/public/img/user.png" alt="">
+                            <h2>Andrew</h2>
+                        </div>
+                        <hr>
+
+                        <a href="#" class="sub-menu-link">
+                            <img src="/public/img/user-solid.svg" alt="">
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="/public/img/gear-solid.svg" alt="">
+                            <p>Setting & Privacy</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="/public/img/circle-info-solid.svg" alt="">
+                            <p>Help & Support</p>
+                            <span>></span>
+                        </a>
+                        <a href="index.html" class="sub-menu-link">
+                            <img src="/public/img/arrow-right-from-bracket-solid.svg" alt="">
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h6>Duration: <span id="header_dur">1h 47min</span></h6>
+            <h3 id="header_gen"><i class="fas fa-star"></i>6.5
+                <span>Action / Adventure / Sci-Fi</span>
+            </h3>
+            <h1 id="header_title">Rampage</h1>
+            <p id="header_pra">From Wikipedia, the free encyclopedia Rampage is a series of video games released by Midway (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various consoles. The basic premise of the games is that,
+                due to experiment-related accidents, the player controls a human transformed into a giant monster.</p>
+            <div class="btns">
+                <button><i class="fas fa-play"></i>WATCH</button>
+                <button><i class="fas fa-plus"></i>ADD LIST</button>
+                <button>CREATE ROOM</button>
+            </div>
+        </div>
+        <div class="slider_btns">
+            <div class="slider"></div>
+            <div class="slider"></div>
+            <div class="slider"></div>
+        </div>
+    </header>
+
+     <!-- trending box2 start  -->
+     <div class="tranding_bx" style="margin-top: 20px;">
+        <a href="#" class="active"><i class="fas fa-photo-video"></i>Tv Show<span></span></a>
+        <!-- <li><a href="#"><i class="fas fa-film"></i> Series <span></span></a></li>
+        <li><a href="#"><i class="fas fa-check"></i> Original Series <span></span></a></li>
+        <li><a href="#"> Tralier <span></span></a></li> -->
+    </div>
+    <div class="cato_bx cato_bx2">
+        <div class="left_cato">
+            <button>Sort by:</button>
+            <button>All</button>
+            <button>Latest</button>
+            <button id="year">Year<i class="fas fa-angle-down" ></i>
+            <div class="year_bx">
+                <div>2022</div>
+                <div>2021</div>
+                <div>2020</div>
+                <div>2019</div>
+                <div>2018</div>
+                <div>2017</div>
+                <div>2016</div>
+                <div>2015</div>
+                <div>2014</div>
+                <div>2013</div>
+                <div>2012</div>
+                <div>2011</div>
+                <div>2010</div>
+                <div>2009</div>
+                <div>2008</div>
+                <div>2007</div>
+                <div>2006</div>
+                <div>2005</div>
+                <div>2004</div>
+                <div>2003</div>
+                <div>2002</div>
+                <div>2001</div>
+                <div>2000</div>
+            </div>
+            </button>
+            <button id="a_z">A-Z <i class="fas fa-angle-down" ></i>
+                <div class="year_bx letter_bx">
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                    <div>E</div>
+                    <div>D</div>
+                    <div>F</div>
+                    <div>G</div>
+                    <div>H</div>
+                    <div>I</div>
+                    <div>J</div>
+                    <div>K</div>
+                    <div>L</div>
+                    <div>M</div>
+                    <div>N</div>
+                    <div>O</div>
+                    <div>P</div>
+                    <div>Q</div>
+                    <div>R</div>
+                    <div>S</div>
+                    <div>T</div>
+                    <div>U</div>
+                    <div>V</div>
+                    <div>W</div>
+                    <div>X</div>
+                    <div>Y</div>
+                    <div>Z</div>
+                </div>
+            </button>
+        </div>
+        <div class="right_cato">
+            <i class="fas fa-star"></i>
+            <input type="range" name="RangeChange" id="change_input" min="4.2" max="9.9">
+            <span>7.0</span>
+        </div>
+    </div>
+
+    <!-- movies box strat  -->
+    <div class="movie_bx_1 movie_bx_2">
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/LockwoodAndCo.jpg" alt="">
+                <div class="content">
+                    <h2>Lockwood & Co</h2>
+                    <div class="metadata">
+                        <span>2018</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>6.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/Carnival_Row.jpg" alt="">
+                <div class="content">
+                    <h2>Carnival Row</h2>
+                    <div class="metadata">
+                        <span>2022</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.3</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/TheConnection.jpg" alt="">
+                <div class="content">
+                    <h2>The Connection</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.1</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/1899.jpg" alt="">
+                <div class="content">
+                    <h2>1899</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.7</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/ShadowAndBone.jpg" alt="">
+                <div class="content">
+                    <h2>Shadow And Bone</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>7.7</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/oz.webp" alt="">
+                <div class="content">
+                    <h2>OZ</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>7.9</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/paul.webp" alt="">
+                <div class="content">
+                    <h2>Paul</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>8.9</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/bagi.jpg" alt="">
+                <div class="content">
+                    <h2>Bagi</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>8.8</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/pixels.webp" alt="">
+                <div class="content">
+                    <h2>Pixels</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>6.8</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/Qismat_2.webp" alt="">
+                <div class="content">
+                    <h2>Qismat</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.7</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/aqwaman.jpg" alt="">
+                <div class="content">
+                    <h2>Aqwaman</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.6</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/red_notice.jpg" alt="">
+                <div class="content">
+                    <h2>Red Notice</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>8.8</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/shershaah.webp" alt="">
+                <div class="content">
+                    <h2>Shershaah</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>8.2</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/shiddat.webp" alt="">
+                <div class="content">
+                    <h2>Shiddat</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.1</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/snakeeyes.webp" alt="">
+                <div class="content">
+                    <h2>Snake Eyes</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.9</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/takepoint.webp" alt="">
+                <div class="content">
+                    <h2>Take Point</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>7.9</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/The-Manor.webp" alt="">
+                <div class="content">
+                    <h2>The Manor</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>6.9</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/theblackwater.webp" alt="">
+                <div class="content">
+                    <h2>The Black Water</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>9.2</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/theoutpost.webp" alt="">
+                <div class="content">
+                    <h2>The Out Post</h2>
+                    <div class="metadata">
+                        <span>2020</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>8.2</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="/public/img/thevault.webp" alt="">
+                <div class="content">
+                    <h2>The Vault</h2>
+                    <div class="metadata">
+                        <span>2021</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>8.5</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
