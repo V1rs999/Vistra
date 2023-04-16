@@ -1,19 +1,3 @@
-//! Форма регістрації\авторизації
-`use strict`;
-function togglePasswordVisibility(passwordId) {
-  const passwordField = document.getElementById(passwordId);
-  const showPasswordButton = document.getElementById(`show-${passwordId}`);
-
-  if (passwordField.type === "password") {
-    passwordField.type = "text";
-    showPasswordButton.innerHTML =
-      '<img class="hide" src="/img/icons8-eye-50.svg">';
-  } else {
-    passwordField.type = "password";
-    showPasswordButton.innerHTML =
-      '<img class="hide" src="/img/icons8-eye-64.svg">';
-  }
-}
 // !Мейн сторінка
 let search = document.getElementById("search");
 let search_icon = document.getElementById("search_icon");
@@ -37,7 +21,7 @@ let slider_btn = document.getElementsByClassName("slider");
 const slider_load = () => {
   setTimeout(() => {
     header.style.background =
-      "url('/img/121213.jpg') no-repeat center center/cover";
+      "url('/public/img/121213.jpg') no-repeat center center/cover";
     document.getElementById("header_dur").innerText = "1h 47min";
     document.getElementById(
       "header_gen"
@@ -52,7 +36,7 @@ const slider_load = () => {
   }, 0000);
   setTimeout(() => {
     header.style.background =
-      "url('/img/121214.jpg') no-repeat center center/cover";
+      "url('/public/img/121214.jpg') no-repeat center center/cover";
     document.getElementById("header_dur").innerText = "1h 57min";
     document.getElementById(
       "header_gen"
@@ -67,7 +51,7 @@ const slider_load = () => {
   }, 3000);
   setTimeout(() => {
     header.style.background =
-      "url('/img/121215.jpg') no-repeat center center/cover";
+      "url('/public/img/121215.jpg') no-repeat center center/cover";
     document.getElementById("header_dur").innerText = "2h 10min";
     document.getElementById(
       "header_gen"
