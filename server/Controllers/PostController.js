@@ -1,4 +1,4 @@
-const PostService = require("./PostService.js");
+const PostService = require("../Services/PostService.js");
 
 class PostConroller {
   async create(req, res) {
