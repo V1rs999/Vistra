@@ -1,6 +1,6 @@
 const Router = require("express");
 const router = new Router();
-const PostConroller = require("./PostController.js");
+const PostConroller = require("../Controllers/PostController.js");
 
 router.post("/posts", PostConroller.create);
 router.get("/posts", PostConroller.getAll);

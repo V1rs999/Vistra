@@ -1,7 +1,7 @@
 // підключення БД
 const express = require("express");
 const mongoose = require("mongoose");
-const router = require("./router.js");
+const router = require("./routers/router.js");
 const fileupload = require("express-fileupload");
 const path = require("path");
 
@@ -13,7 +13,7 @@ const DB_URL =
 const app = express();
 
 app.use(express.json());
-app.use(express.static(path.join("D:/web/html/Vistra/public/img")));
+app.use(express.static(path.join("../img")));
 app.use(fileupload({}));
 app.use("/api", router);
 
