@@ -15,6 +15,74 @@
 
 <body>
 
+    <header class="header">
+        <a href="#" class="logo"><img src="/img/Vectorr.png" alt=""></a>
+
+        <nav class="navbar">
+            <a href="home.html" class="active">Home</a>
+            <a href="TvShow.html">TV Shows</a>
+            <a href="movie.html">Movies</a>
+            <a href="#">My Friends</a>
+            <a href="#">My List</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search movies..." id="search">
+            <i class="fas fa-search" id="search_icon"></i>
+            <div class="search_bx2">
+            </div>
+        </div>
+        <div class="bell">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="user">
+            <img src="/img/user.png" onclick="toggleMenu()" alt="">
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="/img/user.png" alt="">
+                    <h2>Andrew</h2>
+                </div>
+                <hr>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="/img/user-solid.svg" alt="">
+                    <p>Edit Profile</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="/img/gear-solid.svg" alt="">
+                    <p>Setting & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="/img/circle-info-solid.svg" alt="">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="index.html" class="sub-menu-link">
+                    <img src="/img/arrow-right-from-bracket-solid.svg" alt="">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="starsBG">
+        <div class="container">
+            <div class="main">
+                <h2>4</h2>
+                <img src="/img/saturn.png" class="saturn">
+                <h2>4</h2>
+            </div>
+            <div class="main2">
+                <p>Oops! Page not found.</p>
+                <button onclick="window.location.href='home.html'">BACK TO HOME</button>
+            </div>
+        </div>
+    </div>
 
     <script src="/js/script.js"></script>
 </body>
