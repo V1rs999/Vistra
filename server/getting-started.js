@@ -13,7 +13,7 @@ const DB_URL =
 const app = express();
 
 app.use(express.json());
-app.use(express.static(path.join("../img")));
+app.use(express.static(path.join("../Vistra/public/img")));
 app.use(fileupload({}));
 app.use("/api", router);
 
