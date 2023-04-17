@@ -18,33 +18,31 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo"><img src="/img/Vectorr.png" alt=""></a>
-            <div class="end_bx">
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="TvShow.html">TV Shows</a></li>
-                    <li><a href="movie.html">Movies</a></li>
-                    <li><a href="#">My Friends</a></li>
-                    <li><a href="#">My List</a></li>
-                </ul>
-                <div class="search">
-                    <input type="text" placeholder="Search movies..." id="search">
-                    <i class="fas fa-search" id="search_icon"></i>
-                    <div class="search_bx2">
-                    </div>
-                </div>
-                <div class="bell">
-                    <i class="fas fa-bell"></i>
-                </div>
-                <div class="btns">
-                    <button onclick="window.location.href='Login.html'">Log in</button>
-                    <button onclick="window.location.href='registerNum2.html'">Sign up</button>
-                </div>
-            </div>
-        </nav>
+    <header class="header">
+        <a href="#" class="logo"><img src="/img/Vectorr.png" alt=""></a>
 
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="TvShow.html">TV Shows</a>
+            <a href="movie.html">Movies</a>
+            <a href="#">My Friends</a>
+            <a href="#">My List</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search movies..." id="search">
+            <i class="fas fa-search" id="search_icon"></i>
+            <div class="search_bx2">
+            </div>
+        </div>
+        <div class="bell">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="btns">
+            <button onclick="window.location.href='Login.html'">Log in</button>
+            <button onclick="window.location.href='registerNum2.html'">Sign up</button>
+        </div>
+    </header>
+    <main>
         <div class="content">
             <h6>Duration: <span id="header_dur">1h 47min</span></h6>
             <h3 id="header_gen"><i class="fas fa-star"></i>6.5
@@ -52,8 +50,10 @@
             </h3>
             <h1 id="header_title">Rampage</h1>
             <p id="header_pra">From Wikipedia, the free encyclopedia Rampage is a series of video games released by
-                Midway (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various
-                consoles. The basic premise of the games is that,
+                Midway
+                (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various
+                consoles.
+                The basic premise of the games is that,
                 due to experiment-related accidents, the player controls a human transformed into a giant monster.</p>
             <div class="btns">
                 <button><i class="fas fa-play"></i>WATCH</button>
@@ -66,7 +66,7 @@
             <div class="slider"></div>
             <div class="slider"></div>
         </div>
-    </header>
+    </main>
 
 
     <!-- trending box start  -->
@@ -74,7 +74,7 @@
         <a href="#" class="active"><i class="fas fa-angle-double-up"></i> Trends Now <span></span></a>
         <a href="#"><i class="fas fa-fire"></i> Popular <span></span></a>
         <a href="#"><i class="fas fa-star"></i> Prefrenes <span></span></a>
-        <a href="movie.html"><i class="fas fa-chevron-down"></i> All Movies <span></span></a>
+        <a href="movie.html"> All Movies <span></span><i class="fas fa-chevron-down"></i></a>
     </div>
 
 

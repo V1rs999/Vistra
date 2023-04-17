@@ -14,7 +14,7 @@ function toggleMenu() {
 
 // header slider start
 
-let header = document.getElementsByTagName("header")[0];
+let header = document.getElementsByTagName("main")[0];
 let slider_btn = document.getElementsByClassName("slider");
 
 const slider_load = () => {
