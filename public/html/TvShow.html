@@ -15,74 +15,77 @@
     <!--Import font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo"><img src="/public/img/Vectorr.png" alt=""></a>
-            <div class="end_bx">
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="TvShow.html">TV Shows</a></li>
-                    <li><a href="movie.html">Movies</a></li>
-                    <li><a href="#">My Friends</a></li>
-                    <li><a href="#">My List</a></li>
-                </ul>
-                <div class="search">
-                    <input type="text" placeholder="Search movies..." id="search">
-                    <i class="fas fa-search" id="search_icon"></i>
-                    <div class="search_bx2">
-                    </div>
-                </div>
-                <div class="bell">
-                    <i class="fas fa-bell"></i>
-                </div>
-                <div class="user">
-                    <img src="/public/img/user.png" alt="User" onclick="toggleMenu()">
-                </div>
-                <div class="sub-menu-wrap" id="subMenu">
-                    <div class="sub-menu">
-                        <div class="user-info">
-                            <img src="/public/img/user.png" alt="">
-                            <h2>Andrew</h2>
-                        </div>
-                        <hr>
+    <header class="header">
+        <a href="#" class="logo"><img src="/img/Vectorr.png" alt=""></a>
 
-                        <a href="#" class="sub-menu-link">
-                            <img src="/public/img/user-solid.svg" alt="">
-                            <p>Edit Profile</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <img src="/public/img/gear-solid.svg" alt="">
-                            <p>Setting & Privacy</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <img src="/public/img/circle-info-solid.svg" alt="">
-                            <p>Help & Support</p>
-                            <span>></span>
-                        </a>
-                        <a href="index.html" class="sub-menu-link">
-                            <img src="/public/img/arrow-right-from-bracket-solid.svg" alt="">
-                            <p>Logout</p>
-                            <span>></span>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="TvShow.html" class="active">TV Shows</a>
+            <a href="movie.html">Movies</a>
+            <a href="#">My Friends</a>
+            <a href="#">My List</a>
         </nav>
+        <div class="search">
+            <input type="text" placeholder="Search movies..." id="search">
+            <i class="fas fa-search" id="search_icon"></i>
+            <div class="search_bx2">
+            </div>
+        </div>
+        <div class="bell">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="user">
+            <img src="/img/user.png" onclick="toggleMenu()" alt="">
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="/img/user.png" alt="">
+                    <h2>Andrew</h2>
+                </div>
+                <hr>
 
+                <a href="#" class="sub-menu-link">
+                    <img src="/img/user-solid.svg" alt="">
+                    <p>Edit Profile</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="/img/gear-solid.svg" alt="">
+                    <p>Setting & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="/img/circle-info-solid.svg" alt="">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="index.html" class="sub-menu-link">
+                    <img src="/img/arrow-right-from-bracket-solid.svg" alt="">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+
+            </div>
+        </div>
+    </header>
+    <main>
         <div class="content">
             <h6>Duration: <span id="header_dur">1h 47min</span></h6>
             <h3 id="header_gen"><i class="fas fa-star"></i>6.5
                 <span>Action / Adventure / Sci-Fi</span>
             </h3>
             <h1 id="header_title">Rampage</h1>
-            <p id="header_pra">From Wikipedia, the free encyclopedia Rampage is a series of video games released by Midway (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various consoles. The basic premise of the games is that,
+            <p id="header_pra">From Wikipedia, the free encyclopedia Rampage is a series of video games released by
+                Midway
+                (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various
+                consoles.
+                The basic premise of the games is that,
                 due to experiment-related accidents, the player controls a human transformed into a giant monster.</p>
             <div class="btns">
                 <button><i class="fas fa-play"></i>WATCH</button>
@@ -95,10 +98,10 @@
             <div class="slider"></div>
             <div class="slider"></div>
         </div>
-    </header>
+    </main>
 
-     <!-- trending box2 start  -->
-     <div class="tranding_bx" style="margin-top: 20px;">
+    <!-- trending box2 start  -->
+    <div class="tranding_bx" style="margin-top: 20px;">
         <a href="#" class="active"><i class="fas fa-photo-video"></i>Tv Show<span></span></a>
         <!-- <li><a href="#"><i class="fas fa-film"></i> Series <span></span></a></li>
         <li><a href="#"><i class="fas fa-check"></i> Original Series <span></span></a></li>
@@ -109,34 +112,34 @@
             <button>Sort by:</button>
             <button>All</button>
             <button>Latest</button>
-            <button id="year">Year<i class="fas fa-angle-down" ></i>
-            <div class="year_bx">
-                <div>2022</div>
-                <div>2021</div>
-                <div>2020</div>
-                <div>2019</div>
-                <div>2018</div>
-                <div>2017</div>
-                <div>2016</div>
-                <div>2015</div>
-                <div>2014</div>
-                <div>2013</div>
-                <div>2012</div>
-                <div>2011</div>
-                <div>2010</div>
-                <div>2009</div>
-                <div>2008</div>
-                <div>2007</div>
-                <div>2006</div>
-                <div>2005</div>
-                <div>2004</div>
-                <div>2003</div>
-                <div>2002</div>
-                <div>2001</div>
-                <div>2000</div>
-            </div>
+            <button id="year">Year<i class="fas fa-angle-down"></i>
+                <div class="year_bx">
+                    <div>2022</div>
+                    <div>2021</div>
+                    <div>2020</div>
+                    <div>2019</div>
+                    <div>2018</div>
+                    <div>2017</div>
+                    <div>2016</div>
+                    <div>2015</div>
+                    <div>2014</div>
+                    <div>2013</div>
+                    <div>2012</div>
+                    <div>2011</div>
+                    <div>2010</div>
+                    <div>2009</div>
+                    <div>2008</div>
+                    <div>2007</div>
+                    <div>2006</div>
+                    <div>2005</div>
+                    <div>2004</div>
+                    <div>2003</div>
+                    <div>2002</div>
+                    <div>2001</div>
+                    <div>2000</div>
+                </div>
             </button>
-            <button id="a_z">A-Z <i class="fas fa-angle-down" ></i>
+            <button id="a_z">A-Z <i class="fas fa-angle-down"></i>
                 <div class="year_bx letter_bx">
                     <div>A</div>
                     <div>B</div>
