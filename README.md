@@ -1,6 +1,6 @@
 # 💫 About Me:
 
-🔭 I’m currently working in team Vistra<br>👯 I’m looking to collaborate on<br>🤝 I’m looking for help with back-end<br>🌱 I’m currently learning back-end(((<br>💬Don't ask me about back<br>⚡ Fun fact I'm front-end dev)
+🔭 I’m currently working in team Vistra<br>👯 I’m looking to collaborate on real team(<br>🤝 I’m looking for help with back-end<br>🌱 I’m currently learning back-end(((<br>💬Don't ask me about back<br>⚡ Fun fact I'm front-end dev)
 
 # 💻 Tech Stack:
 
