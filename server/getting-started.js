@@ -27,7 +27,7 @@ app.get("/TvShow", (req, res) => {
 app.get("/movie", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/movie.html"));
 });
-app.get("/index", (req, res) => {
+app.get("/Login", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/login.html"));
 });
 app.get("/Register", (req, res) => {
