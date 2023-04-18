@@ -21,6 +21,18 @@ app.use("/auth", authRouter);
 app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/home.html"));
 });
+app.get("/TvShow", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/TvShow.html"));
+});
+app.get("/movie", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/movie.html"));
+});
+app.get("/index", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/login.html"));
+});
+app.get("/Register", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/Register.html"));
+});
 
 app.use((req, res) => {
   res
