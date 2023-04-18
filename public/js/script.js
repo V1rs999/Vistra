@@ -21,7 +21,7 @@ let slider_btn = document.getElementsByClassName("slider");
 const slider_load = () => {
   setTimeout(() => {
     header.style.background =
-      "url('/public/img/121213.jpg') no-repeat center center/cover";
+      "url('../img/121213.jpg') no-repeat center center/cover";
     document.getElementById("header_dur").innerText = "1h 47min";
     document.getElementById(
       "header_gen"
@@ -36,7 +36,7 @@ const slider_load = () => {
   }, 0000);
   setTimeout(() => {
     header.style.background =
-      "url('/public/img/121214.jpg') no-repeat center center/cover";
+      "url('../img/121214.jpg') no-repeat center center/cover";
     document.getElementById("header_dur").innerText = "1h 57min";
     document.getElementById(
       "header_gen"
@@ -51,7 +51,7 @@ const slider_load = () => {
   }, 3000);
   setTimeout(() => {
     header.style.background =
-      "url('/public/img/121215.jpg') no-repeat center center/cover";
+      "url('../img/121215.jpg') no-repeat center center/cover";
     document.getElementById("header_dur").innerText = "2h 10min";
     document.getElementById(
       "header_gen"

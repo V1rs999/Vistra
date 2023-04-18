@@ -13,7 +13,7 @@ html {
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	background: rgb(17, 16, 16);
 }
 
@@ -46,10 +46,10 @@ body {
 	font-weight: 500;
 	margin-right: 3.5rem;
 	text-decoration: none;
-	color: rgb(255, 255, 255, .7);
+	color: rgb(255, 255, 255, 0.7);
 	font-size: 14px;
-	font-family: 'Poppins', sans-serif;
-	transition: .3s linear;
+	font-family: "Poppins", sans-serif;
+	transition: 0.3s linear;
 }
 
 .navbar a:hover {
@@ -57,12 +57,12 @@ body {
 }
 
 .navbar a.active::before {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	bottom: -3px;
 	width: 100%;
-	height: .2rem;
+	height: 0.2rem;
 	background-color: rgb(226, 8, 8);
 }
 
@@ -86,10 +86,10 @@ body {
 }
 
 .search i {
-	color: rgb(255, 255, 255, .7);
+	color: rgb(255, 255, 255, 0.7);
 	font-size: 13px;
 	cursor: pointer;
-	transition: .4s linear;
+	transition: 0.4s linear;
 }
 
 .search i:hover {
@@ -103,22 +103,22 @@ body {
 	/* border: 1px solid #fff; */
 	top: 35px;
 	left: -10px;
-	background: rgb(184, 184, 184, .3);
+	background: rgb(184, 184, 184, 0.3);
 	border-radius: 10px;
 	overflow: auto;
 	visibility: hidden;
 	opacity: 0;
-	transition: .3s linear;
+	transition: 0.3s linear;
 }
 
 .search .search_bx2::-webkit-scrollbar {
 	width: 7px;
-	background: rgb(184, 184, 184, .3);
+	background: rgb(184, 184, 184, 0.3);
 	border-radius: 20px;
 }
 
 .search .search_bx2::-webkit-scrollbar-thumb {
-	background: rgb(184, 184, 184, .7);
+	background: rgb(184, 184, 184, 0.7);
 	border-radius: 20px;
 }
 
@@ -130,11 +130,11 @@ body {
 	/* border: 1px solid #fff; */
 	display: flex;
 	align-items: center;
-	transition: .3s linear;
+	transition: 0.3s linear;
 }
 
 .search .search_bx2 a:hover {
-	background: rgb(184, 184, 184, .6);
+	background: rgb(184, 184, 184, 0.6);
 }
 
 .search .search_bx2 a img {
@@ -160,7 +160,6 @@ body {
 	max-height: 280px;
 }
 
-
 .sub-menu {
 	background: rgba(32, 32, 32, 0.9);
 	padding: 20px;
@@ -175,7 +174,7 @@ body {
 .user-info h2 {
 	font-size: 22px;
 	font-weight: 500;
-	color: rgb(255, 255, 255, .7);
+	color: rgb(255, 255, 255, 0.7);
 }
 
 .user-info img {
@@ -188,7 +187,7 @@ body {
 	border: 0;
 	height: 1px;
 	width: 100%;
-	background: rgb(255, 255, 255, .1);
+	background: rgb(255, 255, 255, 0.1);
 	margin: 15px 0 10px;
 }
 
@@ -196,7 +195,7 @@ body {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: rgb(255, 255, 255, .7);
+	color: rgb(255, 255, 255, 0.7);
 	margin: 10px 0;
 }
 
@@ -238,11 +237,10 @@ body {
 }
 
 .search .search_bx2 a .content2 p {
-	color: rgb(255, 255, 255, .7);
+	color: rgb(255, 255, 255, 0.7);
 	font-size: 11px;
 	font-weight: 500;
 }
-
 
 /* javascript classes start  */
 
@@ -250,14 +248,13 @@ body {
 	width: 180px;
 }
 
-
 /* javascript classes end  */
 
 .bell {
-	color: rgb(255, 255, 255, .7);
+	color: rgb(255, 255, 255, 0.7);
 	font-size: 13px;
 	cursor: pointer;
-	transition: .3s linear;
+	transition: 0.3s linear;
 	margin: 0px 35px;
 }
 
@@ -280,7 +277,7 @@ body {
 }
 
 main::before {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 100%;
 	height: 40%;
@@ -291,7 +288,7 @@ main::before {
 }
 
 main::after {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 30%;
 	height: 100%;
@@ -301,12 +298,11 @@ main::after {
 	z-index: -1;
 }
 
-
 main {
 	position: relative;
 	width: 100%;
 	height: 500px;
-	background: url('/public/img/121213.jpg') no-repeat center center/cover;
+	background: url("../img/121213.jpg") no-repeat center center/cover;
 	transition: 1s linear;
 	z-index: 2;
 	display: flex;
@@ -328,11 +324,11 @@ main {
 }
 
 .content h6 span {
-	color: rgb(255, 255, 255, .8);
+	color: rgb(255, 255, 255, 0.8);
 }
 
 .content h3 {
-	color: rgb(255, 255, 255, .8);
+	color: rgb(255, 255, 255, 0.8);
 	font-size: 15px;
 	margin: 10px 0px;
 	transition: 1s linear;
@@ -379,15 +375,14 @@ main {
 	border: 2px solid red;
 	color: #fff;
 	margin-right: 10px;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-size: 12px;
 	font-weight: 500;
 	box-shadow: 0px 3px 10px red;
-	transition: .3s linear;
+	transition: 0.3s linear;
 	cursor: pointer;
 	z-index: 999;
 }
-
 
 .content .btns button:nth-child(2) {
 	border: 2px solid #000;
@@ -442,16 +437,14 @@ main {
 	border: 2px solid rgb(218, 25, 25);
 	color: #fff;
 	margin-right: 10px;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-size: 12px;
 	font-weight: 500;
 	/* box-shadow: 0px 3px 10px rgb(218, 25, 25); */
-	transition: .4s linear;
+	transition: 0.4s linear;
 	cursor: pointer;
 	z-index: 999;
 }
-
-
 
 .btns button:hover {
 	border: 2px solid #000;
@@ -459,9 +452,6 @@ main {
 	background: #000;
 	box-shadow: 0px 3px 10px #000;
 }
-
-
-
 
 .slider_btns {
 	position: absolute;
@@ -480,7 +470,7 @@ main {
 	height: 3px;
 	margin-right: 5px;
 	transition: 1s linear;
-	background: rgb(184, 184, 184, .1);
+	background: rgb(184, 184, 184, 0.1);
 }
 
 .slider_btns h6:nth-child(1) {
@@ -490,7 +480,7 @@ main {
 .tranding_bx {
 	width: 90%;
 	height: auto;
-	border-bottom: 2px solid rgb(184, 184, 184, .1);
+	border-bottom: 2px solid rgb(184, 184, 184, 0.1);
 	margin: auto;
 	padding: 20px 0px;
 	display: flex;
@@ -501,7 +491,7 @@ main {
 .tranding_bx a {
 	position: relative;
 	text-decoration: none;
-	color: rgb(255, 255, 255, .7);
+	color: rgb(255, 255, 255, 0.7);
 	font-size: 13px;
 	/* transition: 0.3 linear; */
 	list-style: none;
@@ -525,7 +515,6 @@ main {
 	left: 45%;
 }
 
-
 /* tranding box active classes start  */
 
 .tranding_bx .active {
@@ -537,9 +526,7 @@ main {
 	background: red;
 }
 
-
 /* tranding box active classes end    */
-
 
 /* category box start  */
 
@@ -568,16 +555,16 @@ main {
 	outline: none;
 	color: #fff;
 	border-radius: 20px;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-weight: 400;
 	font-size: 13px;
 	margin-right: 10px;
 	cursor: pointer;
-	transition: .3s linear;
+	transition: 0.3s linear;
 }
 
 .cato_bx button:hover {
-	background: rgb(184, 184, 184, .1);
+	background: rgb(184, 184, 184, 0.1);
 }
 
 .cato_bx .cato_left_right {
@@ -593,20 +580,18 @@ main {
 
 .cato_bx .cato_left_right i {
 	transform: rotate(90deg);
-	transition: .3s linear;
+	transition: 0.3s linear;
 }
 
 .cato_bx .cato_left_right:nth-last-child(1) i {
 	transform: rotate(-90deg);
 }
 
-
 /* cato button java class start  */
 
 .cato_bx .cato_button_active {
-	background: rgb(184, 184, 184, .2);
+	background: rgb(184, 184, 184, 0.2);
 }
-
 
 /* cato button java class end */
 
@@ -624,7 +609,6 @@ main {
 .movie_bx_1::-webkit-scrollbar {
 	display: none;
 }
-
 
 /* movie extra box  */
 
@@ -687,7 +671,7 @@ main {
 }
 
 .movie_bx_1 .card a .content .metadata span {
-	color: rgb(255, 255, 255, .6);
+	color: rgb(255, 255, 255, 0.6);
 	/* font-weight: lighter; */
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -704,7 +688,7 @@ main {
 .movie_bx_1 .card a .content .metadata .rate .fas {
 	margin-right: 7px;
 	font-size: 9px;
-	color: rgb(255, 255, 255, .5);
+	color: rgb(255, 255, 255, 0.5);
 }
 
 .movie_bx_1 .card a .content .metadata .rate .fas:nth-last-child(2) {
@@ -732,20 +716,20 @@ main {
 }
 
 .movie_bx_1 button::before {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 25px;
 	height: 25px;
-	background: rgb(255, 255, 255, .5);
+	background: rgb(255, 255, 255, 0.5);
 	border-radius: 50%;
 	left: -5px;
 	top: -1px;
 	z-index: -1;
-	transition: .3s linear;
+	transition: 0.3s linear;
 }
 
 .movie_bx_1 button:hover::before {
-	background: rgb(255, 0, 0, .5);
+	background: rgb(255, 0, 0, 0.5);
 }
 
 .movie_bx_1 button:nth-child(2) {
@@ -764,7 +748,6 @@ main {
 	left: -7px;
 	top: -1px;
 }
-
 
 .movie_bx_2 {
 	width: 90%;
@@ -785,8 +768,6 @@ main {
 	margin: 7px 7px;
 }
 
-
-
 .cato_bx2 {
 	position: relative;
 	overflow: visible;
@@ -804,14 +785,14 @@ main {
 
 .cato_bx2 .left_cato button i {
 	margin-left: 10px;
-	transition: .3s linear;
+	transition: 0.3s linear;
 }
 
 .cato_bx2 .left_cato button:nth-child(4),
 button:nth-child(5) {
 	padding: 4px 15px;
 	position: relative;
-	background: rgb(184, 184, 184, .1);
+	background: rgb(184, 184, 184, 0.1);
 }
 
 .cato_bx2 .right_cato {
@@ -853,7 +834,7 @@ button:nth-child(5) {
 	width: 80px;
 	height: 150px;
 	/* border: 1px solid #fff; */
-	background: rgb(8, 8, 8, .7);
+	background: rgb(8, 8, 8, 0.7);
 	border-radius: 10px 3px 3px 10px;
 	top: 35px;
 	left: 0;
@@ -869,7 +850,7 @@ button:nth-child(5) {
 }
 
 .cato_bx2 button .year_bx::-webkit-scrollbar-track {
-	background: rgb(184, 184, 184, .4);
+	background: rgb(184, 184, 184, 0.4);
 	backdrop-filter: blur(5px);
 	border-radius: 20px;
 }
@@ -885,7 +866,7 @@ button:nth-child(5) {
 	font-weight: 600;
 	padding: 5px;
 	color: #fff;
-	transition: .3s linear;
+	transition: 0.3s linear;
 }
 
 .cato_bx2 button .year_bx div:hover {
@@ -900,7 +881,6 @@ button:nth-child(5) {
 	font-size: 16px;
 	font-weight: 600;
 }
-
 
 /* javascript classes start  */
 
@@ -924,12 +904,10 @@ button:nth-child(5) {
 	color: red;
 }
 
-
 /* Error page */
 
-
 .starsBG {
-	background: url(/public/img/stars.png) repeat;
+	background: url(../img/stars.png) repeat;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -961,10 +939,12 @@ button:nth-child(5) {
 	font-size: 70px;
 	margin: 0 0 30px;
 	/* letter-spacing: 8px; */
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-weight: 900;
 	margin-top: -30px;
-	text-shadow: 0 1px 0 #8a6dd4, 0 2px 0 #8a6dd4, 0 3px 0 #8a6dd4, 0 4px 0 #8a6dd4, 0 5px 0 #8a6dd4, 0 6px 0 #8a6dd4, 0 7px 0 #8a6dd4, 0 8px 0 #8a6dd4, 0 0 5px #8a6dd400, 0 -1px 3px #8a6dd445, 0 9px 9px #8a6dd452, 0 12px 12px #8a6dd452, 0 15px 15px #8a6dd44d;
+	text-shadow: 0 1px 0 #8a6dd4, 0 2px 0 #8a6dd4, 0 3px 0 #8a6dd4, 0 4px 0 #8a6dd4, 0 5px 0 #8a6dd4, 0 6px 0 #8a6dd4,
+		0 7px 0 #8a6dd4, 0 8px 0 #8a6dd4, 0 0 5px #8a6dd400, 0 -1px 3px #8a6dd445, 0 9px 9px #8a6dd452,
+		0 12px 12px #8a6dd452, 0 15px 15px #8a6dd44d;
 }
 
 .starsBG .container .main2 button {
@@ -974,11 +954,11 @@ button:nth-child(5) {
 	border: 3px solid #614d94;
 	color: #fff;
 	margin-right: 10px;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-size: 20px;
 	font-weight: 700;
 	box-shadow: 0px 3px 10px #614d94;
-	transition: .3s linear;
+	transition: 0.3s linear;
 	cursor: pointer;
 	z-index: 999;
 }
@@ -995,7 +975,9 @@ button:nth-child(5) {
 	color: #fff;
 	margin-left: 0px;
 	margin-right: 20px;
-	text-shadow: 0 1px 0 #8a6dd4, 0 2px 0 #8a6dd4, 0 3px 0 #8a6dd4, 0 4px 0 #8a6dd4, 0 5px 0 #8a6dd4, 0 6px 0 #8a6dd4, 0 7px 0 #8a6dd4, 0 8px 0 #8a6dd4, 0 0 5px #8a6dd400, 0 -1px 3px #8a6dd445, 0 9px 9px #8a6dd452, 0 12px 12px #8a6dd452, 0 15px 15px #8a6dd44d;
+	text-shadow: 0 1px 0 #8a6dd4, 0 2px 0 #8a6dd4, 0 3px 0 #8a6dd4, 0 4px 0 #8a6dd4, 0 5px 0 #8a6dd4, 0 6px 0 #8a6dd4,
+		0 7px 0 #8a6dd4, 0 8px 0 #8a6dd4, 0 0 5px #8a6dd400, 0 -1px 3px #8a6dd445, 0 9px 9px #8a6dd452,
+		0 12px 12px #8a6dd452, 0 15px 15px #8a6dd44d;
 }
 
 .starsBG .container .main .saturn {
