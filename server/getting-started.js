@@ -37,7 +37,7 @@ app.get("/Register", (req, res) => {
 app.use((req, res) => {
   res
     .status(404)
-    .sendFile(path.join(__dirname, "..", "public", "html/eror.html"));
+    .sendFile(path.join(__dirname, "..", "public", "html/error.html"));
 });
 
 async function startApp() {
