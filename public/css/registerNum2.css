@@ -112,6 +112,7 @@ body {
 	transform-style: preserve-3d;
 	transform: rotateX(-25deg) rotateY(50deg);
 }
+
 .cube div {
 	position: absolute;
 	top: 0;
@@ -120,6 +121,7 @@ body {
 	height: 100%;
 	transform-style: preserve-3d;
 }
+
 .cube div span {
 	position: absolute;
 	top: 0;
@@ -139,6 +141,7 @@ body {
 	transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
 	background: url(/public/img/Rectangle.png);
 }
+
 .first .top::before {
 	content: "";
 	position: absolute;
@@ -192,6 +195,7 @@ body {
 	transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
 	background: url(/public/img/clown.png);
 }
+
 .second .top::before {
 	content: "";
 	position: absolute;
@@ -369,6 +373,7 @@ body {
 	width: 150px;
 	height: 150px;
 }
+
 .top::before {
 	content: "";
 	position: absolute;
@@ -529,6 +534,7 @@ body {
 .setDiv {
 	margin: 10px 0px;
 }
+
 .setDiv .inputDivName {
 	box-sizing: border-box;
 	display: flex;
@@ -685,6 +691,7 @@ input {
 a {
 	color: #169c89;
 }
+
 a:hover {
 	color: red;
 }
