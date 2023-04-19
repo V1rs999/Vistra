@@ -10,11 +10,11 @@ function togglePasswordVisibility(passwordId) {
   if (passwordField.type === "password") {
     passwordField.type = "text";
     showPasswordButton.innerHTML =
-      '<img class="hide" src="/public/img/icons8-eye-50.svg">';
+      '<img class="hide" src="../img/icons8-eye-50.svg">';
   } else {
     passwordField.type = "password";
     showPasswordButton.innerHTML =
-      '<img class="hide" src="/public/img/icons8-eye-64.svg">';
+      '<img class="hide" src="../img/icons8-eye-64.svg">';
   }
 }
 
