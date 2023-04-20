@@ -458,6 +458,7 @@ body {
 
 .bodyLog {
 	position: absolute;
+	display: flex;
 	width: 511px;
 	height: 616px;
 	background: #212226;
@@ -541,12 +542,12 @@ body {
 	flex-direction: row;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: 7px 5px;
+	/* padding: 7px 5px; */
 	gap: 10px;
 	width: 343px;
 	height: 58px;
-	background: #f8f8f8;
-	border: 2px solid #dddddd;
+	/* background: #f8f8f8;
+	border: 2px solid #dddddd; */
 	border-radius: 10px;
 	flex: none;
 	order: 0;
@@ -561,13 +562,14 @@ input {
 	position: absolute;
 	display: flex;
 	flex-direction: row;
-	width: 320px;
-	height: 33px;
+	width: 342px;
+	height: 60px;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 27px;
 	background: #f8f8f8;
+	border-radius: 9px;
 }
 
 .inputDivName {
@@ -590,15 +592,15 @@ input {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 7px 5px;
+	/* padding: 7px 5px; */
 	gap: 10px;
 	width: 343px;
 	height: 58px;
-	background: #f8f8f8;
-	border: 2px solid #dddddd;
+	/* background: #f8f8f8;
+	border: 2px solid #dddddd; */
 	border-radius: 10px;
 	flex: none;
-	order: 1;
+	order: 2;
 	flex-grow: 0;
 }
 
@@ -608,12 +610,12 @@ input {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 7px 5px;
+	/* padding: 7px 5px; */
 	gap: 10px;
 	width: 343px;
 	height: 58px;
-	background: #f8f8f8;
-	border: 2px solid #dddddd;
+	/* background: #f8f8f8;
+	border: 2px solid #dddddd; */
 	border-radius: 10px;
 	flex: none;
 	order: 2;
@@ -626,19 +628,19 @@ input {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 7px 5px;
+	/* padding: 7px 5px; */
 	gap: 10px;
 	width: 343px;
 	height: 58px;
-	background: #f8f8f8;
-	border: 2px solid #dddddd;
+	/* background: #f8f8f8;
+	border: 2px solid #dddddd; */
 	border-radius: 10px;
 	flex: none;
 	order: 3;
 	flex-grow: 0;
 }
 
-.Register {
+/* .Register {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -651,6 +653,43 @@ input {
 	bottom: -30px;
 	background: #169c89;
 	border-radius: 10px;
+} */
+
+.Register {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 7px 5px;
+	gap: 10px;
+	position: absolute;
+	width: 343px;
+	height: 58px;
+	bottom: -30px;
+
+	color: #FFF;
+	font-weight: bold;
+	/* text-transform: uppercase; */
+	background: #169c89;
+	cursor: pointer;
+	/* border: 2px solid #BFE2FF; */
+	outline: 2px solid;
+	outline-color: #138675;
+	outline-offset: 0px;
+	text-shadow: none;
+	transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+	cursor: pointer;
+	z-index: 999;
+	border-radius: 20px;
+}
+
+
+.Register:active {
+	/* box-shadow: inset 0 0 20px #BFE2FF; */
+	outline-color: rgba(255, 255, 255, 0);
+	outline-offset: 15px;
+
+	color: #FFF;
 }
 
 .Alredy {
@@ -663,10 +702,19 @@ input {
 	position: absolute;
 	width: 509px;
 	height: 59px;
-	left: -82px;
+	left: -83px;
 	bottom: -170px;
 	background: #e8f3f2;
 	border-radius: 0px 0px 10px 10px;
+}
+
+a {
+	color: #169c89;
+}
+
+a:hover {
+	font-weight: 700;
+	color: #107566;
 }
 
 .Alr {
@@ -688,25 +736,25 @@ input {
 	order: 0;
 }
 
-a {
-	color: #169c89;
-}
 
-a:hover {
+
+/* a:hover {
 	color: red;
-}
+} */
 
 .input-field {
-	width: 290px;
-	height: 40px;
-	border: none;
-	border-radius: 50px;
-	padding-left: 40px;
+	width: 343px;
+	height: 60px;
+	/* border: none; */
+	border-radius: 8px;
+	padding-left: 39px;
+	padding-right: 30px;
 	font-size: 16px;
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-position-x: 10px;
 	background-size: 20px;
+	border: 3px solid #fff;
 }
 
 .input-field.name {
@@ -723,8 +771,8 @@ a:hover {
 
 .hide {
 	position: absolute;
-	top: 0px;
-	right: 0px;
+	top: 10px;
+	right: 8px;
 	width: 22px;
 	height: 40px;
 	border: none;
@@ -733,4 +781,23 @@ a:hover {
 	background-position: left center;
 	background-position-x: 10px;
 	background-size: 20px 20px;
+}
+
+.input input:focus {
+	outline: 0;
+}
+
+.input.success input {
+	border-color: green;
+}
+
+.input.error input {
+	border-color: red;
+}
+
+.input .error {
+	color: red;
+	font-size: 0.1px;
+	/* height: 13px; */
+	position: absolute;
 }

@@ -81,11 +81,12 @@
 					<h4>Enter your credentials to continue.</h4>
 				</div>
 			</div>
-			<form action="#" method="get">
+			<form id="form1" action="#" method="get">
 				<div class="setDiv">
 					<div class="inputDivEmail">
 						<div class="input text">
-							<input type="text" pattern=".+@gmail\.com" class="input-field email" placeholder="Email">
+							<input id="email" type="text" class="input-field email" placeholder="Email">
+							<div class="error"></div>
 						</div>
 					</div>
 
@@ -93,19 +94,20 @@
 						<div class="inputDivPassworld">
 							<div class="input text">
 								<span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide"
-										src="/public/img/icons8-eye-64.svg" alt=""></span>
+										src="../img/icons8-eye-64.svg" alt=""></span>
 								<input id="pass1" type="password" class="input-field password" placeholder="Password">
+								<div class="error"></div>
 							</div>
 						</div>
 					</div>
-
-
-					<a href="#" class="forget text">Forget Password?</a>
-					<button class="login Log" type="button">Login</button>
-					<span class="Policy text">By logging, you are agreeing with our <a class="show-modal forget text"
-							href="#">Terms of Use and Privacy Policy</a></span>
-					<div class="ahead ahe">Don't have an account?<a href="/Register">Register</a></div>
 				</div>
+
+				<a href="#" class="forget text">Forget Password?</a>
+				<button class="login Log" type="submit">Login</button>
+				<span class="Policy text">By logging, you are agreeing with our <a class="show-modal forget text"
+						href="#">Terms of Use and Privacy Policy</a></span>
+				<div class="ahead ahe">Don't have an account?<a href="/Register">Register</a></div>
+
 			</form>
 		</div>
 	</div>

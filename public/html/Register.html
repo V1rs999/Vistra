@@ -85,49 +85,48 @@
                 <div class="setDiv">
                     <div class="inputDivName">
                         <div class="input text">
-                            <input type="text" pattern="[a-z]{0,9}" class="input-field name" placeholder="Name">
-                        </div>
-                    </div>
-
-                    <div class="setDiv">
-                        <div class="inputDivEmail">
-                            <div class="input text">
-                                <input type="email" pattern=".+@gmail\.com" class="input-field email"
-                                    placeholder="Email">
-                            </div>
-                        </div>
-
-                        <div class="setDiv">
-                            <div class="inputDivPassworld">
-                                <div class="input text">
-                                    <span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide"
-                                            src="../img/icons8-eye-64.svg" alt=""></span>
-                                    <input id="pass1" type="password" class="input-field password"
-                                        placeholder="Password">
-                                    <div class="error"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="setDiv">
-                            <div class="inputDivConfirmPassworld">
-                                <div class="input text">
-                                    <span id="show-pass2" onclick="togglePasswordVisibility('pass2')"><img class="hide"
-                                            src="../img/icons8-eye-64.svg" alt=""></span>
-                                    <input id="pass2" type="password" class="input-field password"
-                                        placeholder="Confirm Password">
-                                    <div class="error"></div>
-                                </div>
-                            </div>
-
-                            <button id="button" class="Register Reg" type="submit">Register</button>
-                            <div class="Alredy Alr">Already have an account?<a href="/Login">Log in.</a></div>
+                            <input id="username" type="text" class="input-field name" placeholder="Name">
+                            <div class="error"></div>
                         </div>
                     </div>
                 </div>
+
+                <div class="setDiv">
+                    <div class="inputDivEmail">
+                        <div class="input text">
+                            <input id="email" type="text" class="input-field email" placeholder="Email">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setDiv">
+                    <div class="inputDivPassworld">
+                        <div class="input text">
+                            <span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide"
+                                    src="../img/icons8-eye-64.svg" alt=""></span>
+                            <input id="pass1" type="password" class="input-field password" placeholder="Password">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setDiv">
+                    <div class="inputDivConfirmPassworld">
+                        <div class="input text">
+                            <span id="show-pass2" onclick="togglePasswordVisibility('pass2')"><img class="hide"
+                                    src="../img/icons8-eye-64.svg" alt=""></span>
+                            <input id="pass2" type="password" class="input-field password"
+                                placeholder="Confirm Password">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="button" class="Register Reg" type="submit">Register</button>
+                <div class="Alredy Alr">Already have an account?<a href="/Login">Log in.</a></div>
             </form>
         </div>
-
     </div>
 
     <script src="../js/index.js"></script>
