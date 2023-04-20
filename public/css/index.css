@@ -24,7 +24,7 @@ body {
 	height: 50px;
 	width: 100%;
 	padding: 0 5%;
-	background: rgb(54, 50, 50);
+	background: rgb(54, 50, 50, 0.4);
 	display: flex;
 	align-items: center;
 	z-index: 100;
@@ -47,7 +47,7 @@ body {
 	margin-right: 3.5rem;
 	text-decoration: none;
 	color: rgb(255, 255, 255, 0.7);
-	font-size: 14px;
+	font-size: 17px;
 	font-family: "Poppins", sans-serif;
 	transition: 0.3s linear;
 }
@@ -81,13 +81,13 @@ body {
 	background: transparent;
 	color: #fff;
 	transition: 1s linear;
-	-webkit-transition: 1s linear;
+	transition: 1s linear;
 	width: 0px;
 }
 
 .search i {
 	color: rgb(255, 255, 255, 0.7);
-	font-size: 13px;
+	font-size: 17px;
 	cursor: pointer;
 	transition: 0.4s linear;
 }
@@ -252,7 +252,7 @@ body {
 
 .bell {
 	color: rgb(255, 255, 255, 0.7);
-	font-size: 13px;
+	font-size: 17px;
 	cursor: pointer;
 	transition: 0.3s linear;
 	margin: 0px 35px;
@@ -307,7 +307,7 @@ main {
 	z-index: 2;
 	display: flex;
 	align-items: center;
-	margin-top: 50px;
+	/* margin-top: 50px; */
 }
 
 .content {
@@ -749,6 +749,7 @@ main {
 	top: -1px;
 }
 
+/*  */
 .movie_bx_2 {
 	width: 90%;
 	height: auto;
@@ -768,6 +769,7 @@ main {
 	margin: 7px 7px;
 }
 
+/*  */
 .cato_bx2 {
 	position: relative;
 	overflow: visible;
@@ -1023,3 +1025,70 @@ button:nth-child(5) {
 		margin-left: 2000px;
 	}
 }
+
+
+/* #form {
+	width: 300px;
+	margin: 20vh auto 0 auto;
+	padding: 20px;
+	background-color: whitesmoke;
+	border-radius: 4px;
+	font-size: 12px;
+}
+
+#form h1 {
+	color: #000;
+	text-align: center;
+}
+
+#form button {
+	padding: 10px;
+	margin-top: 10px;
+	width: 100%;
+	color: white;
+	background-color: blue;
+	border: none;
+	border-radius: 4px;
+}
+
+.input-control {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-control input {
+	border: 2px solid #fff;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+	outline: 0;
+}
+
+.input-control.success input {
+	border-color: #009578;
+}
+
+.input-control.error input {
+	border-color: red;
+}
+
+.input-control .error {
+	color: red;
+	font-size: 9px;
+	height: 13px;
+} */
+
+/* body {
+	background-color: #9b59b6;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+} */

@@ -28,7 +28,7 @@ app.get("/movie", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/movie.html"));
 });
 app.get("/Login", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "public", "html/login.html"));
+  res.sendFile(path.join(__dirname, "..", "public", "html/Login.html"));
 });
 app.get("/Register", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/Register.html"));
@@ -37,7 +37,7 @@ app.get("/Register", (req, res) => {
 app.use((req, res) => {
   res
     .status(404)
-    .sendFile(path.join(__dirname, "..", "public", "html/eror.html"));
+    .sendFile(path.join(__dirname, "..", "public", "html/error.html"));
 });
 
 async function startApp() {
