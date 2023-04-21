@@ -15,7 +15,7 @@ authrouter.post(
   ],
   authConroller.registration
 );
-authrouter.post("/login", authConroller.login);
+authrouter.post("/Login", authConroller.login);
 authrouter.get("/users", roleMiddleware(["ADMIN"]), authConroller.getUsers);
 
 module.exports = authrouter;
