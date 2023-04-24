@@ -33,6 +33,9 @@ app.get("/Login", (req, res) => {
 app.get("/Register", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/Register.html"));
 });
+app.get("/MyList", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/MyList.html"));
+});
 
 app.use((req, res) => {
   res
