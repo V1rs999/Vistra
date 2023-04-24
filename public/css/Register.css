@@ -801,3 +801,7 @@ a:hover {
 	/* height: 13px; */
 	position: absolute;
 }
+
+.getStart h4 {
+	position: absolute;
+}

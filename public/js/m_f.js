@@ -687,26 +687,45 @@ const movies = [
   upload: "latest"
 },
 ]
+window.addEventListener('load', () => {
+    movies.forEach(element => {
+      const { img, title, year, url, rate } = element;
+      let card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+      <a href="${url}">
+                  <img src="${img}" alt="${title}">
+                  <div class="content">
+                      <h2>${title}</h2>
+                      <div class="metadata">
+                          <span>${year}</span>
+                          <div class="rate">
+                              <i class="fas fa-heart"></i>
+                              <i class="fas fa-eye"></i>
+                              <i class="fas fa-star"></i>
+                              <span>${rate}</span>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+        `
+    all.appendChild(card);
+    });
+  })
 
-// action button and active box
+//   latest box start 
+let latest = document.getElementById('latest');
 
-let action1 = document.getElementById('action1');
-let action_bx = document.getElementById('action_bx');
+let latest_array = movies.filter((e) => {
+    return e.upload == "latest";
+})
 
-action1.addEventListener('click', () => {
-    action1.classList.toggle('cato_button_active');
-    action_bx.classList.toggle('movie_box_active');
-});
-
-const action_array = movies.filter((e) => {
-    return e.genre1 == "action";
-});
-
-action_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
+window.addEventListener('load', () => {
+        latest_array.forEach(element => {
+            const { img, title, year, url, rate } = element;
+            let card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
     <a href="${url}">
                 <img src="${img}" alt="${title}">
                 <div class="content">
@@ -720,30 +739,27 @@ action_array.forEach(element => {
                             <span>${rate}</span>
                         </div>
                     </div>
-                </div>
+                </div> 
             </a>
     `
 
-    action_bx.appendChild(card);
-});
+            latest.appendChild(card);
+        });
+    })
 
-let crime1 = document.getElementById('crime1');
-let crime_bx = document.getElementById('crime_bx');
+// 
+    let year_2022 = document.getElementById('year_2022');
 
-crime1.addEventListener('click', () => {
-    crime1.classList.toggle('cato_button_active');
-    crime_bx.classList.toggle('movie_box_active');
-});
+let year2022 = movies.filter((e) => {
+    return e.year == "2022";
+})
 
-const crime_array = movies.filter((e) => {
-    return e.genre2 == "crime";
-});
-
-crime_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
+window.addEventListener('load', () => {
+        year2022.forEach(element => {
+            const { img, title, year, url, rate } = element;
+            let card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
     <a href="${url}">
                 <img src="${img}" alt="${title}">
                 <div class="content">
@@ -757,30 +773,26 @@ crime_array.forEach(element => {
                             <span>${rate}</span>
                         </div>
                     </div>
-                </div>
+                </div> 
             </a>
     `
 
-    crime_bx.appendChild(card);
-});
+            year_2022.appendChild(card);
+        });
+    })
+    // 2021 box start 
+let year_2021 = document.getElementById('year_2021');
 
-let biography1 = document.getElementById('biography1');
-let biography_bx = document.getElementById('biography_bx');
+let year2021 = movies.filter((e) => {
+    return e.year == "2021";
+})
 
-biography1.addEventListener('click', () => {
-    biography1.classList.toggle('cato_button_active');
-    biography_bx.classList.toggle('movie_box_active');
-});
-
-const biography_array = movies.filter((e) => {
-    return e.genre3 == "biography";
-});
-
-biography_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
+window.addEventListener('load', () => {
+        year2021.forEach(element => {
+            const { img, title, year, url, rate } = element;
+            let card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
     <a href="${url}">
                 <img src="${img}" alt="${title}">
                 <div class="content">
@@ -794,30 +806,26 @@ biography_array.forEach(element => {
                             <span>${rate}</span>
                         </div>
                     </div>
-                </div>
+                </div> 
             </a>
     `
 
-    biography_bx.appendChild(card);
-});
+            year_2021.appendChild(card);
+        });
+    })
 
-let drama1 = document.getElementById('drama1');
-let drama_bx = document.getElementById('drama_bx');
+    let letter_a = document.getElementById('letter_a');
 
-drama1.addEventListener('click', () => {
-    drama1.classList.toggle('cato_button_active');
-    drama_bx.classList.toggle('movie_box_active');
-});
+let letter_a_array = movies.filter((e) => {
+    return e.letter == "a";
+})
 
-const drama_array = movies.filter((e) => {
-    return e.genre7 == "drama";
-});
-
-drama_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
+window.addEventListener('load', () => {
+        letter_a_array.forEach(element => {
+            const { img, title, year, url, rate } = element;
+            let card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
     <a href="${url}">
                 <img src="${img}" alt="${title}">
                 <div class="content">
@@ -831,69 +839,43 @@ drama_array.forEach(element => {
                             <span>${rate}</span>
                         </div>
                     </div>
-                </div>
+                </div> 
             </a>
     `
-    drama_bx.appendChild(card);
-});
 
-// let all = document.getElementById('all');
+            letter_a.appendChild(card);
+        });
+    })
+    // letter_b box start 
+let letter_b = document.getElementById('letter_b');
 
-// window.addEventListener('load', () => {
-//   movies.forEach(element => {
-//     const { img, title, year, url, rate } = element;
-//     let card = document.createElement('div');
-//     card.classList.add('card');
-//     card.innerHTML = `
-//     <a href="${url}">
-//                 <img src="${img}" alt="${title}">
-//                 <div class="content">
-//                     <h2>${title}</h2>
-//                     <div class="metadata">
-//                         <span>${year}</span>
-//                         <div class="rate">
-//                             <i class="fas fa-heart"></i>
-//                             <i class="fas fa-eye"></i>
-//                             <i class="fas fa-star"></i>
-//                             <span>${rate}</span>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </a>
-//       `
-//   all.appendChild(card);
-//   })
-// })
-    // latest box start 
-// let latest = document.getElementById('latest');
+let letter_b_array = movies.filter((e) => {
+    return e.letter == "b";
+})
 
-// let latest_array = movies.filter((e) => {
-//     return e.upload == "latest";
-// })
+window.addEventListener('load', () => {
+        letter_b_array.forEach(element => {
+            const { img, title, year, url, rate } = element;
+            let card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
+    <a href="${url}">
+                <img src="${img}" alt="${title}">
+                <div class="content">
+                    <h2>${title}</h2>
+                    <div class="metadata">
+                        <span>${year}</span>
+                        <div class="rate">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-star"></i>
+                            <span>${rate}</span>
+                        </div>
+                    </div>
+                </div> 
+            </a>
+    `
 
-// window.addEventListener('load', () => {
-//         latest_array.forEach(element => {
-//             const { img, title, year, url, rate } = element;
-//             let card = document.createElement('div');
-//             card.classList.add('card');
-//             card.innerHTML = `
-//     <a href="${url}">
-//                 <img src="${img}" alt="${title}">
-//                 <div class="content">
-//                     <h2>${title}</h2>
-//                     <div class="metadata">
-//                         <span>${year}</span>
-//                         <div class="rate">
-//                             <i class="fas fa-heart"></i>
-//                             <i class="fas fa-eye"></i>
-//                             <i class="fas fa-star"></i>
-//                             <span>${rate}</span>
-//                         </div>
-//                     </div>
-//                 </div> 
-//             </a>
-//     `
-
-//             latest.appendChild(card);
-//         });
-//     })
+            letter_b.appendChild(card);
+        });
+    })

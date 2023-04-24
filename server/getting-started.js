@@ -34,6 +34,7 @@ app.get("/Register", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/Register.html"));
 });
 
+
 app.use((req, res) => {
   res
     .status(404)
