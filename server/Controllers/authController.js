@@ -38,6 +38,7 @@ class authConroller {
       res.status(400).json({ message: "Registration error" });
     }
   }
+
   async login(req, res) {
     try {
       const { username, password } = req.body;
@@ -58,6 +59,7 @@ class authConroller {
       res.status(400).json({ message: "Login error" });
     }
   }
+
   async getUsers(req, res) {
     try {
       const users = await User.find();
@@ -67,4 +69,5 @@ class authConroller {
     }
   }
 }
+
 module.exports = new authConroller();
