@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/Login.css">
+	<!-- <link rel="stylesheet" href="../css/poput.css"> -->
 	<title>Login</title>
 </head>
 
@@ -71,7 +72,7 @@
 		</div>
 	</div>
 	<div class="bodyLog">
-
+		<button onclick="window.location.href='index'" class="close-form">&times;</button>
 		<div class="AutoLayout">
 			<div class="head">
 				<div class="h1">
@@ -105,14 +106,44 @@
 				<a href="/forgotPass" class="forget text">Forget Password?</a>
 				<button class="login Log" type="submit">Login</button>
 				<span class="Policy text">By logging, you are agreeing with our <a class="show-modal forget text"
-						href="#">Terms of Use and Privacy Policy</a></span>
+						href="#">Terms
+						of Use and Privacy Policy</a></span>
 				<div class="ahead ahe">Don't have an account?<a href="/Register">Register</a></div>
 
 			</form>
+			<div class="modal hidden">
+				<button class="close-modal">&times;</button>
+				<div class="terms-text">
+					<h2>Terms Of Service</h2>
+					<span>Last Edit: 04/13/2022</span>
+					<span>Greeting Users,</span>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quisquam quam. Minima quaerat omnis
+						nulla
+						rem tempore suscipit recusandae dolores magnam, sed, blanditiis obcaecati! Odio iusto
+						necessitatibus
+						quae maiores, eaque recusandae voluptate velit ipsam, nulla, quisquam asperiores mollitia!
+						Explicabo
+						consequatur accusamus incidunt consequuntur rem accusantium impedit beatae adipisci animi
+						debitis
+						Culpa eaque quia quisquam nisi eligendi? Dolores neque quas qui excepturi eveniet aliquid esse
+						eum
+						nihil
+						ratione. Aperiam accusamus nisi totam sequi facilis, doloribus architecto voluptates
+						perspiciatis
+						repudiandae culpa dicta laborum libero aut inventore ratione nobis amet provident, magni a vel
+						officiis
+						delectus blanditiis, laboriosam rem! Mollitia tempora pariatur ipsa.</p>
+				</div>
+			</div>
 		</div>
+		<div class="overlay hidden"></div>
+
+	</div>
 	</div>
 
+
 	<script src="../js/index.js"></script>
+	<script src="../js/1.js"></script>
 </body>
 
 </html>

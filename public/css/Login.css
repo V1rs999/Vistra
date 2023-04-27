@@ -799,13 +799,17 @@ input {
 
 .close-modal {
 	position: absolute;
-	top: 1.2rem;
-	right: 2rem;
-	font-size: 5rem;
-	color: #333;
+	top: 8px;
+	right: 8px;
+	font-size: 50px;
+	color: gray;
 	cursor: pointer;
 	border: none;
 	background: none;
+}
+
+.close-modal:hover {
+	color: #fff;
 }
 
 .hidden {
@@ -814,41 +818,72 @@ input {
 
 .modal {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 200%;
-	background-color: white;
-	padding: 6rem;
+	width: 150%;
+	background-color: #111;
+	padding: 70px 50px 20px;
 	border-radius: 5px;
 	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-	z-index: 10;
-}
-
-h1 {
-	font-size: 2.5rem;
-	margin-bottom: 2rem;
-}
-
-p {
-	font-size: 1.8rem;
-}
-
-html {
-	font-size: 62.5%;
-	box-sizing: border-box;
+	z-index: 999;
 }
 
 .overlay {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgb(0, 0, 0);
-	-webkit-backdrop-filter: blur(3px);
+	width: 1980px;
+	height: 1280px;
 	backdrop-filter: blur(3px);
 	z-index: 5;
+}
+
+.terms-text {
+	padding: 0 20px;
+	height: 450px;
+	overflow-y: auto;
+	font-size: 14px;
+	font-weight: 500;
+	color: #f1f1f1;
+	font-family: "Poppins", sans-serif;
+}
+
+.terms-text::-webkit-scrollbar {
+	width: 5px;
+	background-color: #282828;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+	background-color: #d13639;
+}
+
+.terms-text h2 {
+	text-transform: uppercase;
+	display: block;
+	font-size: 1.5em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+
+}
+
+.terms-text span {
+	display: block;
+	font-size: 1.1em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.terms-text p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 }
 
 .ahead a {
@@ -883,4 +918,19 @@ span .Policy a .show-modal:hover {
 	font-size: 0.1px;
 	/* height: 13px; */
 	position: absolute;
+}
+
+.close-form {
+	position: absolute;
+	top: -5px;
+	right: 8px;
+	font-size: 50px;
+	color: gray;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.close-form:hover {
+	color: #fff;
 }
