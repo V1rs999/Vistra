@@ -8,6 +8,7 @@ authrouter.post(
   "/registration",
   [
     check("username", "can't be emty").notEmpty(),
+    check("email", "can't be emty").notEmpty(),
     check("password", "length shoud be between 4 and 10 char").isLength({
       min: 4,
       max: 10,

@@ -17,7 +17,7 @@ class authConroller {
       if (!errors.isEmpty()) {
         return res.status(400).json({ message: "Error registation", errors });
       }
-      const { username, password } = req.body;
+      const { username, email, password } = req.body;
       const candidate = await User.findOne({ username });
       if (candidate) {
         return res
@@ -28,6 +28,7 @@ class authConroller {
       const userRole = await Role.findOne({ value: "USER" });
       const user = new User({
         username,
+        email,
         password: hashPassword,
         roles: [userRole.value],
       });
@@ -41,12 +42,10 @@ class authConroller {
 
   async login(req, res) {
     try {
-      const { username, password } = req.body;
-      const user = await User.findOne({ username });
+      const { email, password } = req.body;
+      const user = await User.findOne({ email });
       if (!user) {
-        return res
-          .status(400)
-          .json({ message: `User ${username} not be found` });
+        return res.status(400).json({ message: `User ${email} not be found` });
       }
       const validPassword = bcrypt.compareSync(password, user.password);
       if (!validPassword) {
