@@ -15,4 +15,3 @@ function togglePasswordVisibility(passwordId) {
       '<img class="hide" src="../img/icons8-eye-64.svg">';
   }
 }
-

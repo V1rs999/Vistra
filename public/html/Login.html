@@ -2,121 +2,244 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/Login.css">
-  <title>Login</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/Login.css">
+	<title>Login</title>
 </head>
 
 <body>
-<div class="cube first">
-  <div class="top topfirst"></div>
-  <div class="bottom bottomfirst"></div>
-  <div>
-    <span style="--i: 0"></span>
-    <span style="--i: 1"></span>
-    <span style="--i: 2"></span>
-    <span style="--i: 3"></span>
-  </div>
-</div>
-<div class="cube second">
-  <div class="top topsecond"></div>
-  <div class="bottom bottomsecond"></div>
-  <div>
-    <span style="--i: 0"></span>
-    <span style="--i: 1"></span>
-    <span style="--i: 2"></span>
-    <span style="--i: 3"></span>
-  </div>
-</div>
-<div class="cube tree">
-  <div class="top toptree"></div>
-  <div class="bottom bottomtree"></div>
-  <div>
-    <span style="--i: 0"></span>
-    <span style="--i: 1"></span>
-    <span style="--i: 2"></span>
-    <span style="--i: 3"></span>
-  </div>
-</div>
-<div class="cube four">
-  <div class="top topfour"></div>
-  <div class="bottom bottomfour"></div>
-  <div>
-    <span style="--i: 0"></span>
-    <span style="--i: 1"></span>
-    <span style="--i: 2"></span>
-    <span style="--i: 3"></span>
-  </div>
-</div>
-<div class="cube five">
-  <div class="top topfive"></div>
-  <div class="bottom bottomfive"></div>
-  <div>
-    <span style="--i: 0"></span>
-    <span style="--i: 1"></span>
-    <span style="--i: 2"></span>
-    <span style="--i: 3"></span>
-  </div>
-</div>
-<div class="cube six">
-  <div class="top topsix"></div>
-  <div class="bottom bottomsix"></div>
-  <div>
-    <span style="--i: 0"></span>
-    <span style="--i: 1"></span>
-    <span style="--i: 2"></span>
-    <span style="--i: 3"></span>
-  </div>
-</div>
-<div class="bodyLog">
+	<div class="cube first">
+		<div class="top topfirst"></div>
+		<div class="bottom bottomfirst"></div>
+		<div>
+			<span style="--i: 0"></span>
+			<span style="--i: 1"></span>
+			<span style="--i: 2"></span>
+			<span style="--i: 3"></span>
+		</div>
+	</div>
+	<div class="cube second">
+		<div class="top topsecond"></div>
+		<div class="bottom bottomsecond"></div>
+		<div>
+			<span style="--i: 0"></span>
+			<span style="--i: 1"></span>
+			<span style="--i: 2"></span>
+			<span style="--i: 3"></span>
+		</div>
+	</div>
+	<div class="cube tree">
+		<div class="top toptree"></div>
+		<div class="bottom bottomtree"></div>
+		<div>
+			<span style="--i: 0"></span>
+			<span style="--i: 1"></span>
+			<span style="--i: 2"></span>
+			<span style="--i: 3"></span>
+		</div>
+	</div>
+	<div class="cube four">
+		<div class="top topfour"></div>
+		<div class="bottom bottomfour"></div>
+		<div>
+			<span style="--i: 0"></span>
+			<span style="--i: 1"></span>
+			<span style="--i: 2"></span>
+			<span style="--i: 3"></span>
+		</div>
+	</div>
+	<div class="cube five">
+		<div class="top topfive"></div>
+		<div class="bottom bottomfive"></div>
+		<div>
+			<span style="--i: 0"></span>
+			<span style="--i: 1"></span>
+			<span style="--i: 2"></span>
+			<span style="--i: 3"></span>
+		</div>
+	</div>
+	<div class="cube six">
+		<div class="top topsix"></div>
+		<div class="bottom bottomsix"></div>
+		<div>
+			<span style="--i: 0"></span>
+			<span style="--i: 1"></span>
+			<span style="--i: 2"></span>
+			<span style="--i: 3"></span>
+		</div>
+	</div>
+	<div class="bodyLog">
+		<button onclick="window.location.href='index'" class="close-form">&times;</button>
+		<div class="AutoLayout">
+			<div class="head">
+				<div class="h1">
+					<h1>Welcome Back!</h1>
+				</div>
+				<div class="yourCredentials">
+					<h4>Enter your credentials to continue.</h4>
+				</div>
+			</div>
+			<form id="form1" action="#" method="get">
+				<div class="setDiv">
+					<div class="inputDivEmail">
+						<div class="input text">
+							<input id="email" type="text" class="input-field email" placeholder="Email">
+							<div class="error"></div>
+						</div>
+					</div>
 
-  <div class="AutoLayout">
-    <div class="head">
-      <div class="h1">
-        <h1>Welcome Back!</h1>
-      </div>
-      <div class="yourCredentials">
-        <h4>Enter your credentials to continue.</h4>
-      </div>
-    </div>
-    <!-- !FORM -->
-    <form id="form1" action="#" method="post">
-      <div class="setDiv">
-        <div class="inputDivEmail">
-          <div class="input text">
-            <input id="email" type="text" class="input-field email" placeholder="Email">
-            <div class="error"></div>
-          </div>
-        </div>
-
-        <div class="setDiv">
-          <div class="inputDivPassworld">
-            <div class="input text">
+					<div class="setDiv">
+						<div class="inputDivPassworld">
+							<div class="input text">
 								<span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide"
-                                                                                       src="../img/icons8-eye-64.svg"
-                                                                                       alt=""></span>
-              <input id="pass1" type="password" class="input-field password" placeholder="Password">
-              <div class="error"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+										src="../img/icons8-eye-64.svg" alt=""></span>
+								<input id="pass1" type="password" class="input-field password" placeholder="Password">
+								<div class="error"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-      <a href="#" class="forget text">Forget Password?</a>
-      <button class="login Log" type="submit">Login</button>
-      <span class="Policy text">By logging, you are agreeing with our <a class="show-modal forget text"
-                                                                         href="#">Terms of Use and Privacy Policy</a></span>
-      <div class="ahead ahe">Don't have an account?<a href="/Register">Register</a></div>
+				<a href="/forgotPass" class="forget text">Forget Password?</a>
+				<button class="login Log" type="submit">Login</button>
+				<span class="Policy text">By logging, you are agreeing with our <a class="show-modal forget text"
+						href="#">Terms
+						of Use and Privacy Policy</a></span>
+				<div class="ahead ahe">Don't have an account?<a href="/Register">Register</a></div>
 
-    </form>
-  </div>
-</div>
+			</form>
+			<div class="modal hidden">
+				<button class="close-modal">&times;</button>
+				<div class="tc_wrap">
+					<div class="tabs_list">
+						<ul>
+							<li data-tc="tab_item_1" class="active">Terms of use</li>
+							<li data-tc="tab_item_2">Intellectual property rights</li>
+							<li data-tc="tab_item_3">Prohibited activities</li>
+							<li data-tc="tab_item_4">Termination clause</li>
+							<li data-tc="tab_item_5">Governing law</li>
+						</ul>
+					</div>
+					<div class="tabs_content">
+						<div class="tab_head">
+							<h2>Terms & Privacy</h2>
+						</div>
+						<div class="tab_body">
+							<div class="tab_item tab_item_1">
+								<h3>Terms of use</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+							</div>
+							<div class="tab_item tab_item_2" style="display: none;">
+								<h3>Intellectual property rights</h3>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odit neque a natus
+									fuga
+									incidunt, facilis, consequatur ducimus vitae consectetur reiciendis tempora
+									explicabo animi
+									quis laborum possimus totam voluptatum illum.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+							</div>
+							<div class="tab_item tab_item_3" style="display: none;">
+								<h3>Prohibited activities</h3>
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat sit commodi
+									esse enim? Cum
+									tempore deserunt numquam molestias. Pariatur, minima consequatur nam
+									exercitationem
+									explicabo porro quibusdam. Excepturi, voluptatibus repellendus. Provident!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+									reiciendis aut
+									debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+									ut
+									accusantium laboriosam eius sequi?</p>
+							</div>
+							<div class="tab_item tab_item_4" style="display: none;">
+								<h3>Termination clause</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quae ipsa,
+									enim
+									aspernatur ducimus vero! Repellendus exercitationem dolore, voluptatibus
+									consectetur facere
+									eveniet in, corporis, nostrum animi unde recusandae repudiandae. Excepturi.</p>
+							</div>
+							<div class="tab_item tab_item_5" style="display: none;">
+								<h3>Governing law</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem alias
+									nemo eius
+									aspernatur doloremque laboriosam velit, consequatur nesciunt, ipsum facere
+									autem, dicta quam
+									consectetur! Nostrum quae odit adipisci omnis asperiores!</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem alias
+									nemo eius
+									aspernatur doloremque laboriosam velit, consequatur nesciunt, ipsum facere
+									autem, dicta quam
+									consectetur! Nostrum quae odit adipisci omnis asperiores!</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem alias
+									nemo eius
+									aspernatur doloremque laboriosam velit, consequatur nesciunt, ipsum facere
+									autem, dicta quam
+									consectetur! Nostrum quae odit adipisci omnis asperiores!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay hidden"></div>
+		</div>
 
-<script src="../js/LoginForm.js"></script>
-<script src="../js/index.js"></script>
+	</div>
+	</div>
 
+
+	<script src="../js/index.js"></script>
+	<script src="../js/LoginForm.js"></script>
 </body>
 
 </html>
