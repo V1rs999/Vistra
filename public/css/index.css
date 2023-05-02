@@ -56,13 +56,18 @@ body {
 	color: #fff;
 }
 
+/* .navbar a.active {
+	color: rgb(226, 8, 8);
+	font-weight: 700;
+} */
+
 .navbar a.active::before {
 	content: "";
 	position: absolute;
-	left: 0;
-	bottom: -15px;
-	width: 100%;
-	height: 0.2rem;
+	left: -5px;
+	bottom: -13px;
+	width: 120%;
+	height: 3px;
 	background-color: rgb(226, 8, 8);
 }
 

@@ -799,8 +799,8 @@ input {
 
 .close-modal {
 	position: absolute;
-	top: 8px;
-	right: 8px;
+	top: -12px;
+	right: 4px;
 	font-size: 50px;
 	color: gray;
 	cursor: pointer;
@@ -821,10 +821,10 @@ input {
 	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 150%;
+	width: 200%;
 	background-color: #111;
-	padding: 70px 50px 20px;
-	border-radius: 5px;
+	/* padding: 70px 50px 20px; */
+	border-radius: 10px;
 	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 	z-index: 999;
 }
@@ -933,4 +933,110 @@ span .Policy a .show-modal:hover {
 
 .close-form:hover {
 	color: #fff;
+}
+
+.tc_wrap {
+	width: 700px;
+	max-width: 100%;
+	height: 450px;
+	background: #212226;
+	display: flex;
+	border-radius: 10px;
+	overflow: hidden;
+	/* border: 1px solid #000000; */
+	font-size: 14px;
+	color: #cdcccc;
+}
+
+.tc_wrap .tabs_list {
+	width: 200px;
+	background: #3a3c44;
+	height: 100%;
+}
+
+.tc_wrap .tabs_content {
+	width: calc(100% - 200px);
+	padding: 0 10px 0 11px;
+	height: 105%;
+}
+
+.tc_wrap .tabs_content .tab_head,
+.tc_wrap .tabs_content .tab_foot {
+	color: #169c89;
+	padding: 25px 0;
+	height: 70px;
+}
+
+.tc_wrap .tabs_content .tab_head {
+	text-align: center;
+}
+
+.tc_wrap .tabs_content .tab_head h2 {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.tc_wrap .tabs_content .tab_body {
+	height: calc(100% - 140px);
+	overflow: auto;
+}
+
+.tc_wrap .tabs_list ul {
+	padding: 70px 20px;
+	text-align: right;
+}
+
+.tc_wrap .tabs_list ul li {
+	padding: 10px 0;
+	position: relative;
+	margin-bottom: 3px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+.tc_wrap .tabs_list ul li:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -20px;
+	width: 2px;
+	height: 100%;
+	background: #169c89;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+.tc_wrap .tabs_list ul li.active,
+.tc_wrap .tabs_list ul li:hover {
+	color: #169c89;
+	font-weight: bold;
+}
+
+.tc_wrap .tabs_list ul li.active:before {
+	opacity: 1;
+}
+
+.tc_wrap .tabs_content .tab_body .tab_item h3 {
+	padding-top: 10px;
+	margin-bottom: 10px;
+	color: #169c89;
+	font-weight: bold;
+}
+
+.tc_wrap .tabs_content .tab_body .tab_item p {
+	margin-bottom: 20px;
+}
+
+.tc_wrap .tabs_content .tab_body .tab_item.active {
+	display: block !important;
+}
+
+.tab_body::-webkit-scrollbar {
+	width: 5px;
+	background-color: #282828;
+}
+
+.tab_body::-webkit-scrollbar-thumb {
+	background-color: #169c89;
 }

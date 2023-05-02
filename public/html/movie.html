@@ -26,7 +26,7 @@
         <nav class="navbar">
             <a href="/home">Home</a>
             <a href="/TvShow">TV Shows</a>
-            <a href="/movie">Movies</a>
+            <a href="/movie" class="active">Movies</a>
             <a href="/eror">My Friends</a>
             <a href="/eror">My List</a>
         </nav>
@@ -39,40 +39,41 @@
         <div class="bell">
             <i class="fas fa-bell"></i>
         </div>
-        <div class="user">
-            <img src="../img/user.png" onclick="toggleMenu()" alt="">
-        </div>
-        <div class="sub-menu-wrap" id="subMenu">
-            <div class="sub-menu">
-                <div class="user-info">
-                    <img src="../img/user.png" alt="">
-                    <h2>Andrew</h2>
-                </div>
-                <hr>
-
-                <a href="eror" class="sub-menu-link">
-                    <img src="../img/user-solid.svg" alt="">
-                    <p>Edit Profile</p>
-                    <span>></span>
-                </a>
-                <a href="eror" class="sub-menu-link">
-                    <img src="../img/gear-solid.svg" alt="">
-                    <p>Setting & Privacy</p>
-                    <span>></span>
-                </a>
-                <a href="eror" class="sub-menu-link">
-                    <img src="../img/circle-info-solid.svg" alt="">
-                    <p>Help & Support</p>
-                    <span>></span>
-                </a>
-                <a href="/Login" class="sub-menu-link">
-                    <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
-                    <p>Logout</p>
-                    <span>></span>
-                </a>
-
+        <form action="#" method="post">
+            <div class="user">
+                <img src="../img/user.png" onclick="toggleMenu()" alt="">
             </div>
-        </div>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="../img/user.png" alt="">
+                        <h2>Andrew</h2>
+                    </div>
+                    <hr>
+
+                    <a href="eror" class="sub-menu-link">
+                        <img src="../img/user-solid.svg" alt="">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="eror" class="sub-menu-link">
+                        <img src="../img/gear-solid.svg" alt="">
+                        <p>Setting & Privacy</p>
+                        <span>></span>
+                    </a>
+                    <a href="eror" class="sub-menu-link">
+                        <img src="../img/circle-info-solid.svg" alt="">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+                    <a href="/Login" class="sub-menu-link">
+                        <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </form>
     </header>
     <main>
         <div class="content">
@@ -245,8 +246,8 @@
         <div class="rate_change" id="rate8"></div>
     </div>
 
-    <!-- <script src="../js/script.js"></script> -->
-    <script src="../js/m_f.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/movie_TvShow.js" type="module"></script>
 </body>
 
 </html>

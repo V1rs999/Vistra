@@ -805,3 +805,18 @@ a:hover {
 .getStart h4 {
 	position: absolute;
 }
+
+.close-form {
+	position: absolute;
+	top: -5px;
+	right: 8px;
+	font-size: 50px;
+	color: gray;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.close-form:hover {
+	color: #fff;
+}
