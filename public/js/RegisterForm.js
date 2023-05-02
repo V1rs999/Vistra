@@ -4,12 +4,38 @@ const email = document.getElementById("email");
 const pass1 = document.getElementById("pass1");
 const pass2 = document.getElementById("pass2");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  const email = document.getElementById("email").value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("pass1").value;
+  try {
+    const response = await fetch("/auth/registration", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+      }),
+    });
 
-  validateInputs();
+    const data = await response.json();
+    console.log(data);
+    if (response.ok) {
+      window.location.href = "/Login";
+    }
+
+    document.getElementById("username").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("pass1").value = "";
+    validateInputs();
+  } catch (err) {
+    console.error(err);
+  }
 });
-
 const setError = (element, message) => {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error");

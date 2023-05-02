@@ -4,7 +4,7 @@ const pass = document.getElementById("pass1");
 
 form1.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const username = document.getElementById("email").value;
+  const email = document.getElementById("email").value;
   const password = document.getElementById("pass1").value;
   try {
     const response = await fetch("/auth/Login", {
@@ -13,13 +13,16 @@ form1.addEventListener("submit", async (e) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username,
+        email,
         password,
       }),
     });
 
     const data = await response.json();
     console.log(data);
+    if (response.ok) {
+      window.location.href = "/home";
+    }
 
     document.getElementById("email").value = "";
     document.getElementById("pass1").value = "";
