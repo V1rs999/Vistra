@@ -26,8 +26,8 @@
       <a href="/home">Home</a>
       <a href="/TvShow" class="active">TV Shows</a>
       <a href="/movie">Movies</a>
-      <a href="/eror">My Friends</a>
-      <a href="/eror">My List</a>
+      <a href="/error">My Friends</a>
+      <a href="/error">My List</a>
     </nav>
     <div class="search">
       <input type="text" placeholder="Search movies..." id="search">
@@ -38,40 +38,40 @@
     <div class="bell">
       <i class="fas fa-bell"></i>
     </div>
-    <div class="user">
-      <img src="../img/user.png" onclick="toggleMenu()" alt="">
-    </div>
-    <div class="sub-menu-wrap" id="subMenu">
-      <div class="sub-menu">
-        <div class="user-info">
-          <img src="../img/user.png" alt="">
-          <h2>Andrew</h2>
-        </div>
-        <hr>
-
-        <a href="eror" class="sub-menu-link">
-          <img src="../img/user-solid.svg" alt="">
-          <p>Edit Profile</p>
-          <span>></span>
-        </a>
-        <a href="eror" class="sub-menu-link">
-          <img src="../img/gear-solid.svg" alt="">
-          <p>Setting & Privacy</p>
-          <span>></span>
-        </a>
-        <a href="eror" class="sub-menu-link">
-          <img src="../img/circle-info-solid.svg" alt="">
-          <p>Help & Support</p>
-          <span>></span>
-        </a>
-        <a href="/Login" class="sub-menu-link">
-          <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
-          <p>Logout</p>
-          <span>></span>
-        </a>
-
+    <form action="#" method="get">
+      <div class="user">
+        <img src="../img/user.png" onclick="toggleMenu()" alt="">
       </div>
-    </div>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../img/user.png" id="user_img" alt="">
+            <h2 id="username"></h2>
+          </div>
+          <hr>
+          <a href="eror" class="sub-menu-link">
+            <img src="../img/user-solid.svg" alt="">
+            <p>Edit Profile</p>
+            <span>></span>
+          </a>
+          <a href="eror" class="sub-menu-link">
+            <img src="../img/gear-solid.svg" alt="">
+            <p>Setting & Privacy</p>
+            <span>></span>
+          </a>
+          <a href="eror" class="sub-menu-link">
+            <img src="../img/circle-info-solid.svg" alt="">
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+          <a href="/Login" class="sub-menu-link">
+            <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </form>
   </header>
   <main>
     <div class="content">
@@ -87,9 +87,9 @@
         The basic premise of the games is that,
         due to experiment-related accidents, the player controls a human transformed into a giant monster.</p>
       <div class="btns">
-        <button onclick="window.location.href='eror'"><i class="fas fa-play"></i>WATCH</button>
-        <button onclick="window.location.href='eror'"><i class="fas fa-plus"></i>ADD LIST</button>
-        <button onclick="window.location.href='eror'">CREATE ROOM</button>
+        <button onclick="window.location.href='/error'"><i class="fas fa-play"></i>WATCH</button>
+        <button onclick="window.location.href='/error'"><i class="fas fa-plus"></i>ADD LIST</button>
+        <button onclick="window.location.href='/error'">CREATE ROOM</button>
       </div>
     </div>
     <div class="slider_btns">
@@ -110,7 +110,6 @@
     <div class="left_cato">
       <button>Sort by:</button>
       <button id="all_btn">All</button>
-      <button id="latest_btn">Latest</button>
       <button id="year">Year <i class="fas fa-angle-down"></i>
         <div class="year_bx">
           <div id="year2023__btn">2023</div>
@@ -180,7 +179,6 @@
   <!-- movies box strat  -->
   <div class="movie_bx_1 movie_bx_2">
     <div class="all box2_actives" id="all"></div>
-    <div class="latest box2_actives" id="latest"></div>
     <div class="year" id="year_2023"></div>
     <div class="year" id="year_2022"></div>
     <div class="year" id="year_2021"></div>
