@@ -9,7 +9,7 @@ action1.addEventListener('click', () => {
 });
 
 const action_array = movies.filter((e) => {
-    return e.genre1 == "action";
+    return e.genre == "action";
 });
 
 action_array.forEach(element => {
@@ -46,7 +46,7 @@ crime1.addEventListener('click', () => {
 });
 
 const crime_array = movies.filter((e) => {
-    return e.genre2 == "crime";
+    return e.genre == "crime";
 });
 
 crime_array.forEach(element => {
@@ -83,7 +83,7 @@ biography1.addEventListener('click', () => {
 });
 
 const biography_array = movies.filter((e) => {
-    return e.genre3 == "biography";
+    return e.genre == "biography";
 });
 
 biography_array.forEach(element => {
@@ -120,7 +120,7 @@ drama1.addEventListener('click', () => {
 });
 
 const drama_array = movies.filter((e) => {
-    return e.genre7 == "drama";
+    return e.genre == "drama";
 });
 
 drama_array.forEach(element => {

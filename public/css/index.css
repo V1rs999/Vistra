@@ -832,8 +832,8 @@ main {
 	transition: 0.3s linear;
 }
 
-.cato_bx2 .left_cato button:nth-child(4),
-button:nth-child(5) {
+.cato_bx2 .left_cato button:nth-child(3),
+button:nth-child(4) {
 	padding: 4px 15px;
 	position: relative;
 	background: rgb(184, 184, 184, 0.1);
