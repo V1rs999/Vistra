@@ -36,10 +36,12 @@ app.get("/Register", (req, res) => {
 app.get("/MyList", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyList.html"));
 });
+app.get("/player", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/player.html"));
+});
 app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/index.html"));
 });
-
 
 app.use((req, res) => {
   res
