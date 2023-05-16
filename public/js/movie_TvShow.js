@@ -1,5 +1,7 @@
 import {movies} from "../js/card_movies.js";
 
+let all = document.getElementById('all');
+
 window.addEventListener('load', () => {
     movies.forEach(element => {
       const { img, title, year, url, rate } = element;
@@ -25,40 +27,6 @@ window.addEventListener('load', () => {
     all.appendChild(card);
     });
   })
-
-let latest = document.getElementById('latest');
-
-let latest_array = movies.filter((e) => {
-    return e.upload == "latest";
-})
-
-window.addEventListener('load', () => {
-        latest_array.forEach(element => {
-            const { img, title, year, url, rate } = element;
-            let card = document.createElement('div');
-            card.classList.add('card');
-            card.innerHTML = `
-    <a href="${url}">
-                <img src="${img}" alt="${title}">
-                <div class="content">
-                    <h2>${title}</h2>
-                    <div class="metadata">
-                        <span>${year}</span>
-                        <div class="rate">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-eye"></i>
-                            <i class="fas fa-star"></i>
-                            <span>${rate}</span>
-                        </div>
-                    </div>
-                </div> 
-            </a>
-    `
-
-            latest.appendChild(card);
-        });
-    })
-
 // 
     let year_2022 = document.getElementById('year_2022');
 
@@ -92,6 +60,8 @@ window.addEventListener('load', () => {
             year_2022.appendChild(card);
         });
     })
+
+
     // 2021 box start 
 let year_2021 = document.getElementById('year_2021');
 
@@ -194,71 +164,66 @@ window.addEventListener('load', () => {
     });
 
 
-    let rate8 = document.getElementById('rate8');
-
-    let rate8_array = movies.filter((e) => {
-        return e.rate >= 8;
-    })
-    
-    window.addEventListener('load', () => {
-            rate8_array.forEach(element => {
-                const { img, title, year, url, rate } = element;
-                let card = document.createElement('div');
-                card.classList.add('card');
-                card.innerHTML = `
-        <a href="${url}">
-                    <img src="${img}" alt="${title}">
-                    <div class="content">
-                        <h2>${title}</h2>
-                        <div class="metadata">
-                            <span>${year}</span>
-                            <div class="rate">
-                                <i class="fas fa-heart"></i>
-                                <i class="fas fa-eye"></i>
-                                <i class="fas fa-star"></i>
-                                <span>${rate}</span>
-                            </div>
-                        </div>
-                    </div> 
-                </a>
-        `
-    
-                rate8.appendChild(card);
-            });
+    document.addEventListener('DOMContentLoaded', () => {
+        const rate8 = document.getElementById('rate8');
+        const rate4 = document.getElementById('rate4');
+      
+        const rate8Array = movies.filter((e) => {
+          return e.rate >= 8;
         });
-
-    let rate4 = document.getElementById('rate4');
-
-    let rate4_array = movies.filter((e) => {
-        return e.rate <= 7;
-    })
-    
-    window.addEventListener('load', () => {
-            rate4_array.forEach(element => {
-                const { img, title, year, url, rate } = element;
-                let card = document.createElement('div');
-                card.classList.add('card');
-                card.innerHTML = `
-        <a href="${url}">
-                    <img src="${img}" alt="${title}">
-                    <div class="content">
-                        <h2>${title}</h2>
-                        <div class="metadata">
-                            <span>${year}</span>
-                            <div class="rate">
-                                <i class="fas fa-heart"></i>
-                                <i class="fas fa-eye"></i>
-                                <i class="fas fa-star"></i>
-                                <span>${rate}</span>
-                            </div>
-                        </div>
-                    </div> 
-                </a>
-        `
-    
-                rate4.appendChild(card);
-            });
+      
+        rate8Array.forEach((element) => {
+          const { img, title, year, url, rate } = element;
+          let card = document.createElement('div');
+          card.classList.add('card');
+          card.innerHTML = `
+            <a href="${url}">
+              <img src="${img}" alt="${title}">
+              <div class="content">
+                <h2>${title}</h2>
+                <div class="metadata">
+                  <span>${year}</span>
+                  <div class="rate">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-star"></i>
+                    <span>${rate}</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          `;
+          rate8.appendChild(card);
         });
+      
+        const rate4Array = movies.filter((e) => {
+          return e.rate < 8;
+        });
+      
+        rate4Array.forEach((element) => {
+          const { img, title, year, url, rate } = element;
+          let card = document.createElement('div');
+          card.classList.add('card');
+          card.innerHTML = `
+            <a href="${url}">
+              <img src="${img}" alt="${title}">
+              <div class="content">
+                <h2>${title}</h2>
+                <div class="metadata">
+                  <span>${year}</span>
+                  <div class="rate">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-star"></i>
+                    <span>${rate}</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          `;
+          rate4.appendChild(card);
+        });
+      });
 
         let all_btn = document.getElementById('all_btn');
 
@@ -267,12 +232,6 @@ window.addEventListener('load', () => {
             all.classList.toggle('box2_actives');
         });
         
-        let latest_btn = document.getElementById('latest_btn');
-        
-        latest_btn.addEventListener('click', () => {
-            latest_btn.classList.toggle('cato_button_active');
-            latest.classList.toggle('box2_actives');
-        });
         let year2022__btn = document.getElementById('year2022__btn');
         
         year2022__btn.addEventListener('click', () => {
