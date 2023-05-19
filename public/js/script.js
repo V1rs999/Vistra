@@ -1,4 +1,3 @@
-// !Мейн сторінка
 let search = document.getElementById("search");
 let search_icon = document.getElementById("search_icon");
 let subMenu = document.getElementById("subMenu");
@@ -29,7 +28,7 @@ const slider_load = () => {
             <span>Action / Adventure / Sci-Fi</span>`;
     document.getElementById("header_title").innerText = "Rampage";
     document.getElementById("header_pra").innerText =
-      "From Wikipedia, the free encyclopedia Rampage is a series of video games released by Midway (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various consoles. The basic premise of the games is that, due to experiment-related accidents, the player controls a human transformed into a giant monster.";
+      "From Wikipedia, the free encyclopedia Rampage is a series of video games released by Midway (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and constious consoles. The basic premise of the games is that, due to experiment-related accidents, the player controls a human transformed into a giant monster.";
     slider_btn[0].style.background = "#fff";
     slider_btn[1].style.background = "rgb(184, 184, 184, .1)";
     slider_btn[2].style.background = "rgb(184, 184, 184, .1)";
@@ -100,29 +99,25 @@ if (a_z) {
   });
 }
 
+const tab_lists = document.querySelectorAll(".tabs_list ul li");
+const tab_items = document.querySelectorAll(".tab_item");
 
-var tab_lists = document.querySelectorAll(".tabs_list ul li");
-var tab_items = document.querySelectorAll(".tab_item"); 
+tab_lists.forEach(function (list) {
+  list.addEventListener("click", function () {
+    const tab_data = list.getAttribute("data-tc");
 
-tab_lists.forEach(function(list){
-  list.addEventListener("click", function(){
-    var tab_data = list.getAttribute("data-tc");
-    
-    tab_lists.forEach(function(list){
+    tab_lists.forEach(function (list) {
       list.classList.remove("active");
     });
     list.classList.add("active");
-    
-    tab_items.forEach(function(item){
-      var tab_class = item.getAttribute("class").split(" ");
-      if(tab_class.includes(tab_data)){
+
+    tab_items.forEach(function (item) {
+      const tab_class = item.getAttribute("class").split(" ");
+      if (tab_class.includes(tab_data)) {
         item.style.display = "block";
-      }
-      else{
+      } else {
         item.style.display = "none";
       }
-      
-    })
-    
-  })
-})
+    });
+  });
+});
