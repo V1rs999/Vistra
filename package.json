@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./server/getting-started.js",
+    "dev": "nodemon ./server/getting-started.js --exec 'npm run open-browser'",
+    "open-browser": "start http://localhost:5000/Login",
     "test": "mocha"
   },
   "repository": {
-    "type": "git`",
+    "type": "git",
     "url": "git+https://github.com/V1rs999/Vistra.git"
   },
   "keywords": [
