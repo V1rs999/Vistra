@@ -99,12 +99,13 @@
 <div class="group"></div>
 
 <script>
+  console.log(localStorage.getItem("videoUrl"));
   var player = videojs("my-video", {
     techOrder: ["youtube"],
     sources: [
       {
         type: "video/youtube",
-        src: "https://music.youtube.com/watch?v=ba7mB8oueCY&list=RDTMAK5uy_lz2owBgwWf1mjzyn_NbxzMViQzIg8IAIg"
+        src: localStorage.getItem("videoUrl")
       }
     ],
     youtube: {
