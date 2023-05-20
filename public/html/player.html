@@ -99,25 +99,29 @@
 <div class="group"></div>
 
 <script>
-  console.log(localStorage.getItem("videoUrl"));
+  // Retrieve the URL parameter from the query string
+  const urlParams = new URLSearchParams(window.location.search);
+  const videoUrl = urlParams.get("url");
+
+  console.log(videoUrl); // Check if the URL is correctly retrieved
+
   var player = videojs("my-video", {
     techOrder: ["youtube"],
     sources: [
       {
         type: "video/youtube",
-        src: localStorage.getItem("videoUrl")
+        src: videoUrl // Set the retrieved URL as the video source
       }
     ],
     youtube: {
-      iv_load_policy: 3, // Приховувати підказки
-      modestbranding: 1, // Приховувати логотип YouTube
-      controls: 1, // Відображати елементи керування
-      rel: 0 // Відключити рекомендації на закінчення відео
+      iv_load_policy: 3,
+      modestbranding: 1,
+      controls: 1,
+      rel: 0
     },
     controlBar: {
-      progressControl: false // Відключити відображення прогрес бара
+      progressControl: false
     }
-
   });
 </script>
 </body>

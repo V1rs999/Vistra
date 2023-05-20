@@ -8,11 +8,12 @@ fetch("http://localhost:5000/api/posts/")
     const action_bx = document.getElementById("action_bx");
     data.forEach((element) => {
       const { picture, title, year, url, rate } = element;
-      console.log(url);
       let card = document.createElement("div");
       card.classList.add("card");
       card.innerHTML = `
-        <a href="/player" onclick="setVideoUrl('${url}')">
+        <a href="/player?url=${encodeURIComponent(
+          url
+        )}"> <!-- Add the URL as a query parameter -->  
           <img src="${picture}" alt="${title}">
           <div class="content">
             <h2>${title}</h2>
@@ -36,7 +37,3 @@ fetch("http://localhost:5000/api/posts/")
   .catch((error) => {
     console.log("Помилка при отриманні даних з сервера:", error);
   });
-
-function setVideoUrl(url) {
-  console.log(url);
-}
