@@ -2,6 +2,8 @@ import {movies} from "../js/card_movies.js";
 
 let action_bx = document.getElementById('action_bx');
 
+
+
 const action_array = movies.filter((e) => {
     return e.genre == "action";
 });
