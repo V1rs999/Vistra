@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./server/getting-started.js --exec 'npm run open-browser'",
-    "open-browser": "start http://localhost:5000/Login",
+    "dev": "nodemon ./server/getting-started.js ",
     "test": "mocha"
   },
   "repository": {
