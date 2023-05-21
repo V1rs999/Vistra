@@ -79,17 +79,9 @@
         <button id="action1">Action</button>
         <button id="crime1">Crime</button>
         <button id="biography1">Biography</button>
-        <button id="animation1">Animation</button>
         <button id="comady1">Comady</button>
         <button id="documentary1">Documentary</button>
         <button id="drama1">Drama</button>
-        <!-- all button copyed  -->
-        <!-- <div class="cato_left_right">
-            <i class="fas fa-angle-down" id="left_scroll"></i>
-        </div>
-        <div class="cato_left_right">
-            <i class="fas fa-angle-down" id="right_scroll"></i>
-        </div> -->
     </div>
 
     <!-- movies box strat  -->
@@ -99,7 +91,6 @@
         <div class="movie_bxx" id="action_bx"></div>
         <div class="movie_bxx" id="crime_bx"></div>
         <div class="movie_bxx" id="biography_bx"></div>
-        <div class="movie_bxx" id="animation_bx"></div>
         <div class="movie_bxx" id="comady_bx"></div>
         <div class="movie_bxx" id="documentary_bx"></div>
         <div class="movie_bxx" id="drama_bx"></div>
@@ -108,7 +99,12 @@
 
 
 
-
+    <script>
+        // Отримання значення з локального сховища
+        const userData = localStorage.getItem("user");
+        const user = JSON.parse(userData);
+        document.getElementById("username").textContent = user.username;
+    </script>
     <script src="../js/trends.js" type="module"></script>
     <script src="../js/script.js"></script>
 </body>

@@ -100,7 +100,6 @@ body {
 	position: absolute;
 	width: 200px;
 	height: 300px;
-	/* border: 1px solid #fff; */
 	top: 35px;
 	left: -10px;
 	background: rgb(184, 184, 184, 0.3);
@@ -127,7 +126,6 @@ body {
 	color: #fff;
 	width: 100%;
 	height: 50px;
-	/* border: 1px solid #fff; */
 	display: flex;
 	align-items: center;
 	transition: 0.3s linear;
@@ -307,13 +305,11 @@ main {
 	z-index: 2;
 	display: flex;
 	align-items: center;
-	/* margin-top: 50px; */
 }
 
 .content {
 	width: 77%;
 	height: auto;
-	/* border: 1px solid #fff; */
 	margin: 0px auto 0px auto;
 }
 
@@ -440,7 +436,6 @@ main {
 	font-family: "Poppins", sans-serif;
 	font-size: 12px;
 	font-weight: 500;
-	/* box-shadow: 0px 3px 10px rgb(218, 25, 25); */
 	transition: 0.4s linear;
 	cursor: pointer;
 	z-index: 999;
@@ -457,7 +452,6 @@ main {
 	position: absolute;
 	width: 300px;
 	height: 50px;
-	/* border: 1px solid #fff; */
 	bottom: 0;
 	left: 45%;
 	display: flex;
@@ -493,7 +487,6 @@ main {
 	text-decoration: none;
 	color: rgb(255, 255, 255, 0.7);
 	font-size: 13px;
-	/* transition: 0.3 linear; */
 	list-style: none;
 }
 
@@ -535,7 +528,6 @@ main {
 	width: 90%;
 	height: auto;
 	margin: auto;
-	/* border: 1px solid #fff; */
 	display: flex;
 	align-items: center;
 	padding: 20px 40px 20px 0px;
@@ -599,10 +591,8 @@ main {
 /* movie extra box  */
 
 .movie_bx_1 {
-	/* position: relative; */
 	width: 100%;
 	height: 260px;
-	/* border: 1px solid #fff; */
 	display: flex;
 	align-items: center;
 	overflow: auto;
@@ -631,13 +621,9 @@ main {
 .movie_bx_1 .card {
 	min-width: 136px;
 	height: 250px;
-	/* border: 1px solid #fff; */
+
 	margin: 0px 7px;
 }
-
-/* .movie_bx_1 .card:nth-last-child(1) {
-	margin: 0px 5px 0px 0px;
-} */
 
 .movie_bx_1 .card a {
 	text-decoration: none;
@@ -653,7 +639,6 @@ main {
 .movie_bx_1 .card a .content {
 	width: 100%;
 	height: 15%;
-	/* border: 1px solid #fff; */
 	margin-top: 5px;
 }
 
@@ -673,7 +658,6 @@ main {
 
 .movie_bx_1 .card a .content .metadata span {
 	color: rgb(255, 255, 255, 0.6);
-	/* font-weight: lighter; */
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -766,7 +750,6 @@ main {
 .movie_bx_2 .card {
 	width: 136px;
 	height: 250px;
-	/* border: 1px solid #fff; */
 	margin: 7px 3px;
 }
 
@@ -777,10 +760,8 @@ main {
 .rate_change {
 	width: 1900px;
 	height: auto;
-	/* margin: auto; */
 	overflow: unset;
 	flex-wrap: wrap;
-	/* padding: 20px 0px; */
 	align-items: center;
 	display: flex;
 	justify-content: flex-start;
@@ -817,7 +798,6 @@ main {
 button:nth-child(4) {
 	padding: 4px 15px;
 	position: relative;
-	background: rgb(184, 184, 184, 0.1);
 }
 
 .cato_bx2 .right_cato {
@@ -858,7 +838,6 @@ button:nth-child(4) {
 	position: absolute;
 	width: 80px;
 	height: 150px;
-	/* border: 1px solid #fff; */
 	background: rgb(8, 8, 8, 0.7);
 	border-radius: 10px 3px 3px 10px;
 	top: 35px;
@@ -951,7 +930,6 @@ button:nth-child(4) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* height: 100px; */
 	margin-top: 220px;
 }
 
@@ -963,7 +941,6 @@ button:nth-child(4) {
 	color: #fff;
 	font-size: 70px;
 	margin: 0 0 30px;
-	/* letter-spacing: 8px; */
 	font-family: "Poppins", sans-serif;
 	font-weight: 900;
 	margin-top: -30px;
