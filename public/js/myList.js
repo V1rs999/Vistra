@@ -19,7 +19,6 @@ action_array.forEach(element => {
                         <span>${year}</span>
                         <div class="rate">
                             <i class="fas fa-heart"></i>
-                            <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
                             <span>${rate}</span>
                         </div>
@@ -49,7 +48,6 @@ crime_array.forEach(element => {
                     <div class="metadata">
                         <span>${year}</span>
                         <div class="rate">
-                            <i class="fas fa-heart"></i>
                             <i class="fas fa-eye"></i>
                             <i class="fas fa-star"></i>
                             <span>${rate}</span>
