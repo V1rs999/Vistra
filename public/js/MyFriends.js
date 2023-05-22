@@ -16,7 +16,7 @@ let friends = {
             image: "friend3.png",
             username: "brittneyhasen",
             email: " brittneyhasen@gmail.com",
-            status: "ofline"
+            status: "online"
         },
         {
             image: "friend4.png",
@@ -222,6 +222,7 @@ function loadSelectedFriends() {
   
   // Add keyup event listener to the search input
   document.getElementById("search-input").addEventListener("keyup", searchFriends);
+
   
   // Create panel with information labels
   let infoPanel = document.createElement("div");
@@ -251,6 +252,7 @@ function loadSelectedFriends() {
     container.classList.add("container");
     container.style.display = "flex";
     container.style.justifyContent = "space-between";
+    container.style.alignItems = "center";
   
     // Image
     let imgContainer = document.createElement("div");
@@ -266,6 +268,7 @@ function loadSelectedFriends() {
     let infoContainer = document.createElement("div");
     infoContainer.style.display = "flex";
     infoContainer.style.justifyContent = "space-between";
+    infoContainer.style.alignItems = "center";
   
     let username = document.createElement("h5");
     username.classList.add("friends-username");
@@ -302,7 +305,7 @@ function loadSelectedFriends() {
   
       // Show button "Delete"
       deleteButton.style.display = "block";
-  
+
       // Save updated friend data to sessionStorage
       saveSelectedFriends();
     });
@@ -338,180 +341,32 @@ function loadSelectedFriends() {
   
     document.getElementById("friendsmy").appendChild(card);
   // CSS styles for hiding the friend list initially
-document.getElementById("friendsmy").style.display = "none";
+  document.getElementById("friendsmy").style.display = "none";
+  
+   //hide and show close button
+   var closeButton = document.getElementById("closebutton");
+   var friendsmy = document.getElementById("friendsmy");
 
-// Function to handle click event on the search_f div
-function showFriendList() {
+   document.querySelector(".search_f").addEventListener("click", function() {
+       closeButton.style.display = "block"; /* show button */
+   });
+
+   closeButton.addEventListener("click", function() {
+       friendsmy.style.display = "none"; /* hide friendsmy */
+       closeButton.style.display = "none"; /* hide button closebutton */
+   });
+  
+
+  // Function to handle click event on the search_f div
+  function showFriendList() {
   // Display the friend list
   document.getElementById("friendsmy").style.display = "block";
 }
 
-// Add click event listener to the search_f div
+ // Add click event listener to the search_f div
 document.querySelector(".search_f").addEventListener("click", showFriendList);
 
-}
-
-  
+}  
   // Load selected friends f
   loadSelectedFriends();
 
-
-/*// Function to handle click event on the search_f div
-function showFriendList() {
-    // Display the friend list
-    document.getElementById("friendsmy").style.display = "block";
-  }
-  
-  // Add click event listener to the search_f div
-  document.querySelector(".search_f").addEventListener("click", showFriendList);
-  
-  // Function to handle search event
-  function searchFriends() {
-    // Get the search input value
-    let searchValue = document.getElementById("search-input").value.toLowerCase();
-  
-    // Get all friend cards
-    let friendCards = document.querySelectorAll(".card");
-  
-    // Loop through friend cards
-    for (let card of friendCards) {
-      // Get the username from the friend card
-      let username = card.querySelector(".friends-username").innerText.toLowerCase();
-  
-      // Check if the username matches the search value
-      if (username.includes(searchValue)) {
-        card.style.display = "flex"; // Display the friend card if it matches
-      } else {
-        card.style.display = "none"; // Hide the friend card if it doesn't match
-      }
-    }
-  }
-  
-  // Add keyup event listener to the search input
-  document.getElementById("search-input").addEventListener("keyup", searchFriends);
-
-// Create panel with information labels
-let infoPanel = document.createElement("div");
-infoPanel.classList.add("info-panel");
-infoPanel.style.display = "flex";
-infoPanel.style.justifyContent = "space-between";
-
-let labels = ["Photo", "Username", "E-mail Address", "Status", "Action"];
-
-for (let label of labels) {
-  let infoLabel = document.createElement("h5");
-  infoLabel.classList.add("info-label");
-  infoLabel.innerText = label;
-  infoPanel.appendChild(infoLabel);
-}
-
-document.getElementById("friendsmy").appendChild(infoPanel);
-
-for (let friend of friends.data) {
-    // Create friend card
-    let card = document.createElement("div");
-    card.classList.add("card", friend.status);
-  
-    // Container
-    let container = document.createElement("div");
-    container.classList.add("container");
-    container.style.display = "flex";
-    container.style.justifyContent = "space-between";
-  
-    // Image
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add("img-container");
-  
-    let image = document.createElement("img");
-    image.setAttribute("src", friend.image);
-    imgContainer.appendChild(image);
-  
-    container.appendChild(imgContainer);
-  
-    // Friend info
-    let infoContainer = document.createElement("div");
-    infoContainer.style.display = "flex";
-    infoContainer.style.justifyContent = "space-between";
-  
-    let username = document.createElement("h5");
-    username.classList.add("friends-username");
-    username.innerText = friend.username.toLowerCase();
-    infoContainer.appendChild(username);
-  
-    let email = document.createElement("h5");
-    email.classList.add("email");
-    email.innerText = friend.email.toLowerCase();
-    infoContainer.appendChild(email);
-  
-    let status = document.createElement("h5");
-    status.classList.add("status");
-    status.innerText = friend.status.toLowerCase();
-    infoContainer.appendChild(status);
-  
-    container.appendChild(infoContainer);
-  
-    card.appendChild(container);
-  
-    // Add button
-    let addButton = document.createElement("button");
-    addButton.innerText = "Add";
-    addButton.addEventListener("click", function() {
-      // get select friend
-      let selectedFriend = this.parentNode.parentNode.parentNode;
-  
-      // move select friend to"My Friends"
-      document.getElementById("adfriend").appendChild(selectedFriend);
-  
-      // hide button "Add"
-      addButton.style.display = "none";
-  
-      // show button "Delete"
-      deleteButton.style.display = "block";
-  
-      // Зберегти оновлені дані друзів в sessionStorage
-      saveSelectedFriends();
-    });
-  
-    infoContainer.appendChild(addButton);
-  
-    // Delete button
-    let deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
-    deleteButton.style.display = "none";
-    deleteButton.addEventListener("click", function() {
-      // get parent elem friend card)
-      let friendCard = this.parentNode.parentNode.parentNode;
-  
-      // delete friend from "My Friends"
-      friendCard.remove();
-  
-      // return friend to main list friend
-      document.getElementById("friendsmy").appendChild(friendCard);
-  
-      // hide button "Delete"
-      deleteButton.style.display = "none";
-  
-      // show button "Add"
-      addButton.style.display = "block";
-  
-      // save data friend to sessionStorage
-      saveSelectedFriends();
-    });
-  
-    infoContainer.appendChild(deleteButton);
-  
-    document.getElementById("friendsmy").appendChild(card);
-    // CSS styles for hiding the friend list initially
-document.getElementById("friendsmy").style.display = "none";
-
-// Function to handle click event on the search_f div
-function showFriendList() {
-  // Display the friend list
-  document.getElementById("friendsmy").style.display = "block";
-}
-
-// Add click event listener to the search_f div
-document.querySelector(".search_f").addEventListener("click", showFriendList);
-
-}
-*/
