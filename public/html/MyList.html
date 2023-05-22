@@ -40,7 +40,7 @@
     <div class="bell">
       <i class="fas fa-bell"></i>
     </div>
-    <form action="#" method="get">
+    <form id="form1" action="#" method="get">
       <div class="user">
         <img src="../img/user.png" onclick="toggleMenu()" alt="">
       </div>
@@ -89,6 +89,12 @@
   <div class="movie_bx_1 movie_bx_2">
     <div class="movie_bxx" id="crime_bx"></div>
   </div>
+  <script>
+    // Отримання значення з локального сховища
+    const userData = localStorage.getItem("user");
+    const user = JSON.parse(userData);
+    document.getElementById("username").textContent = user.username;
+  </script>
 
   <script src="../js/script.js"></script>
   <script src="../js/trends.js" type="module"></script>

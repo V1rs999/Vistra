@@ -604,12 +604,9 @@ input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* padding: 7px 5px; */
     gap: 10px;
     width: 343px;
     height: 58px;
-    /* background: #f8f8f8; */
-    /* border: 2px solid #dddddd; */
     border-radius: 10px;
     flex: none;
     order: 1;
@@ -622,12 +619,9 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* padding: 7px 5px; */
     gap: 10px;
     width: 343px;
     height: 58px;
-    /* background: #f8f8f8; */
-    /* border: 2px solid #dddddd; */
     border-radius: 10px;
     flex: none;
     order: 2;
@@ -644,8 +638,6 @@ input {
     gap: 10px;
     width: 343px;
     height: 58px;
-    /* background: #f8f8f8;
-    border: 2px solid #dddddd; */
     border-radius: 10px;
     flex: none;
     order: 3;
@@ -666,10 +658,8 @@ input {
 
     color: #FFF;
     font-weight: bold;
-    /* text-transform: uppercase; */
     background: #169c89;
     cursor: pointer;
-    /* border: 2px solid #BFE2FF; */
     outline: 2px solid;
     outline-color: #138675;
     outline-offset: 0px;
@@ -682,7 +672,6 @@ input {
 }
 
 .login:active {
-    /* box-shadow: inset 0 0 20px #BFE2FF; */
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
     color: #FFF;
@@ -708,7 +697,6 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: revert; */
     padding: 10px 5px;
     gap: 10px;
     flex-wrap: wrap;
@@ -747,7 +735,6 @@ input {
 .input-field {
     width: 343px;
     height: 60px;
-    /* border: none; */
     border-radius: 8px;
     padding-left: 39px;
     padding-right: 30px;
@@ -819,7 +806,6 @@ input {
     transform: translate(-50%, -50%);
     width: 200%;
     background-color: #111;
-    /* padding: 70px 50px 20px; */
     border-radius: 10px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
     z-index: 999;
@@ -866,7 +852,6 @@ span .Policy a .show-modal:hover {
 .input .error {
     color: red;
     font-size: 0.1px;
-    /* height: 13px; */
     position: absolute;
 }
 
@@ -893,7 +878,6 @@ span .Policy a .show-modal:hover {
     display: flex;
     border-radius: 10px;
     overflow: hidden;
-    /* border: 1px solid #000000; */
     font-size: 14px;
     color: #cdcccc;
 }
