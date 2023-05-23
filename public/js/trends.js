@@ -21,7 +21,7 @@ fetch("http://localhost:5000/api/posts/")
         card.classList.add("card");
         card.innerHTML = `
           <a href="/player?url=${encodeURIComponent(url)}">
-            <img src="${picture}" alt="${title}">
+            <div><img src="${picture}" alt="${title}"></div>
             <div class="content">
               <h2>${title}</h2>
               <div class="metadata">

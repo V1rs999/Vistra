@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header>
     <a href="/home" class="logo"><img src="../img/Vectorr.png" alt=""></a>
 
     <nav class="navbar">
@@ -188,17 +188,15 @@
     <div class="rate_change" id="rate8"></div>
   </div>
 
+  <a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
   <script>
     // Отримання значення з локального сховища
     const userData = localStorage.getItem("user");
     const user = JSON.parse(userData);
     document.getElementById("username").textContent = user.username;
-    const rangeInput = document.querySelector("#change_input");
-    const numberValue = document.querySelector("span");
-
-    rangeInput.addEventListener("input", function () {
-      numberValue.textContent = rangeInput.value;
-    });
   </script>
   <script src="../js/script.js"></script>
   <script src="../js/movie_TvShow.js" type="module"></script>
