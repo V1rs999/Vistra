@@ -21,13 +21,13 @@ fetch("http://localhost:5000/api/posts/")
             <a href="/player?url=${encodeURIComponent(
                 url
             )}"> <!-- Add the URL as a query parameter -->  
-                <img src="${picture}" alt="${title}">
+                <div><img src="${picture}" alt="${title}"></div>
                 <div class="content">
                 <h2>${title}</h2>
                 <div class="metadata">
                     <span>${year}</span>
                     <div class="rate">
-                    <i class="fas fa-heart"></i>
+                    <i onclick="window.location.href='/home'" class="fas fa-heart"></i>
                     <i class="fas fa-eye"></i>
                     <i class="fas fa-star"></i>
                     <span>${rate}</span>
@@ -55,6 +55,8 @@ fetch("http://localhost:5000/api/posts/")
         const container = document.getElementById(containerId);
       
         btn.addEventListener('click', () => {
+          all.classList.remove('box2_actives');
+          all_btn.classList.remove('cato_button_active');
           btn.classList.toggle('cato_button_active');
           container.classList.toggle('box2_actives');
         });
@@ -73,7 +75,7 @@ fetch("http://localhost:5000/api/posts/")
         card.classList.add('card');
         card.innerHTML = `
           <a href="/player?url=${encodeURIComponent(url)}">
-            <img src="${picture}" alt="${title}">
+            <div><img src="${picture}" alt="${title}"></div>
             <div class="content">
               <h2>${title}</h2>
               <div class="metadata">
@@ -124,7 +126,7 @@ const letterFilters = [
     card.classList.add('card');
     card.innerHTML = `
       <a href="/player?url=${encodeURIComponent(url)}">
-        <img src="${picture}" alt="${title}">
+        <div><img src="${picture}" alt="${title}"></div>
         <div class="content">
           <h2>${title}</h2>
           <div class="metadata">
@@ -179,7 +181,7 @@ const letterFilters = [
               <a href="/player?url=${encodeURIComponent(
                   url
               )}"> <!-- Add the URL as a query parameter -->  
-                  <img src="${picture}" alt="${title}">
+                  <div><img src="${picture}" alt="${title}"></div>
                   <div class="content">
                   <h2>${title}</h2>
                   <div class="metadata">
@@ -214,7 +216,7 @@ const letterFilters = [
               <a href="/player?url=${encodeURIComponent(
                   url
               )}"> <!-- Add the URL as a query parameter -->  
-                  <img src="${picture}" alt="${title}">
+                  <div><img src="${picture}" alt="${title}"></div>
                   <div class="content">
                   <h2>${title}</h2>
                   <div class="metadata">
