@@ -83,6 +83,15 @@ class authConroller {
     }
   }
 
+  async delete(req, res) {
+    try {
+      const postId = req.params.id;
+      const post = await authService.delete(postId);
+      return res.json(post);
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  }
 }
 
 module.exports = new authConroller();

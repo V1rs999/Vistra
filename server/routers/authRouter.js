@@ -21,4 +21,5 @@ authrouter.post(
 authrouter.post("/Login", authConroller.login);
 authrouter.get("/users", roleMiddleware(["ADMIN"]), authConroller.getUsers);
 authrouter.put("/MyList", authConroller.updateMylist);
+authrouter.delete("/MyList/:id", authConroller.delete);
 module.exports = authrouter;
