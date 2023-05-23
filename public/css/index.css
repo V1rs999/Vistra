@@ -12,23 +12,41 @@ html {
 	overflow-x: hidden;
 }
 
+
+html::-webkit-scrollbar-thumb {
+	background-color: red;
+}
+
+html::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+html::-webkit-scrollbar {
+	width: 5px;
+}
+
 body {
 	font-family: "Poppins", sans-serif;
 	background: rgb(17, 16, 16);
 }
 
-.header {
+header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 50px;
 	width: 100%;
 	padding: 0 5%;
-	background: rgb(54, 50, 50, 0.4);
+	background: rgb(54, 50, 50, 0.7);
 	display: flex;
 	align-items: center;
-	z-index: 100;
+	z-index: 9999;
 	justify-content: space-between;
+	transition: 0.6s;
+}
+
+header.sticky {
+	background: rgb(17 16 16);
 }
 
 .logo {
@@ -630,11 +648,22 @@ main {
 	color: #fff;
 }
 
-.movie_bx_1 .card a img {
-	width: 100%;
+.movie_bx_1 .card a div {
 	height: 80%;
-	border-radius: 8px;
+	overflow: hidden;
 }
+
+.movie_bx_1 .card a div img {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	transition: transform 0.3s linear;
+}
+
+.movie_bx_1 .card a div img:hover {
+	transform: scale(1.2);
+}
+
 
 .movie_bx_1 .card a .content {
 	width: 100%;
@@ -675,6 +704,14 @@ main {
 	font-size: 9px;
 	color: rgb(255, 255, 255, 0.5);
 }
+
+.movie_bx_1 .card a .content .metadata .rate .fas.fa-heart:hover {
+	font-size: 11px;
+	color: red;
+	z-index: 999;
+}
+
+
 
 .movie_bx_1 .card a .content .metadata .rate .fas:nth-last-child(2) {
 	color: yellow;
@@ -1025,3 +1062,35 @@ button:nth-child(4) {
 		margin-left: 2000px;
 	}
 }
+
+.to-top {
+	background: white;
+	position: fixed;
+	bottom: 16px;
+	right: 32px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	color: #1f1f1f;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+}
+
+.to-top.active {
+	bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.to-top:hover {
+	background-color: red;
+}
+
+
+/* --------------------------------- */
