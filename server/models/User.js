@@ -4,21 +4,26 @@ const User = new Schema({
   username: {
     type: String,
     unique: true,
-    required: true,
+    required: true
   },
   email: {
     type: String,
-    unique: true,
+    unique: true
   },
   password: {
     type: String,
-    unique: true,
+    unique: true
   },
   roles: [
     {
       type: String,
-      ref: "Role",
-    },
+      ref: "Role"
+    }
   ],
+  like: [
+    {
+      type: String
+    }
+  ]
 });
 module.exports = model("User", User);

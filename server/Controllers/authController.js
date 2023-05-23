@@ -4,6 +4,8 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 const { secret } = require("../config");
+const authService = require("../Services/authService.js");
+const PostService = require("../Services/PostService");
 
 const generateAccessToken = (id, roles) => {
   const payload = { id, roles };
@@ -17,7 +19,7 @@ class authConroller {
       if (!errors.isEmpty()) {
         return res.status(400).json({ message: "Error registation", errors });
       }
-      const { username, email, password } = req.body;
+      const { username, email, password, like } = req.body;
       const candidate = await User.findOne({ username });
       if (candidate) {
         return res
@@ -31,6 +33,7 @@ class authConroller {
         email,
         password: hashPassword,
         roles: [userRole.value],
+        like: [...like]
       });
       await user.save();
       return res.json({ message: "Successful registration" });
@@ -54,7 +57,7 @@ class authConroller {
       const token = generateAccessToken(user._id, user.roles);
       return res.json({
         token,
-        user: { username: user.username },
+        user: { username: user.username }
       });
     } catch (e) {
       console.log(e);
@@ -68,6 +71,24 @@ class authConroller {
       res.json(users);
     } catch (e) {
       console.log(e);
+    }
+  }
+
+  async updateMylist(req, res) {
+    try {
+      const updateMylist = await authService.update(req.body);
+      return res.json(updateMylist);
+    } catch (e) {
+      res.status(500).json(e.message);
+    }
+  }
+
+  async delete(req, res) {
+    try {
+      const post = await authService.delete(req.params.id);
+      return res.json(post);
+    } catch (e) {
+      res.status(500).json(e);
     }
   }
 }
