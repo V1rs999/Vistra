@@ -83,14 +83,6 @@ class authConroller {
     }
   }
 
-  async delete(req, res) {
-    try {
-      const post = await authService.delete(req.params.id);
-      return res.json(post);
-    } catch (e) {
-      res.status(500).json(e);
-    }
-  }
 }
 
 module.exports = new authConroller();

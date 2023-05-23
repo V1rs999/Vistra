@@ -16,6 +16,5 @@ router.post(
 router.get("/posts", PostConroller.getAll);
 router.get("/posts/:id", PostConroller.getOne);
 router.put("/posts", PostConroller.update);
-router.delete("/posts/:id", PostConroller.delete);
 
 module.exports = router;

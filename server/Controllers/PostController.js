@@ -42,6 +42,15 @@ class PostConroller {
       res.status(500).json(e.message);
     }
   }
+
+  async delete(req, res) {
+    try {
+      const post = await PostService.delete(req.params.id);
+      return res.json(post);
+    } catch (e) {
+      res.status(500).json(e);
+    }
+  }
 }
 
 module.exports = new PostConroller();
