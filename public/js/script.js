@@ -125,18 +125,21 @@ tab_lists.forEach(function (list) {
 window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
-})
+});
 
+const toggleActiveClass = (element, condition) => {
+  if (condition) {
+    element.classList.add("active");
+  } else {
+    element.classList.remove("active");
+  }
+};
 
 const toTop = document.querySelector(".to-top");
 
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    toTop.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-  }
-})
+  toggleActiveClass(toTop, window.pageYOffset > 100);
+});
 
 
 // ----------------------------

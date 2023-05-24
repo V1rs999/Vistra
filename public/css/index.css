@@ -468,7 +468,7 @@ main {
 
 .slider_btns {
 	position: absolute;
-	width: 300px;
+	/* width: 300px; */
 	height: 50px;
 	bottom: 0;
 	left: 45%;
@@ -665,27 +665,28 @@ main {
 }
 
 
-.movie_bx_1 .card a .content {
+.movie_bx_1 .card .content {
 	width: 100%;
 	height: 15%;
 	margin-top: 5px;
 }
 
-.movie_bx_1 .card a .content h2 {
+.movie_bx_1 .card .content h2 {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
 	font-weight: 500;
 	font-size: 12px;
+	color: #fff;
 }
 
-.movie_bx_1 .card a .content .metadata {
+.movie_bx_1 .card .content .metadata {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.movie_bx_1 .card a .content .metadata span {
+.movie_bx_1 .card .content .metadata span {
 	color: rgb(255, 255, 255, 0.6);
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -694,31 +695,34 @@ main {
 	font-size: 12px;
 }
 
-.movie_bx_1 .card a .content .metadata .rate {
+.movie_bx_1 .card .content .metadata .rate {
 	display: flex;
 	align-items: center;
 }
 
-.movie_bx_1 .card a .content .metadata .rate .fas {
+.movie_bx_1 .card .content .metadata .rate .fas {
 	margin-right: 7px;
 	font-size: 9px;
 	color: rgb(255, 255, 255, 0.5);
 }
 
-.movie_bx_1 .card a .content .metadata .rate .fas.fa-heart:hover {
-	font-size: 11px;
+
+.movie_bx_1 .card .content .metadata .rate .fas.fa-heart:hover {
+	font-size: 13px;
 	color: red;
 	z-index: 999;
+	cursor: pointer;
 }
 
 
 
-.movie_bx_1 .card a .content .metadata .rate .fas:nth-last-child(2) {
+
+.movie_bx_1 .card .content .metadata .rate .fas:nth-last-child(2) {
 	color: yellow;
 	margin: 1px;
 }
 
-.movie_bx_1 .card a .content .metadata .rate span {
+.movie_bx_1 .card .content .metadata .rate span {
 	color: yellow;
 	margin-top: -1px;
 	font-size: 11px;

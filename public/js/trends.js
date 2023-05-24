@@ -20,11 +20,14 @@ fetch("http://localhost:5000/api/posts/")
         const card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `
-          <a href="/player?url=${encodeURIComponent(url)}">
-            <div><img src="${picture}" alt="${title}"></div>
-            <div class="content">
-              <h2>${title}</h2>
-              <div class="metadata">
+        <a href="/player?url=${encodeURIComponent(url)}"> <!-- Add the URL as a query parameter -->  
+          <div>
+            <img src="${picture}" alt="${title}">
+          </div>
+        </a>
+          <div class="content">
+            <h2>${title}</h2>
+            <div class="metadata">
                 <span>${year}</span>
                 <div class="rate">
                   <i class="fas fa-heart"></i>
@@ -32,16 +35,22 @@ fetch("http://localhost:5000/api/posts/")
                   <i class="fas fa-star"></i>
                   <span>${rate}</span>
                 </div>
-              </div>
             </div>
-          </a>`;
+          </div>
+        `;
+
+        
         container.appendChild(card);
+        
       });
     };
+
     
     const filterByGenre = (genre) => {
       return data.filter((e) => e.genre == genre);
     };
+
+  
     
     genres.forEach(({ buttonId, containerId, genre }) => {
       const button = document.getElementById(buttonId);

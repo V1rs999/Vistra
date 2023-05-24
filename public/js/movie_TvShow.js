@@ -22,19 +22,19 @@ fetch("http://localhost:5000/api/posts/")
                 url
             )}"> <!-- Add the URL as a query parameter -->  
                 <div><img src="${picture}" alt="${title}"></div>
-                <div class="content">
-                <h2>${title}</h2>
-                <div class="metadata">
-                    <span>${year}</span>
-                    <div class="rate">
-                    <i onclick="window.location.href='/home'" class="fas fa-heart"></i>
-                    <i class="fas fa-eye"></i>
-                    <i class="fas fa-star"></i>
-                    <span>${rate}</span>
-                    </div>
-                </div>
-                </div>
             </a>
+                <div class="content">
+                  <h2>${title}</h2>
+                  <div class="metadata">
+                      <span>${year}</span>
+                      <div class="rate">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-star"></i>
+                        <span>${rate}</span>
+                      </div>
+                  </div>
+                </div>
             `;
 
                 all.appendChild(card);
@@ -55,8 +55,6 @@ fetch("http://localhost:5000/api/posts/")
         const container = document.getElementById(containerId);
       
         btn.addEventListener('click', () => {
-          all.classList.remove('box2_actives');
-          all_btn.classList.remove('cato_button_active');
           btn.classList.toggle('cato_button_active');
           container.classList.toggle('box2_actives');
         });
