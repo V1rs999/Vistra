@@ -1,4 +1,4 @@
-fetch("http://localhost:5000/api/posts/")
+fetch("http://16.170.236.235:5000/api/posts/")
   .then((response) => response.json())
   .then((data) => {
     // Отримано дані з сервера
@@ -11,9 +11,9 @@ fetch("http://localhost:5000/api/posts/")
       { buttonId: "comady1", containerId: "comady_bx", genre: "comady" },
       { buttonId: "biography1", containerId: "biography_bx", genre: "biography" },
       { buttonId: "documentary1", containerId: "documentary_bx", genre: "documentary" },
-      { buttonId: "crime1", containerId: "crime_bx", genre: "crime" },
+      { buttonId: "crime1", containerId: "crime_bx", genre: "crime" }
     ];
-    
+
     const createCards = (array, container) => {
       array.forEach((element) => {
         const { picture, title, year, url, rate } = element;
@@ -38,20 +38,20 @@ fetch("http://localhost:5000/api/posts/")
         container.appendChild(card);
       });
     };
-    
+
     const filterByGenre = (genre) => {
       return data.filter((e) => e.genre == genre);
     };
-    
+
     genres.forEach(({ buttonId, containerId, genre }) => {
       const button = document.getElementById(buttonId);
       const container = document.getElementById(containerId);
-    
+
       button.addEventListener("click", () => {
         button.classList.toggle("cato_button_active");
         container.classList.toggle("movie_box_active");
       });
-    
+
       const filteredData = filterByGenre(genre);
       createCards(filteredData, container);
     });
