@@ -557,7 +557,8 @@ input {
     flex-grow: 0;
 }
 
-.inputDiv {
+.inputDivEmail,
+.inputDivPassworld {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -567,16 +568,8 @@ input {
     height: 58px;
     border-radius: 10px;
     flex: none;
-    flex-grow: 0;
-}
-
-.inputDivEmail {
     order: 1;
-}
-
-.inputDivPassworld {
-    justify-content: space-between;
-    order: 2;
+    flex-grow: 0;
 }
 
 
