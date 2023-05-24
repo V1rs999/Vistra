@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link href="../css/player.css" rel="stylesheet">
@@ -35,7 +35,7 @@
     <a href="/MyList">My List</a>
   </nav>
   <div class="search">
-    <input type="text" placeholder="Search movies..." id="search">
+    <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
     <i class="fas fa-search" id="search_icon"></i>
     <div class="search_bx2">
     </div>
@@ -54,17 +54,17 @@
       </div>
       <hr>
 
-      <a href="eror" class="sub-menu-link">
+      <a href="/error" class="sub-menu-link">
         <img src="../img/user-solid.svg" alt="">
         <p>Edit Profile</p>
         <span>></span>
       </a>
-      <a href="eror" class="sub-menu-link">
+      <a href="/error" class="sub-menu-link">
         <img src="../img/gear-solid.svg" alt="">
         <p>Setting & Privacy</p>
         <span>></span>
       </a>
-      <a href="eror" class="sub-menu-link">
+      <a href="/error" class="sub-menu-link">
         <img src="../img/circle-info-solid.svg" alt="">
         <p>Help & Support</p>
         <span>></span>
@@ -86,7 +86,9 @@
 <h2 class="num">num</h2>
 <div class="like">♥</div>
 <div class="chat">chat</div>
-<input class="input-chat" placeholder="write a message...">
+<label>
+  <input class="input-chat" placeholder="write a message...">
+</label>
 <div class="circle"></div>
 <div class="group"></div>
 
@@ -97,7 +99,7 @@
 
   console.log(videoUrl); // Check if the URL is correctly retrieved
 
-  var player = videojs("my-video", {
+  const player = videojs("my-video", {
     techOrder: ["youtube"],
     sources: [
       {
