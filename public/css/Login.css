@@ -514,7 +514,7 @@ body {
     flex-wrap: wrap;
     /* padding: 7px 5px; */
     gap: 10px;
-    width: 343px;
+    width: 340px;
     height: 58px;
     background: #f8f8f8;
     /* border: 2px solid #dddddd; */
@@ -532,7 +532,7 @@ input {
     position: absolute;
     display: flex;
     flex-direction: row;
-    width: 342px;
+    width: 340px;
     height: 60px;
     font-family: "Inter", serif;
     font-style: normal;
