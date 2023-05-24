@@ -4,6 +4,7 @@ fetch("http://16.170.236.235:5000/api/posts/")
     // Отримано дані з сервера
     // Додайте карточки на сторінку
 
+
     // Приклад додавання карточок до контейнеру action_bx
     const genres = [
       { buttonId: "action1", containerId: "action_bx", genre: "action" },
