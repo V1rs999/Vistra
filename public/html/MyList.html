@@ -96,6 +96,9 @@
   // Отримання значення з локального сховища
   const userData = localStorage.getItem("user");
   const user = JSON.parse(userData);
+  const userD = localStorage.getItem("userId");
+  const userId = JSON.parse(userD);
+  console.log(userId);
   document.getElementById("username").textContent = user.username;
 </script>
 

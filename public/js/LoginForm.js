@@ -10,19 +10,20 @@ form1.addEventListener("submit", async (e) => {
     const response = await fetch("/auth/Login", {
       method: "post",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         email,
-        password,
-      }),
+        password
+      })
     });
 
     const data = await response.json();
     if (response.ok) {
-      console.log(data.user);
+      console.log(data.userId);
       // Збереження об'єкту в локальне сховище після перетворення на рядок JSON
       localStorage.setItem("user", JSON.stringify(data.user));
+      localStorage.setItem("userId", JSON.stringify(data.userId));
       window.location.href = "/home";
     }
 
@@ -86,12 +87,12 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnsOpenModal = document.querySelectorAll(".show-modal");
 
-const openModal = function () {
+const openModal = function() {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
 
-const closeModal = function () {
+const closeModal = function() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
@@ -112,16 +113,16 @@ overlay.addEventListener("click", closeModal);
 const tab_lists = document.querySelectorAll(".tabs_list ul li");
 const tab_items = document.querySelectorAll(".tab_item");
 
-tab_lists.forEach(function (list) {
-  list.addEventListener("click", function () {
+tab_lists.forEach(function(list) {
+  list.addEventListener("click", function() {
     const tab_data = list.getAttribute("data-tc");
 
-    tab_lists.forEach(function (list) {
+    tab_lists.forEach(function(list) {
       list.classList.remove("active");
     });
     list.classList.add("active");
 
-    tab_items.forEach(function (item) {
+    tab_items.forEach(function(item) {
       const tab_class = item.getAttribute("class").split(" ");
       if (tab_class.includes(tab_data)) {
         item.style.display = "block";
