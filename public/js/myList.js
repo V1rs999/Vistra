@@ -8,11 +8,7 @@ fetch("/api/posts/")
     // Приклад додавання карточок до контейнеру action_bx
     const genres = [
       { buttonId: "action1", containerId: "action_bx", genre: "action" },
-      { buttonId: "drama1", containerId: "drama_bx", genre: "drama" },
-      { buttonId: "comady1", containerId: "comady_bx", genre: "comady" },
-      { buttonId: "biography1", containerId: "biography_bx", genre: "biography" },
-      { buttonId: "documentary1", containerId: "documentary_bx", genre: "documentary" },
-      { buttonId: "crime1", containerId: "crime_bx", genre: "crime" }
+      { buttonId: "drama1", containerId: "drama_bx", genre: "drama" }
     ];
 
     const createCards = (array, container) => {
