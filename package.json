@@ -35,7 +35,6 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "css-minimizer-webpack-plugin": "^5.0.0",
     "nodemon": "^2.0.22",
     "prettier": "2.8.7"
   }
