@@ -1,4 +1,4 @@
-fetch("http://16.170.236.235:5000/api/posts/")
+fetch("/api/posts/")
   .then((response) => response.json())
   .then((data) => {
     // Отримано дані з сервера
