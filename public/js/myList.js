@@ -50,7 +50,7 @@ fetch("http://16.170.236.235:5000/api/posts/")
     };
 
     const filterByGenre = (genre) => {
-      return data.filter((e) => e.genre == genre);
+      return data.filter((e) => e.genre === genre);
     };
 
     genres.forEach(({ buttonId, containerId, genre }) => {
@@ -59,9 +59,15 @@ fetch("http://16.170.236.235:5000/api/posts/")
 
       const filteredData = filterByGenre(genre);
 
-      const myListURL = "http://16.170.236.235:5000/auth/MyList/";
+      const myListURL = "http://16.170.236.235:5000/auth/MyList";
 
-      fetch(myListURL)
+      fetch(myListURL, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(filteredData)
+      })
         .then((response) => response.json())
         .then((myListData) => {
           // Extract the array of IDs from myListData
@@ -71,7 +77,7 @@ fetch("http://16.170.236.235:5000/api/posts/")
           createCards(filteredData, container, myListArray);
         })
         .catch((error) => {
-          console.log("Error fetching MyList data:", error);
+          console.log("Error updating MyList data:", error);
         });
     });
 
