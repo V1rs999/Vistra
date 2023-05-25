@@ -33,7 +33,7 @@ class authConroller {
         email,
         password: hashPassword,
         roles: [userRole.value],
-        like: [...like]
+        like: Array.isArray(like) ? [...like] : []
       });
       await user.save();
       return res.json({ message: "Successful registration" });
@@ -80,16 +80,6 @@ class authConroller {
       return res.json(updateMylist);
     } catch (e) {
       res.status(500).json(e.message);
-    }
-  }
-
-  async delete(req, res) {
-    try {
-      const postId = req.params.id;
-      const post = await authService.delete(postId);
-      return res.json(post);
-    } catch (e) {
-      res.status(500).json(e);
     }
   }
 }
