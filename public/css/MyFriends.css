@@ -1,6 +1,6 @@
 * {
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -97,15 +97,14 @@ header.sticky {
 }
 
 .search input {
-    padding: 3px 0px 3px 8px;
+    padding: 3px 0 3px 8px;
     border-radius: 20px;
     outline: none;
     border: none;
     background: transparent;
     color: #fff;
     transition: 1s linear;
-    transition: 1s linear;
-    width: 0px;
+    width: 0;
 }
 
 .search i {
@@ -164,7 +163,7 @@ header.sticky {
     width: 30px;
     height: 45px;
     border-radius: 5px;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 /*  */
@@ -174,7 +173,7 @@ header.sticky {
     top: 45px;
     right: 4.5%;
     width: 220px;
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
@@ -276,7 +275,7 @@ header.sticky {
     font-size: 17px;
     cursor: pointer;
     transition: 0.3s linear;
-    margin: 0px 35px;
+    margin: 0 35px;
 }
 
 .bell:hover {
@@ -302,7 +301,7 @@ header.sticky {
     height: auto;
     border-bottom: 2px solid rgb(184, 184, 184, 0.1);
     margin: auto;
-    padding: 9px 0px;
+    padding: 9px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -317,7 +316,7 @@ header.sticky {
 }
 
 .friends_bx i {
-    padding: 0px 5px;
+    padding: 0 5px;
 }
 
 .friends_bx .fas {
@@ -508,7 +507,7 @@ header.sticky {
     right: 32px;
 }
 
-@media (max-width:1082px) {
+@media (max-width: 1082px) {
     header .navbar a {
         margin-right: 40px;
         font-size: 16px;
@@ -523,7 +522,7 @@ header.sticky {
     }
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
     #menu-bar {
         display: initial;
         font-size: 100%;
@@ -567,6 +566,8 @@ header.sticky {
     }
 }
 
-@media (max-width:634px) {}
+@media (max-width: 634px) {
+}
 
-@media (max-width:477px) {}
+@media (max-width: 477px) {
+}
