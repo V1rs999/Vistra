@@ -36,7 +36,7 @@ header {
     left: 0;
     height: 50px;
     width: 100%;
-    padding: 0 5%;
+    padding: 0 3%;
     background: rgb(54, 50, 50, 0.7);
     display: flex;
     align-items: center;
@@ -89,7 +89,6 @@ header.sticky {
     display: flex;
     align-items: center;
     color: #fff;
-    margin-left: auto;
 }
 
 .search input {
@@ -469,7 +468,7 @@ main {
 
 .slider_btns {
     position: absolute;
-    /* width: 300px; */
+    width: 20%;
     height: 50px;
     bottom: 0;
     left: 45%;
@@ -1072,7 +1071,7 @@ button:nth-child(4) {
     background: white;
     position: fixed;
     bottom: 16px;
-    right: 32px;
+    right: 30px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -1121,13 +1120,17 @@ button:nth-child(4) {
     header .logo img {
         width: 50%;
     }
+
+    .to-top {
+        right: 1%;
+    }
 }
 
 @media (max-width:991px) {
     #menu-bar {
         display: initial;
         font-size: 100%;
-        left: -5%;
+        left: -2%;
     }
 
     header .logo img {
@@ -1167,7 +1170,7 @@ button:nth-child(4) {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:634px) {
     .content {
         width: 77%;
         height: auto;
@@ -1266,44 +1269,119 @@ button:nth-child(4) {
         margin-right: 5px;
     }
 
-    @media (max-width:477px) {
+    .cato_bx.cato_bx2 button {
+        padding: 4px 15px;
+        font-size: 10px;
+        margin-right: 7px;
 
-        .content h1 {
-            font-size: 25px;
-            margin-bottom: 5px;
-        }
-
-        .content p {
-            width: 300px;
-            word-break: break-all;
-            font-size: 10px;
-        }
-
-        .content .btns {
-            display: flex;
-            align-items: center;
-        }
-
-        .content .btns button {
-            padding: 4px 10px;
-            border-radius: 20px;
-            border: 2px solid red;
-            margin-right: 8px;
-            font-size: 10px;
-        }
-
-        .content .btns button .fas {
-            margin-right: 5px;
-        }
-
-        .tranding_bx a {
-            font-size: 10px;
-        }
-
-        .cato_bx button {
-            padding: 4px 30px;
-            font-size: 10px;
-            margin-right: 10px;
-        }
     }
+
+    /* ------------------ */
+    .movie_bx_2 {
+        width: 100%;
+        padding: 50px 10px;
+    }
+
+    .movie_bx_2 .card {
+        width: 154px;
+        max-width: none;
+        margin: 7px 7px;
+    }
+
+    .cato_bx2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cato_bx2 .left_cato button:nth-child(1) {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .cato_bx2 .left_cato button:nth-child(3),
+    .cato_bx2 .left_cato button:nth-child(4) {
+        padding: 4px 10px;
+    }
+
+    .cato_bx2 .right_cato {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .cato_bx2 .right_cato input[type="range"] {
+        width: 100%;
+    }
+
+    .cato_bx2 .right_cato span {
+        margin-left: 0;
+    }
+
+    .cato_bx2 button .year_bx {
+        width: 100px;
+        max-width: 100%;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cato_bx2 button .letter_bx {
+        width: auto;
+    }
+
+    .cato_bx2 button .letter_bx div {
+        font-size: 14px;
+    }
+
+    /* ----------------------- */
+
+}
+
+
+
+@media (max-width:477px) {
+
+    .content h1 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .content p {
+        width: 300px;
+        word-break: break-all;
+        font-size: 10px;
+    }
+
+    .content .btns {
+        display: flex;
+        align-items: center;
+    }
+
+    .content .btns button {
+        padding: 4px 10px;
+        border-radius: 20px;
+        border: 2px solid red;
+        margin-right: 8px;
+        font-size: 10px;
+    }
+
+    .content .btns button .fas {
+        margin-right: 5px;
+    }
+
+    .tranding_bx a {
+        font-size: 10px;
+    }
+
+    .cato_bx button {
+        padding: 4px 30px;
+        font-size: 10px;
+        margin-right: 10px;
+    }
+
+    .movie_bx_2 .card {
+        width: 154px;
+        margin: 7px 10px;
+    }
+
+    /* -------------------------------------- */
 }
