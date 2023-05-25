@@ -22,19 +22,19 @@ fetch("/api/posts/")
         url
       )}"> <!-- Add the URL as a query parameter -->  
                 <div><img src="${picture}" alt="${title}"></div>
-                <div class="content">
-                <h2>${title}</h2>
-                <div class="metadata">
-                    <span>${year}</span>
-                    <div class="rate">
-                    <i onclick="window.location.href='/home'" class="fas fa-heart"></i>
-                    <i class="fas fa-eye"></i>
-                    <i class="fas fa-star"></i>
-                    <span>${rate}</span>
-                    </div>
-                </div>
-                </div>
             </a>
+                <div class="content">
+                  <h2>${title}</h2>
+                  <div class="metadata">
+                      <span>${year}</span>
+                      <div class="rate">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-star"></i>
+                        <span>${rate}</span>
+                      </div>
+                  </div>
+                </div>
             `;
 
       all.appendChild(card);
@@ -44,21 +44,28 @@ fetch("/api/posts/")
 
 
     const years = [
-      { btnId: "year2023__btn", containerId: "year_2023", year: "2023" },
-      { btnId: "year2022__btn", containerId: "year_2022", year: "2022" },
-      { btnId: "year2021__btn", containerId: "year_2021", year: "2021" },
-      { btnId: "year2020__btn", containerId: "year_2020", year: "2020" }
-    ];
-
-    years.forEach(({ btnId, containerId, year }) => {
-      const btn = document.getElementById(btnId);
-      const container = document.getElementById(containerId);
-
-      btn.addEventListener("click", () => {
-        all.classList.remove("box2_actives");
-        all_btn.classList.remove("cato_button_active");
-        btn.classList.toggle("cato_button_active");
-        container.classList.toggle("box2_actives");
+        { btnId: 'year2023__btn', containerId: 'year_2023', year: '2023' },
+        { btnId: 'year2022__btn', containerId: 'year_2022', year: '2022' },
+        { btnId: 'year2021__btn', containerId: 'year_2021', year: '2021' },
+        { btnId: 'year2020__btn', containerId: 'year_2020', year: '2020' }
+      ];
+      
+      years.forEach(({ btnId, containerId, year }) => {
+        const btn = document.getElementById(btnId);
+        const container = document.getElementById(containerId);
+      
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('cato_button_active');
+          container.classList.toggle('box2_actives');
+        });
+      
+        const filteredData = data.filter(e => e.year == year);
+      
+        filteredData.forEach(element => {
+          const { picture, title, year, url, rate } = element;
+          const card = createCard(picture, title, year, url, rate);
+          container.appendChild(card);
+        });
       });
 
       const filteredData = data.filter(e => e.year == year);

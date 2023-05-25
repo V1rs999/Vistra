@@ -43,11 +43,15 @@ app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/index.html"));
 });
 
-// app.use((req, res) => {
-//   res
-//     .status(404)
-//     .sendFile(path.join(__dirname, "..", "public", "html/error.html"));
-// });
+app.get("/MyFriends", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
+});
+
+app.use((req, res) => {
+  res
+    .status(404)
+    .sendFile(path.join(__dirname, "..", "public", "html/error.html"));
+});
 
 async function startApp() {
   try {

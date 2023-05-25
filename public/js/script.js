@@ -125,19 +125,36 @@ tab_lists.forEach(function (list) {
 window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
-})
+});
 
+const toggleActiveClass = (element, condition) => {
+  if (condition) {
+    element.classList.add("active");
+  } else {
+    element.classList.remove("active");
+  }
+};
 
 const toTop = document.querySelector(".to-top");
 
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    toTop.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-  }
-})
+  toggleActiveClass(toTop, window.pageYOffset > 100);
+});
 
 
 // ----------------------------
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+
+window.onscroll = () =>{
+	menu.classList.remove('fa-times');
+	navbar.classList.remove('active');
+}
+
+menu.addEventListener('click', () =>{
+	menu.classList.toggle('fa-times');
+	navbar.classList.toggle('active');
+});
 
