@@ -14,21 +14,24 @@ fetch(`/auth/getMyList/${userId.userId}`)
       const card = document.createElement("div");
       card.classList.add("card");
       card.innerHTML = `
-        <a href="/player?url=${encodeURIComponent(url)}">
-          <div><img src="${picture}" alt="${title}"></div>
-          <div class="content">
-            <h2>${title}</h2>
-            <div class="metadata">
-              <span>${year}</span>
-              <div class="rate">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-star"></i>
-                <span>${rate}</span>
-              </div>
+      <a href="/player?url=${encodeURIComponent(url)}"> <!-- Add the URL as a query parameter -->  
+      <div>
+        <img src="${picture}" alt="${title}">
+      </div>
+    </a>
+      <div class="content">
+        <h2>${title}</h2>
+        <div class="metadata">
+            <span>${year}</span>
+            <div class="rate">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-star"></i>
+              <span>${rate}</span>
             </div>
-          </div>
-        </a>`;
+        </div>
+      </div>
+    `;
       myListContainer.appendChild(card);
     };
 
