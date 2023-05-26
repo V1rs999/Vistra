@@ -98,7 +98,7 @@ header.sticky {
     border: none;
     background: transparent;
     color: #fff;
-    transition: 0.5s linear;
+    transition: 0.1s linear;
     width: 0;
 }
 
@@ -106,7 +106,7 @@ header.sticky {
     color: rgb(255, 255, 255, 0.7);
     font-size: 17px;
     cursor: pointer;
-    transition: 0.4s linear;
+    transition: 0.1s ease-in-out;
 }
 
 .search i:hover {
