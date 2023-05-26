@@ -89,7 +89,6 @@ header.sticky {
     display: flex;
     align-items: center;
     color: #fff;
-    gap: 20px;
 }
 
 .search input {
