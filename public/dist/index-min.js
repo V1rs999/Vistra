@@ -1,1 +1,0 @@
-function togglePasswordVisibility(e){const s=document.getElementById(e),i=document.getElementById(`show-${e}`);"password"===s.type?(s.type="text",i.innerHTML='<img class="hide" src="../img/icons8-eye-50.svg">'):(s.type="password",i.innerHTML='<img class="hide" src="../img/icons8-eye-64.svg">')}
