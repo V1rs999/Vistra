@@ -646,8 +646,7 @@ span .Policy a .show-modal:hover {
     background-color: #169c89;
 }
 
-@media (max-width: 991px) {
-}
+@media (max-width: 991px) {}
 
 @media (max-width: 477px) {
 
@@ -665,7 +664,7 @@ span .Policy a .show-modal:hover {
     }
 
     .AutoLayout {
-        margin: 22px 0 0 60px;
+        margin: 22px 0 0 45px;
         width: 180px;
         height: 384px;
     }
@@ -688,13 +687,13 @@ span .Policy a .show-modal:hover {
 
 
     .login {
-        width: 281px;
+        width: 300px;
     }
 
     .ahead {
         width: 387px;
         height: 59px;
-        left: -60px;
+        left: -45px;
     }
 
     .Policy {
@@ -736,14 +735,14 @@ span .Policy a .show-modal:hover {
     }
 
     .AutoLayout {
-        margin: 21px 0 0 46px;
+        margin: 21px 0 0 31px;
         width: 180px;
     }
 
 
     .ahead {
         width: 360px;
-        left: -46px;
+        left: -31px;
     }
 
     .head {
@@ -766,13 +765,13 @@ span .Policy a .show-modal:hover {
     }
 
     .AutoLayout {
-        margin: 21px 0 0 35px;
+        margin: 21px 0 0 23px;
         width: 170px;
     }
 
     .ahead {
         width: 344px;
-        left: -35px;
+        left: -23px;
     }
 
     .head {

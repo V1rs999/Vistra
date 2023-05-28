@@ -383,7 +383,7 @@ a:hover {
     }
 
     .AutoLayout {
-        margin: 22px 0 0 60px;
+        margin: 22px 0 0 45px;
         width: 180px;
         height: 384px;
     }
@@ -395,7 +395,7 @@ a:hover {
 
 
     .input {
-        width: 285px;
+        width: 300px;
     }
 
 
@@ -406,14 +406,14 @@ a:hover {
 
 
     .Register {
-        width: 282px;
+        width: 300px;
         bottom: -85px;
     }
 
     .Alredy {
         width: 387px;
         height: 59px;
-        left: -60px;
+        left: -45px;
     }
 
     .Policy {
@@ -441,7 +441,7 @@ a:hover {
     }
 
     .AutoLayout {
-        margin: 21px 0 0 46px;
+        margin: 21px 0 0 31px;
         width: 180px;
     }
 
@@ -462,7 +462,7 @@ a:hover {
     .Alredy {
         width: 360px;
         height: 59px;
-        left: -46px;
+        left: -31px;
     }
 
 }
@@ -474,7 +474,7 @@ a:hover {
 
     .Alredy {
         width: 344px;
-        left: -35px;
+        left: -23px;
     }
 
     .AutoLayout {
@@ -484,7 +484,7 @@ a:hover {
 
     .ahead {
         width: 344px;
-        left: -35px;
+        left: -23px;
     }
 
     .head {
