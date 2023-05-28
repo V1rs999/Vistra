@@ -20,17 +20,18 @@
 
 <body>
   <header class="header">
-    <a href="/home" class="logo"><img src="../img/Vectorr.png" alt=""></a>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
 
     <nav class="navbar">
       <a href="/home" class="active">Home</a>
       <a href="/TvShow">TV Shows</a>
       <a href="/movie">Movies</a>
-      <a href="/error">My Friends</a>
+      <a href="/MyFriends">My Friends</a>
       <a href="/MyList">My List</a>
     </nav>
     <div class="search">
-      <input type="text" placeholder="Search movies..." id="search">
+      <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
       <i class="fas fa-search" id="search_icon"></i>
       <div class="search_bx2">
       </div>
@@ -40,12 +41,12 @@
     </div>
     <form id="form1" action="#" method="get">
       <div class="user">
-        <img src="../img/user.png" onclick="toggleMenu()" alt="">
+        <img src="../img/user.webp" onclick="toggleMenu()" alt="">
       </div>
       <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
           <div class="user-info">
-            <img src="../img/user.png" id="user_img" alt="">
+            <img src="../img/user.webp" id="user_img" alt="">
             <h2 id="username"></h2>
           </div>
           <hr>
@@ -54,7 +55,7 @@
             <p>Edit Profile</p>
             <span>></span>
           </a>
-          <a href="eror" class="sub-menu-link">
+          <a href="/error" class="sub-menu-link">
             <img src="../img/gear-solid.svg" alt="">
             <p>Setting & Privacy</p>
             <span>></span>

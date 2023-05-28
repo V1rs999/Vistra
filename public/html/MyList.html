@@ -11,7 +11,6 @@
   <!-- font-awesome cdn link  -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/MyList.css">
-  <link rel="icon" href="../img/fav.png">
   <title>List</title>
 
   <!--Import font-->
@@ -21,85 +20,90 @@
 </head>
 
 <body>
-  <header class="header">
-    <a href="/home" class="logo"><img src="../img/Vectorr.png" alt=""></a>
+<header class="header">
+  <div id="menu-bar" class="fas fa-bars"></div>
+  <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
 
-    <nav class="navbar">
-      <a href="/home">Home</a>
-      <a href="/TvShow">TV Shows</a>
-      <a href="/movie">Movies</a>
-      <a href="/error">My Friends</a>
-      <a href="/MyList" class="active">My List</a>
-    </nav>
-    <div class="search">
-      <input type="text" placeholder="Search movies..." id="search">
-      <i class="fas fa-search" id="search_icon"></i>
-      <div class="search_bx2">
-      </div>
+  <nav class="navbar">
+    <a href="/home">Home</a>
+    <a href="/TvShow">TV Shows</a>
+    <a href="/movie">Movies</a>
+    <a href="/MyFriends">My Friends</a>
+    <a href="/MyList" class="active">My List</a>
+  </nav>
+  <div class="search">
+    <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
+    <i class="fas fa-search" id="search_icon"></i>
+    <div class="search_bx2">
     </div>
-    <div class="bell">
-      <i class="fas fa-bell"></i>
+  </div>
+  <div class="bell">
+    <i class="fas fa-bell"></i>
+  </div>
+  <form id="form1" action="#" method="get">
+    <div class="user">
+      <img src="../img/user.webp" onclick="toggleMenu()" alt="">
     </div>
-    <form id="form1" action="#" method="get">
-      <div class="user">
-        <img src="../img/user.png" onclick="toggleMenu()" alt="">
-      </div>
-      <div class="sub-menu-wrap" id="subMenu">
-        <div class="sub-menu">
-          <div class="user-info">
-            <img src="../img/user.png" id="user_img" alt="">
-            <h2 id="username"></h2>
-          </div>
-          <hr>
-          <a href="/error" class="sub-menu-link">
-            <img src="../img/user-solid.svg" alt="">
-            <p>Edit Profile</p>
-            <span>></span>
-          </a>
-          <a href="/error" class="sub-menu-link">
-            <img src="../img/gear-solid.svg" alt="">
-            <p>Setting & Privacy</p>
-            <span>></span>
-          </a>
-          <a href="/error" class="sub-menu-link">
-            <img src="../img/circle-info-solid.svg" alt="">
-            <p>Help & Support</p>
-            <span>></span>
-          </a>
-          <a href="/index" class="sub-menu-link">
-            <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
-            <p>Logout</p>
-            <span>></span>
-          </a>
+    <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <img src="../img/user.webp" id="user_img" alt="">
+          <h2 id="username"></h2>
         </div>
+        <hr>
+        <a href="/error" class="sub-menu-link">
+          <img src="../img/user-solid.svg" alt="">
+          <p>Edit Profile</p>
+          <span>></span>
+        </a>
+        <a href="/error" class="sub-menu-link">
+          <img src="../img/gear-solid.svg" alt="">
+          <p>Setting & Privacy</p>
+          <span>></span>
+        </a>
+        <a href="/error" class="sub-menu-link">
+          <img src="../img/circle-info-solid.svg" alt="">
+          <p>Help & Support</p>
+          <span>></span>
+        </a>
+        <a href="/index" class="sub-menu-link">
+          <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
+          <p>Logout</p>
+          <span>></span>
+        </a>
       </div>
-    </form>
-  </header>
-  <div class="tranding_bx" style="margin-top: 60px;">
-    <a href="#" class="active"><i class="bi bi-view-list"></i> My Watchlist</a>
-  </div>
+    </div>
+  </form>
+</header>
+<div class="tranding_bx" style="margin-top: 60px;">
+  <a href="#" class="active"><i class="bi bi-view-list"></i> My Watchlist</a>
+</div>
 
-  <div class="movie_bx_1 movie_bx_2">
-    <div class="movie_bxx" id="drama_bx"></div>
-  </div>
+<div class="movie_bx_2 movie_bx_1">
+  <div class="movie_bxx" id="action_bx"></div>
+</div>
 
-  <div class="tranding_bx">
-    <a href="#" class="active"><i class="bi bi-clock-history"></i> Watched Movies</a>
-  </div>
-  <div class="movie_bx_2 movie_bx_1">
-    <div class="movie_bxx" id="action_bx"></div>
-  </div>
 
-  <a href="#" class="to-top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
-  <script>
-    // Отримання значення з локального сховища
-    const userData = localStorage.getItem("user");
-    const user = JSON.parse(userData);
-    document.getElementById("username").textContent = user.username;
-  </script>
+<div class="tranding_bx">
+  <a href="#" class="active"><i class="bi bi-clock-history"></i> Watched Movies</a>
+</div>
+<div class="movie_bx_1 movie_bx_2">
+  <div class="movie_bxx" id="drama_bx"></div>
+</div>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/myList.js" type="module"></script>
+<a href="#" class="to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+<script>
+  // Отримання значення з локального сховища
+  const userData = localStorage.getItem("user");
+  const user = JSON.parse(userData);
+  const userD = localStorage.getItem("userId");
+  const userId = JSON.parse(userD);
+  console.log(userId);
+  document.getElementById("username").textContent = user.username;
+</script>
+
+<script src="../js/script.js"></script>
+<script src="../js/myList.js" type="module"></script>
 </body>

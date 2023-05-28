@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 const { secret } = require("../config");
 const authService = require("../Services/authService.js");
-const PostService = require("../Services/PostService");
+const PostModel = require("../models/Post.js");
 
 const generateAccessToken = (id, roles) => {
   const payload = { id, roles };
@@ -33,7 +33,7 @@ class authConroller {
         email,
         password: hashPassword,
         roles: [userRole.value],
-        like: [...like]
+        like: Array.isArray(like) ? [...like] : []
       });
       await user.save();
       return res.json({ message: "Successful registration" });
@@ -57,6 +57,7 @@ class authConroller {
       const token = generateAccessToken(user._id, user.roles);
       return res.json({
         token,
+        userId: { userId: user._id },
         user: { username: user.username }
       });
     } catch (e) {
@@ -74,22 +75,32 @@ class authConroller {
     }
   }
 
+  async getMylist(req, res) {
+    try {
+      const userId = req.params.id; // Assuming the id of the authorized user is passed as a parameter
+      const user = await User.findById(userId);
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      const userLikes = user.like; // Retrieve the array of liked post ids from the user
+
+      const posts = await PostModel.find({ _id: { $in: userLikes } }); // Fetch posts with matching ids in the user's likes array
+
+      return res.json(posts);
+    } catch (e) {
+      console.error(e);
+      res.status(500).json({ message: "Server error" });
+    }
+  }
+
+
   async updateMylist(req, res) {
     try {
       const updateMylist = await authService.update(req.body);
       return res.json(updateMylist);
     } catch (e) {
       res.status(500).json(e.message);
-    }
-  }
-
-  async delete(req, res) {
-    try {
-      const postId = req.params.id;
-      const post = await authService.delete(postId);
-      return res.json(post);
-    } catch (e) {
-      res.status(500).json(e);
     }
   }
 }
