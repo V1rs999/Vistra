@@ -10,72 +10,77 @@
 </head>
 
 <body>
-  <header class="header">
-    <a id="logo" href="/index" class="logo"><img src="../img/Vectorlogo.svg" alt=""></a>
-  </header>
-  <div class="bodyLog">
-    <button onclick="window.location.href='index'" class="close-form">&times;</button>
-    <div class="AutoLayout">
-      <div class="head">
-        <div class="h1">
-          <h1>Create account!</h1>
-        </div>
-        <div class="getStart">
-          <h4>Register to get started</h4>
+<header class="header">
+  <a id="logo" href="/index" class="logo"><img src="../img/Vectorlogo.svg" alt=""></a>
+</header>
+<div class="bodyLog">
+  <button onclick="window.location.href='index'" class="close-form">&times;</button>
+  <div class="AutoLayout">
+    <div class="head">
+      <div class="h1">
+        <h1>Create account!</h1>
+      </div>
+      <div class="getStart">
+        <h4>Register to get started</h4>
+      </div>
+    </div>
+    <form id="form" action="#" method="get">
+      <div class="setDiv">
+        <div class="inputDivName">
+          <div class="input text">
+            <label for="username"></label><input id="username" type="text" class="input-field name"
+                                                 placeholder="Name">
+            <div class="error"></div>
+          </div>
         </div>
       </div>
-      <form id="form" action="#" method="get">
-        <div class="setDiv">
-          <div class="inputDivName">
-            <div class="input text">
-              <label for="username"></label><input id="username" type="text" class="input-field name"
-                placeholder="Name">
-              <div class="error"></div>
-            </div>
+
+      <div class="setDiv">
+        <div class="inputDivEmail">
+          <div class="input text">
+            <label for="email"></label><input id="email" type="text" class="input-field email" placeholder="Email">
+            <div class="error"></div>
           </div>
         </div>
+      </div>
 
-        <div class="setDiv">
-          <div class="inputDivEmail">
-            <div class="input text">
-              <label for="email"></label><input id="email" type="text" class="input-field email" placeholder="Email">
-              <div class="error"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="setDiv">
-          <div class="inputDivPassworld">
-            <div class="input text">
+      <div class="setDiv">
+        <div class="inputDivPassworld">
+          <div class="input text">
               <span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide"
-                  src="../img/icons8-eye-64.svg" alt=""></span>
-              <label for="pass1"></label><input id="pass1" type="password" class="input-field password"
-                placeholder="Password">
-              <div class="error"></div>
-            </div>
+                                                                                     src="../img/icons8-eye-64.svg"
+                                                                                     alt=""></span>
+            <label for="pass1"></label><input id="pass1" type="password" class="input-field password"
+                                              placeholder="Password">
+            <div class="error"></div>
           </div>
         </div>
+      </div>
 
-        <div class="setDiv">
-          <div class="inputDivConfirmPassworld">
-            <div class="input text">
+      <div class="setDiv">
+        <div class="inputDivConfirmPassworld">
+          <div class="input text">
               <span id="show-pass2" onclick="togglePasswordVisibility('pass2')"><img class="hide"
-                  src="../img/icons8-eye-64.svg" alt=""></span>
-              <label for="pass2"></label><input id="pass2" type="password" class="input-field password"
-                placeholder="Confirm Password">
-              <div class="error"></div>
-            </div>
+                                                                                     src="../img/icons8-eye-64.svg"
+                                                                                     alt=""></span>
+            <label for="pass2"></label><input id="pass2" type="password" class="input-field password"
+                                              placeholder="Confirm Password">
+            <div class="error"></div>
           </div>
         </div>
+      </div>
 
-        <button id="button" class="Register Reg" type="submit">Register</button>
-        <div class="Alredy Alr">Already have an account?<a href="/Login">Log in.</a></div>
-      </form>
-    </div>
+      <button id="button" class="Register Reg" type="submit">Register</button>
+      <div class="Alredy Alr">Already have an account?<a href="/Login">Log in.</a></div>
+    </form>
   </div>
+</div>
 
-  <script src="../js/index.js"></script>
-  <script src="../js/RegisterForm.js"></script>
+<footer class="footer">
+  <a target="_blank" href="https://github.com/V1rs999/Vistra"><img src="../img/GitHub.svg" alt="GitHUB"></a>
+</footer>
+<script src="../js/index.js"></script>
+<script src="../js/RegisterForm.js"></script>
 </body>
 
 </html>

@@ -5,109 +5,112 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="/img/random.webp" as="image">
   <link rel="stylesheet" href="../css/Login.css">
 
   <title>Login</title>
 </head>
 
 <body>
-  <header class="header">
-    <a id="logo" href="/index" class="logo"><img src="../img/Vectorlogo.svg" alt=""></a>
-  </header>
-  <div class="bodyLog">
-    <button onclick="window.location.href='index'" class="close-form">&times;</button>
-    <div class="AutoLayout">
-      <div class="head">
-        <div class="h1">
-          <h1>Welcome Back!</h1>
-        </div>
-        <div class="yourCredentials">
-          <h4>Enter your credentials to continue.</h4>
-        </div>
+<header class="header">
+  <a id="logo" href="/index" class="logo"><img src="../img/Vectorlogo.svg" alt=""></a>
+</header>
+<div class="bodyLog">
+  <button onclick="window.location.href='index'" class="close-form">&times;</button>
+  <div class="AutoLayout">
+    <div class="head">
+      <div class="h1">
+        <h1>Welcome Back!</h1>
       </div>
-      <form id="form1" action="#" method="get">
+      <div class="yourCredentials">
+        <h4>Enter your credentials to continue.</h4>
+      </div>
+    </div>
+    <form id="form1" action="#" method="get">
+      <div class="setDiv">
+        <div class="inputDivEmail">
+          <div class="input text">
+            <label for="email"></label><input id="email" type="text" class="input-field email" placeholder="Email">
+            <div class="error"></div>
+          </div>
+        </div>
+
         <div class="setDiv">
-          <div class="inputDivEmail">
+          <div class="inputDivPassworld">
             <div class="input text">
-              <label for="email"></label><input id="email" type="text" class="input-field email" placeholder="Email">
+                <span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide"
+                                                                                       src="../img/icons8-eye-64.svg"
+                                                                                       alt=""></span>
+              <label for="pass1"></label><input id="pass1" type="password" class="input-field password"
+                                                placeholder="Password">
               <div class="error"></div>
             </div>
           </div>
-
-          <div class="setDiv">
-            <div class="inputDivPassworld">
-              <div class="input text">
-                <span id="show-pass1" onclick="togglePasswordVisibility('pass1')"><img class="hide"
-                    src="../img/icons8-eye-64.svg" alt=""></span>
-                <label for="pass1"></label><input id="pass1" type="password" class="input-field password"
-                  placeholder="Password">
-                <div class="error"></div>
-              </div>
-            </div>
-          </div>
         </div>
+      </div>
 
-        <a href="/forgotPass" class="forget text">Forget Password?</a>
-        <button class="login Log" type="submit">Login</button>
-        <span class="Policy text">By logging, you are agreeing with our <a class="show-modal forget text" href="#">Terms
+      <a href="/forgotPass" class="forget text">Forget Password?</a>
+      <button class="login Log" type="submit">Login</button>
+      <span class="Policy text">By logging, you are agreeing with our <a class="show-modal forget text" href="#">Terms
             of Use and Privacy Policy</a></span>
-        <div class="ahead ahe">Don't have an account?<a href="/Register">Register</a></div>
+      <div class="ahead ahe">Don't have an account?<a href="/Register">Register</a></div>
 
-      </form>
-      <div class="modal hidden">
-        <button class="close-modal">&times;</button>
-        <div class="tc_wrap">
-          <div class="tabs_list">
-            <ul>
-              <li data-tc="tab_item_1" class="active">Terms of use</li>
-            </ul>
+    </form>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <div class="tc_wrap">
+        <div class="tabs_list">
+          <ul>
+            <li data-tc="tab_item_1" class="active">Terms of use</li>
+          </ul>
+        </div>
+        <div class="tabs_content">
+          <div class="tab_head">
+            <h2>Terms & Privacy</h2>
           </div>
-          <div class="tabs_content">
-            <div class="tab_head">
-              <h2>Terms & Privacy</h2>
-            </div>
-            <div class="tab_body">
-              <div class="tab_item tab_item_1">
-                <h3>Terms of use</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
-                  reiciendis aut
-                  debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
-                  ut
-                  accusantium laboriosam eius sequi?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
-                  reiciendis aut
-                  debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
-                  ut
-                  accusantium laboriosam eius sequi?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
-                  reiciendis aut
-                  debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
-                  ut
-                  accusantium laboriosam eius sequi?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
-                  reiciendis aut
-                  debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
-                  ut
-                  accusantium laboriosam eius sequi?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
-                  reiciendis aut
-                  debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
-                  ut
-                  accusantium laboriosam eius sequi?</p>
-              </div>
+          <div class="tab_body">
+            <div class="tab_item tab_item_1">
+              <h3>Terms of use</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+                reiciendis aut
+                debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+                ut
+                accusantium laboriosam eius sequi?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+                reiciendis aut
+                debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+                ut
+                accusantium laboriosam eius sequi?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+                reiciendis aut
+                debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+                ut
+                accusantium laboriosam eius sequi?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+                reiciendis aut
+                debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+                ut
+                accusantium laboriosam eius sequi?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit praesentium
+                reiciendis aut
+                debitis minima earum fugiat quam aspernatur qui. Labore, aliquam iste. A quasi
+                ut
+                accusantium laboriosam eius sequi?</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="overlay hidden"></div>
     </div>
-
+    <div class="overlay hidden"></div>
   </div>
 
+</div>
 
-  <script src="../js/index.js"></script>
-  <script src="../js/LoginForm.js"></script>
+<footer class="footer">
+  <a target="_blank" href="https://github.com/V1rs999/Vistra"><img src="../img/GitHub.svg" alt="GitHUB"></a>
+</footer>
+
+<script src="../js/index.js"></script>
+<script src="../js/LoginForm.js"></script>
 </body>
 
 </html>

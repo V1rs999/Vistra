@@ -646,7 +646,20 @@ span .Policy a .show-modal:hover {
     background-color: #169c89;
 }
 
-@media (max-width: 991px) {}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #000000c7;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    line-height: 50px;
+}
+
+@media (max-width: 991px) {
+}
 
 @media (max-width: 477px) {
 
