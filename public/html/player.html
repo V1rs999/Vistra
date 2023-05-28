@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link href="../css/player.css" rel="stylesheet">
@@ -12,7 +12,6 @@
   <!-- font-awesome cdn link  -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/MyList.css">
-  <link rel="icon" href="../img/fav.png">
   <title>Advanced Level Movies Website</title>
 
   <!--Import font-->
@@ -25,99 +24,101 @@
 </head>
 
 <body>
-  <header class="header">
-    <a href="/home" class="logo"><img src="../img/Vectorr.png" alt=""></a>
+<header class="header">
+  <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
 
-    <nav class="navbar">
-      <a href="/home">Home</a>
-      <a href="/TvShow">TV Shows</a>
-      <a href="/movie">Movies</a>
-      <a href="/MyFriends">My Friends</a>
-      <a href="/MyList">My List</a>
-    </nav>
-    <div class="search">
-      <input type="text" placeholder="Search movies..." id="search">
-      <i class="fas fa-search" id="search_icon"></i>
-      <div class="search_bx2">
+  <nav class="navbar">
+    <a href="/home">Home</a>
+    <a href="/TvShow">TV Shows</a>
+    <a href="/movie">Movies</a>
+    <a href="/eror">My Friends</a>
+    <a href="/MyList">My List</a>
+  </nav>
+  <div class="search">
+    <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
+    <i class="fas fa-search" id="search_icon"></i>
+    <div class="search_bx2">
+    </div>
+  </div>
+  <div class="bell">
+    <i class="fas fa-bell"></i>
+  </div>
+  <div class="user">
+    <img src="../img/user.webp" onclick="toggleMenu()" alt="">
+  </div>
+  <div class="sub-menu-wrap" id="subMenu">
+    <div class="sub-menu">
+      <div class="user-info">
+        <img src="../img/user.webp" alt="">
+        <h2 id="username"></h2>
       </div>
-    </div>
-    <div class="bell">
-      <i class="fas fa-bell"></i>
-    </div>
-    <div class="user">
-      <img src="../img/user.png" onclick="toggleMenu()" alt="">
-    </div>
-    <div class="sub-menu-wrap" id="subMenu">
-      <div class="sub-menu">
-        <div class="user-info">
-          <img src="../img/user.png" alt="">
-          <h2 id="username"></h2>
-        </div>
-        <hr>
+      <hr>
 
-        <a href="eror" class="sub-menu-link">
-          <img src="../img/user-solid.svg" alt="">
-          <p>Edit Profile</p>
-          <span>></span>
-        </a>
-        <a href="eror" class="sub-menu-link">
-          <img src="../img/gear-solid.svg" alt="">
-          <p>Setting & Privacy</p>
-          <span>></span>
-        </a>
-        <a href="eror" class="sub-menu-link">
-          <img src="../img/circle-info-solid.svg" alt="">
-          <p>Help & Support</p>
-          <span>></span>
-        </a>
-        <a href="/Login" class="sub-menu-link">
-          <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
-          <p>Logout</p>
-          <span>></span>
-        </a>
+      <a href="/error" class="sub-menu-link">
+        <img src="../img/user-solid.svg" alt="">
+        <p>Edit Profile</p>
+        <span>></span>
+      </a>
+      <a href="/error" class="sub-menu-link">
+        <img src="../img/gear-solid.svg" alt="">
+        <p>Setting & Privacy</p>
+        <span>></span>
+      </a>
+      <a href="/error" class="sub-menu-link">
+        <img src="../img/circle-info-solid.svg" alt="">
+        <p>Help & Support</p>
+        <span>></span>
+      </a>
+      <a href="/Login" class="sub-menu-link">
+        <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
+        <p>Logout</p>
+        <span>></span>
+      </a>
 
-      </div>
     </div>
-  </header>
-  <video id="my-video" class="video-js" controls preload="auto" width="1000" height="650" data-setup="{}">
-    <source src="" type="video/youtube" />
-  </video>
+  </div>
+</header>
+<video id="my-video" class="video-js" controls preload="auto" width="1000" height="650" data-setup="{}">
+  <source src="" type="video/youtube" />
+</video>
 
-  <h2 class="name">name</h2>
-  <h2 class="num">num</h2>
-  <div class="like">♥</div>
-  <div class="chat">chat</div>
+<h2 class="name">name</h2>
+<h2 class="num">num</h2>
+<div class="like">♥</div>
+<div class="chat">chat</div>
+<label>
   <input class="input-chat" placeholder="write a message...">
-  <div class="circle"></div>
-  <div class="group"></div>
+</label>
+<div class="circle"></div>
+<div class="group"></div>
 
-  <script>
-    // Retrieve the URL parameter from the query string
-    const urlParams = new URLSearchParams(window.location.search);
-    const videoUrl = urlParams.get("url");
+<script>
+  // Retrieve the URL parameter from the query string
+  const urlParams = new URLSearchParams(window.location.search);
+  const videoUrl = urlParams.get("url");
 
-    console.log(videoUrl); // Check if the URL is correctly retrieved
+  console.log(videoUrl); // Check if the URL is correctly retrieved
 
-    var player = videojs("my-video", {
-      techOrder: ["youtube"],
-      sources: [
-        {
-          type: "video/youtube",
-          src: videoUrl // Set the retrieved URL as the video source
-        }
-      ],
-      youtube: {
-        iv_load_policy: 3,
-        modestbranding: 1,
-        controls: 1,
-        rel: 0
-      },
-      controlBar: {
-        progressControl: false
+  const player = videojs("my-video", {
+    techOrder: ["youtube"],
+    sources: [
+      {
+        type: "video/youtube",
+        src: videoUrl // Set the retrieved URL as the video source
       }
-    });
-  </script>
-  <script src="../js/script.js"></script>
+    ],
+    youtube: {
+      iv_load_policy: 3,
+      modestbranding: 1,
+      controls: 1,
+      rel: 0
+    },
+    controlBar: {
+      progressControl: false
+    }
+  });
+</script>
+<script src="../js/script.js"></script>
 </body>
 
 </html>

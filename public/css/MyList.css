@@ -1,6 +1,8 @@
+@import "index.css";
+
 * {
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -36,7 +38,7 @@ header {
     left: 0;
     height: 50px;
     width: 100%;
-    padding: 0 5%;
+    padding: 0 3%;
     background: rgb(54, 50, 50, 0.7);
     display: flex;
     align-items: center;
@@ -89,18 +91,18 @@ header.sticky {
     display: flex;
     align-items: center;
     color: #fff;
+    margin: 0 20px;
 }
 
 .search input {
-    padding: 3px 0px 3px 8px;
+    padding: 3px 0 3px 8px;
     border-radius: 20px;
     outline: none;
     border: none;
     background: transparent;
     color: #fff;
     transition: 1s linear;
-    transition: 1s linear;
-    width: 0px;
+    width: 0;
 }
 
 .search i {
@@ -112,20 +114,6 @@ header.sticky {
 
 .search i:hover {
     color: #fff;
-}
-
-.search .search_bx2 {
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    top: 35px;
-    left: -10px;
-    background: rgb(184, 184, 184, 0.3);
-    border-radius: 10px;
-    overflow: auto;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s linear;
 }
 
 .search .search_bx2::-webkit-scrollbar {
@@ -157,7 +145,7 @@ header.sticky {
     width: 30px;
     height: 45px;
     border-radius: 5px;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 /*  */
@@ -167,7 +155,7 @@ header.sticky {
     top: 45px;
     right: 4.5%;
     width: 220px;
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
@@ -269,7 +257,7 @@ header.sticky {
     font-size: 17px;
     cursor: pointer;
     transition: 0.3s linear;
-    margin: 0px 35px;
+    margin: 0 20px;
 }
 
 .bell:hover {
@@ -281,6 +269,7 @@ header.sticky {
     height: 20px;
     border: 1px solid #fff;
     border-radius: 50%;
+    margin: 0 20px;
 }
 
 .user img {
@@ -295,7 +284,7 @@ header.sticky {
     height: auto;
     border-bottom: 2px solid rgb(184, 184, 184, 0.1);
     margin: auto;
-    padding: 9px 0px;
+    padding: 9px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -314,7 +303,7 @@ header.sticky {
 }
 
 .tranding_bx i {
-    padding: 0px 5px;
+    padding: 0 5px;
 }
 
 .tranding_bx .fas {
@@ -362,7 +351,7 @@ header.sticky {
     min-width: 136px;
     height: 250px;
 
-    margin: 0px 7px;
+    margin: 0 7px;
 }
 
 .movie_bx_1 .card a {
@@ -456,7 +445,7 @@ header.sticky {
 }
 
 .movie_bx_2 .card {
-    width: 170px;
+    width: 154px;
     height: 290px;
     margin: 7px 7px;
 }
@@ -465,7 +454,7 @@ header.sticky {
     background: white;
     position: fixed;
     bottom: 16px;
-    right: 32px;
+    right: 30px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -489,3 +478,102 @@ header.sticky {
 .to-top:hover {
     background-color: red;
 }
+
+#menu-bar {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 30px;
+    padding: 8px 20px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    right: 32px;
+}
+
+@media (max-width:1082px) {
+    header .navbar a {
+        margin-right: 40px;
+        font-size: 16px;
+    }
+
+    header .logo img {
+        width: 50%;
+    }
+
+    .to-top {
+        right: 1%;
+    }
+}
+
+@media (max-width:991px) {
+    #menu-bar {
+        display: initial;
+        font-size: 100%;
+        left: -2%;
+    }
+
+    header .logo img {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: #333;
+        border-top: 2px solid rgba(255, 255, 255, .2);
+        padding: 16px 24px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .navbar a.active::before {
+        display: none;
+    }
+
+    header .navbar a {
+        display: block;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 24px 0;
+        background-color: #222;
+    }
+
+    .sub-menu-wrap {
+        right: -2%;
+    }
+}
+
+@media (max-width:634px) {}
+
+@media (max-width:477px) {
+
+    .movie_bx_2 .card {
+        width: 44%;
+        max-width: none;
+        margin: 7px 7px;
+    }
+
+
+    .tranding_bx a {
+        font-size: 10px;
+    }
+
+    .bell,
+    .user,
+    .search,
+    .profile {
+        margin: 0 10px;
+    }
+
+
+    /* -------------------------------------- */
+}
+
+@media (max-width:361px) {}

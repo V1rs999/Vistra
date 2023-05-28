@@ -8,13 +8,13 @@ router.post(
   [
     check("rate")
       .notEmpty()
-      .isInt({ min: 0, max: 10 })
-      .withMessage("The value must be between 0 and 10"),
+      .isFloat({ min: 0, max: 10 })
+      .withMessage("The value must be between 0 and 10")
   ],
   PostConroller.create
 );
 router.get("/posts", PostConroller.getAll);
 router.get("/posts/:id", PostConroller.getOne);
 router.put("/posts", PostConroller.update);
-
+router.delete("/posts/:id", PostConroller.delete);
 module.exports = router;
