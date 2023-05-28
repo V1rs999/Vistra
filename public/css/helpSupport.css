@@ -411,6 +411,10 @@ textarea {
     right: 32px;
 }
 
+textarea {
+    resize: none;
+}
+
 @media (max-width: 1082px) {
     header .navbar a {
         margin-right: 40px;
@@ -470,7 +474,7 @@ textarea {
     }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
     .helpsup {
         padding-bottom: 0;
     }
