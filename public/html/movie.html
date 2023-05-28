@@ -19,189 +19,189 @@
 </head>
 
 <body>
-<header>
+  <header>
 
-  <div id="menu-bar" class="fas fa-bars"></div>
-  <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
 
-  <nav class="navbar">
-    <a href="/home">Home</a>
-    <a href="/TvShow">TV Shows</a>
-    <a href="/movie" class="active">Movies</a>
-    <a href="/MyFriends">My Friends</a>
-    <a href="/MyList">My List</a>
-  </nav>
-  <div class="search">
-    <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
-    <i class="fas fa-search" id="search_icon"></i>
-    <div class="search_bx2">
+    <nav class="navbar">
+      <a href="/home">Home</a>
+      <a href="/TvShow">TV Shows</a>
+      <a href="/movie" class="active">Movies</a>
+      <a href="/MyFriends">My Friends</a>
+      <a href="/MyList">My List</a>
+    </nav>
+    <div class="search">
+      <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
+      <i class="fas fa-search" id="search_icon"></i>
+      <div class="search_bx2">
+      </div>
     </div>
-  </div>
-  <div class="bell">
-    <i class="fas fa-bell"></i>
-  </div>
-  <form id="form1" action="#" method="get">
-    <div class="user">
-      <img src="../img/user.webp" onclick="toggleMenu()" alt="">
+    <div class="bell">
+      <i class="fas fa-bell"></i>
     </div>
-    <div class="sub-menu-wrap" id="subMenu">
-      <div class="sub-menu">
-        <div class="user-info">
-          <img src="../img/user.webp" id="user_img" alt="">
-          <h2 id="username"></h2>
+    <form id="form1" action="#" method="get">
+      <div class="user">
+        <img src="../img/user.webp" onclick="toggleMenu()" alt="">
+      </div>
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="../img/user.webp" id="user_img" alt="">
+            <h2 id="username"></h2>
+          </div>
+          <hr>
+          <a href="/error" class="sub-menu-link">
+            <img src="../img/user-solid.svg" alt="">
+            <p>Edit Profile</p>
+            <span>></span>
+          </a>
+          <a href="/error" class="sub-menu-link">
+            <img src="../img/gear-solid.svg" alt="">
+            <p>Setting & Privacy</p>
+            <span>></span>
+          </a>
+          <a href="/error" class="sub-menu-link">
+            <img src="../img/circle-info-solid.svg" alt="">
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+          <a href="/index" class="sub-menu-link">
+            <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
+            <p>Logout</p>
+            <span>></span>
+          </a>
         </div>
-        <hr>
-        <a href="/error" class="sub-menu-link">
-          <img src="../img/user-solid.svg" alt="">
-          <p>Edit Profile</p>
-          <span>></span>
-        </a>
-        <a href="/error" class="sub-menu-link">
-          <img src="../img/gear-solid.svg" alt="">
-          <p>Setting & Privacy</p>
-          <span>></span>
-        </a>
-        <a href="/error" class="sub-menu-link">
-          <img src="../img/circle-info-solid.svg" alt="">
-          <p>Help & Support</p>
-          <span>></span>
-        </a>
-        <a href="/index" class="sub-menu-link">
-          <img src="../img/arrow-right-from-bracket-solid.svg" alt="">
-          <p>Logout</p>
-          <span>></span>
-        </a>
+      </div>
+    </form>
+  </header>
+  <main>
+    <div class="content">
+      <h6>Duration: <span id="header_dur">1h 47min</span></h6>
+      <h3 id="header_gen"><i class="fas fa-star"></i>6.5
+        <span>Action / Adventure / Sci-Fi</span>
+      </h3>
+      <h1 id="header_title">Rampage</h1>
+      <p id="header_pra">From Wikipedia, the free encyclopedia Rampage is a series of video games released by
+        Midway
+        (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various
+        consoles.
+        The basic premise of the games is that,
+        due to experiment-related accidents, the player controls a human transformed into a giant monster.</p>
+      <div class="btns">
+        <button onclick="window.location.href='/error'"><i class="fas fa-play"></i>WATCH</button>
+        <button onclick="window.location.href='/error'"><i class="fas fa-plus"></i>ADD LIST</button>
+        <button onclick="window.location.href='/error'">CREATE ROOM</button>
       </div>
     </div>
-  </form>
-</header>
-<main>
-  <div class="content">
-    <h6>Duration: <span id="header_dur">1h 47min</span></h6>
-    <h3 id="header_gen"><i class="fas fa-star"></i>6.5
-      <span>Action / Adventure / Sci-Fi</span>
-    </h3>
-    <h1 id="header_title">Rampage</h1>
-    <p id="header_pra">From Wikipedia, the free encyclopedia Rampage is a series of video games released by
-      Midway
-      (1986–2009) and Warner Bros. Interactive Entertainment (2009–present) for the arcade and various
-      consoles.
-      The basic premise of the games is that,
-      due to experiment-related accidents, the player controls a human transformed into a giant monster.</p>
-    <div class="btns">
-      <button onclick="window.location.href='/error'"><i class="fas fa-play"></i>WATCH</button>
-      <button onclick="window.location.href='/error'"><i class="fas fa-plus"></i>ADD LIST</button>
-      <button onclick="window.location.href='/error'">CREATE ROOM</button>
+    <div class="slider_btns">
+      <div class="slider"></div>
+      <div class="slider"></div>
+      <div class="slider"></div>
+    </div>
+  </main>
+
+  <!-- trending box2 start  -->
+  <div class="tranding_bx">
+    <a href="#" class="active"><i class="fas fa-photo-video"></i> Movies <span></span></a>
+  </div>
+  <div class="cato_bx cato_bx2">
+    <div class="left_cato">
+      <button>Sort by:</button>
+      <button id="all_btn">All</button>
+      <button id="year">Year <i class="fas fa-angle-down"></i>
+        <div class="year_bx">
+          <div id="year2023__btn">2023</div>
+          <div id="year2022__btn">2022</div>
+          <div id="year2021__btn">2021</div>
+          <div id="year2020__btn">2020</div>
+          <div id="year2019__btn">2019</div>
+          <div id="year2018__btn">2018</div>
+          <div id="year2017__btn">2017</div>
+          <div id="year2016__btn">2016</div>
+          <div id="year2015__btn">2015</div>
+          <div id="year2014__btn">2014</div>
+          <div id="year2013__btn">2013</div>
+          <div id="year2012__btn">2012</div>
+          <div id="year2011__btn">2011</div>
+          <div id="year2010__btn">2010</div>
+          <div id="year2009__btn">2009</div>
+          <div id="year2008__btn">2008</div>
+          <div id="year2007__btn">2007</div>
+          <div id="year2006__btn">2006</div>
+          <div id="year2005__btn">2005</div>
+          <div id="year2004__btn">2004</div>
+          <div id="year2003__btn">2003</div>
+          <div id="year2002__btn">2002</div>
+          <div id="year2001__btn">2001</div>
+          <div id="year2000__btn">2000</div>
+        </div>
+      </button>
+      <button id="a_z">A-Z <i class="fas fa-angle-down"></i>
+        <div class="year_bx letter_bx">
+          <div id="letter_a_btn">A</div>
+          <div id="letter_b_btn">B</div>
+          <div id="letter_c_btn">C</div>
+          <div id="letter_d_btn">D</div>
+          <div id="letter_e_btn">E</div>
+          <div id="letter_f_btn">F</div>
+          <div id="letter_g_btn">G</div>
+          <div id="letter_h_btn">H</div>
+          <div id="letter_i_btn">I</div>
+          <div id="letter_j_btn">J</div>
+          <div id="letter_k_btn">K</div>
+          <div id="letter_l_btn">L</div>
+          <div id="letter_m_btn">M</div>
+          <div id="letter_n_btn">N</div>
+          <div id="letter_o_btn">O</div>
+          <div id="letter_p_btn">P</div>
+          <div id="letter_q_btn">Q</div>
+          <div id="letter_r_btn">R</div>
+          <div id="letter_s_btn">S</div>
+          <div id="letter_t_btn">T</div>
+          <div id="letter_u_btn">U</div>
+          <div id="letter_v_btn">V</div>
+          <div id="letter_w_btn">W</div>
+          <div id="letter_x_btn">X</div>
+          <div id="letter_y_btn">Y</div>
+          <div id="letter_z_btn">Z</div>
+        </div>
+      </button>
+    </div>
+    <div class="right_cato">
+      <i class="fas fa-star"></i>
+      <label for="change_input"></label><input type="range" name="RangeChange" id="change_input" min="0" max="9.9">
+      <span>5.0</span>
     </div>
   </div>
-  <div class="slider_btns">
-    <div class="slider"></div>
-    <div class="slider"></div>
-    <div class="slider"></div>
+
+  <!-- movies box strat  -->
+  <div class="movie_bx_1 movie_bx_2">
+    <div class="all box2_actives" id="all"></div>
+    <div class="year" id="year_2023"></div>
+    <div class="year" id="year_2022"></div>
+    <div class="year" id="year_2021"></div>
+    <div class="year" id="year_2020"></div>
+    <div class="letter" id="letter_a"></div>
+    <div class="letter" id="letter_b"></div>
+    <div class="letter" id="letter_c"></div>
+    <div class="letter" id="letter_e"></div>
+    <div class="rate_change" id="rate4"></div>
+    <div class="rate_change" id="rate8"></div>
   </div>
-</main>
 
-<!-- trending box2 start  -->
-<div class="tranding_bx" style="margin-top: 20px;">
-  <a href="#" class="active"><i class="fas fa-photo-video"></i> Movies <span></span></a>
-</div>
-<div class="cato_bx cato_bx2">
-  <div class="left_cato">
-    <button>Sort by:</button>
-    <button id="all_btn">All</button>
-    <button id="year">Year <i class="fas fa-angle-down"></i>
-      <div class="year_bx">
-        <div id="year2023__btn">2023</div>
-        <div id="year2022__btn">2022</div>
-        <div id="year2021__btn">2021</div>
-        <div id="year2020__btn">2020</div>
-        <div id="year2019__btn">2019</div>
-        <div id="year2018__btn">2018</div>
-        <div id="year2017__btn">2017</div>
-        <div id="year2016__btn">2016</div>
-        <div id="year2015__btn">2015</div>
-        <div id="year2014__btn">2014</div>
-        <div id="year2013__btn">2013</div>
-        <div id="year2012__btn">2012</div>
-        <div id="year2011__btn">2011</div>
-        <div id="year2010__btn">2010</div>
-        <div id="year2009__btn">2009</div>
-        <div id="year2008__btn">2008</div>
-        <div id="year2007__btn">2007</div>
-        <div id="year2006__btn">2006</div>
-        <div id="year2005__btn">2005</div>
-        <div id="year2004__btn">2004</div>
-        <div id="year2003__btn">2003</div>
-        <div id="year2002__btn">2002</div>
-        <div id="year2001__btn">2001</div>
-        <div id="year2000__btn">2000</div>
-      </div>
-    </button>
-    <button id="a_z">A-Z <i class="fas fa-angle-down"></i>
-      <div class="year_bx letter_bx">
-        <div id="letter_a_btn">A</div>
-        <div id="letter_b_btn">B</div>
-        <div id="letter_c_btn">C</div>
-        <div id="letter_d_btn">D</div>
-        <div id="letter_e_btn">E</div>
-        <div id="letter_f_btn">F</div>
-        <div id="letter_g_btn">G</div>
-        <div id="letter_h_btn">H</div>
-        <div id="letter_i_btn">I</div>
-        <div id="letter_j_btn">J</div>
-        <div id="letter_k_btn">K</div>
-        <div id="letter_l_btn">L</div>
-        <div id="letter_m_btn">M</div>
-        <div id="letter_n_btn">N</div>
-        <div id="letter_o_btn">O</div>
-        <div id="letter_p_btn">P</div>
-        <div id="letter_q_btn">Q</div>
-        <div id="letter_r_btn">R</div>
-        <div id="letter_s_btn">S</div>
-        <div id="letter_t_btn">T</div>
-        <div id="letter_u_btn">U</div>
-        <div id="letter_v_btn">V</div>
-        <div id="letter_w_btn">W</div>
-        <div id="letter_x_btn">X</div>
-        <div id="letter_y_btn">Y</div>
-        <div id="letter_z_btn">Z</div>
-      </div>
-    </button>
-  </div>
-  <div class="right_cato">
-    <i class="fas fa-star"></i>
-    <label for="change_input"></label><input type="range" name="RangeChange" id="change_input" min="0" max="9.9">
-    <span>5.0</span>
-  </div>
-</div>
+  <a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
 
-<!-- movies box strat  -->
-<div class="movie_bx_1 movie_bx_2">
-  <div class="all box2_actives" id="all"></div>
-  <div class="year" id="year_2023"></div>
-  <div class="year" id="year_2022"></div>
-  <div class="year" id="year_2021"></div>
-  <div class="year" id="year_2020"></div>
-  <div class="letter" id="letter_a"></div>
-  <div class="letter" id="letter_b"></div>
-  <div class="letter" id="letter_c"></div>
-  <div class="letter" id="letter_e"></div>
-  <div class="rate_change" id="rate4"></div>
-  <div class="rate_change" id="rate8"></div>
-</div>
-
-<a href="#" class="to-top">
-  <i class="fas fa-chevron-up"></i>
-</a>
-
-<script>
-  // Отримання значення з локального сховища
-  const userData = localStorage.getItem("user");
-  const user = JSON.parse(userData);
-  document.getElementById("username").textContent = user.username;
-</script>
-<script src="../js/script.js"></script>
-<script src="../js/movie_TvShow.js" type="module"></script>
+  <script>
+    // Отримання значення з локального сховища
+    const userData = localStorage.getItem("user");
+    const user = JSON.parse(userData);
+    document.getElementById("username").textContent = user.username;
+  </script>
+  <script src="../js/script.js"></script>
+  <script src="../js/movie_TvShow.js" type="module"></script>
 </body>
 
 </html>

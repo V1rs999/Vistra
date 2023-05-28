@@ -36,9 +36,20 @@
     <div class="bell">
       <i class="fas fa-bell"></i>
     </div>
-    <div class="btns">
-      <button onclick="window.location.href='/login'">Log in</button>
-      <button onclick="window.location.href='/Register'">Sign up</button>
+    <div class="profile">
+      <i class="fas fa-user" onclick="toggleMenu()"></i>
+    </div>
+    <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <a href="/Login" class="sub-menu-link">
+          <p>Log in</p>
+          <span>></span>
+        </a>
+        <a href="/Register" class="sub-menu-link">
+          <p>Sign up</p>
+          <span>></span>
+        </a>
+      </div>
     </div>
   </header>
   <main>
