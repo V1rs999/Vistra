@@ -90,103 +90,6 @@ h6 {
     font-weight: 400;
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 body {
     font-family: sans-serif;
     color: #333;
@@ -743,9 +646,10 @@ span .Policy a .show-modal:hover {
     background-color: #169c89;
 }
 
-@media (max-width:991px) {}
+@media (max-width: 991px) {
+}
 
-@media (max-width:477px) {
+@media (max-width: 477px) {
 
     .bodyLog {
         width: 387px;
@@ -812,7 +716,7 @@ span .Policy a .show-modal:hover {
     }
 
     .tc_wrap .tabs_content .tab_body {
-        height: calc(100%-140px);
+        height: calc(100% - 140px);
     }
 
     .yourCredentials,
@@ -822,7 +726,7 @@ span .Policy a .show-modal:hover {
 
 }
 
-@media (max-width:376px) {
+@media (max-width: 376px) {
     .bodyLog {
         width: 360px;
     }
@@ -856,7 +760,7 @@ span .Policy a .show-modal:hover {
 
 }
 
-@media (max-width:361px) {
+@media (max-width: 361px) {
     .bodyLog {
         width: 344px;
     }
