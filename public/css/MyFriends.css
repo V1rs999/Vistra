@@ -94,6 +94,7 @@ header.sticky {
     display: flex;
     align-items: center;
     color: #fff;
+    margin: 0 20px;
 }
 
 .search input {
@@ -275,7 +276,7 @@ header.sticky {
     font-size: 17px;
     cursor: pointer;
     transition: 0.3s linear;
-    margin: 0 35px;
+    margin: 0 20px;
 }
 
 .bell:hover {
@@ -287,6 +288,7 @@ header.sticky {
     height: 20px;
     border: 1px solid #fff;
     border-radius: 50%;
+    margin: 0 20px;
 }
 
 .user img {
@@ -458,7 +460,11 @@ header.sticky {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 99%;
+}
+
+.closebutton {
+    margin-left: 800px;
+    cursor: pointer;
 }
 
 .fas.fa-search:hover {
@@ -562,12 +568,133 @@ header.sticky {
     }
 
     .sub-menu-wrap {
-        right: 0;
+        right: -2%;
     }
 }
 
 @media (max-width: 634px) {
+    .friends_bx {
+        width: 90%;
+        margin: auto;
+        padding: 9px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .friends_bx p {
+        font-size: 14px;
+    }
+
+    .friends_bx i {
+        padding: 0 2px;
+    }
+
+    .friends_bx .fas {
+        margin-right: 8px;
+    }
+
+    .friends_bx .active {
+        font-size: 14px;
+    }
+
+    .search_f {
+        margin: 0 auto;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #search-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #search-container input {
+        width: 70%;
+        padding: 0.8em 0.3em;
+    }
+
+    #search-container button {
+        padding: 0.5em 0.5em;
+        margin-left: 0.5em;
+        font-size: 12px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container h5 {
+        font-weight: 500;
+        margin: 10px 5px;
+        font-size: 10px;
+    }
+
+    .container button {
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 20px;
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .info-label {
+        font-size: 10px;
+    }
+
+    .info-panel {
+        justify-content: center;
+    }
+
+    #friendsmy {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fas.fa-search:hover {
+        cursor: pointer;
+    }
+
+    .closebutton {
+        margin-left: 96%;
+    }
 }
 
-@media (max-width: 477px) {
+@media (max-width:477px) {
+
+    .movie_bx_2 .card {
+        width: 44%;
+        max-width: none;
+        margin: 7px 7px;
+    }
+
+
+    .tranding_bx a {
+        font-size: 10px;
+    }
+
+    .bell,
+    .user,
+    .search,
+    .profile {
+        margin: 0 10px;
+    }
+
+
+    /* -------------------------------------- */
+
+
+
+
 }
