@@ -200,6 +200,7 @@ body {
     background-repeat: no-repeat;
     background-position: left;
     background-color: #111;
+    overflow: hidden;
 }
 
 body::before {
@@ -772,7 +773,7 @@ span .Policy a .show-modal:hover {
 
 
     .input {
-        width: 285px;
+        width: 300px;
     }
 
 
@@ -812,6 +813,11 @@ span .Policy a .show-modal:hover {
 
     .tc_wrap .tabs_content .tab_body {
         height: calc(100%-140px);
+    }
+
+    .yourCredentials,
+    .Policy {
+        font-size: 15px;
     }
 
 }

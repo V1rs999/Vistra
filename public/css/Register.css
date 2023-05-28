@@ -425,6 +425,10 @@ a:hover {
         left: 66%;
     }
 
+    .getStart {
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width:376px) {
