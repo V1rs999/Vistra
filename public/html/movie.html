@@ -20,7 +20,9 @@
 
 <body>
   <header>
-    <a href="/home" class="logo"><img src="../img/Vectorr.png" alt=""></a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
 
     <nav class="navbar">
       <a href="/home">Home</a>
@@ -30,7 +32,7 @@
       <a href="/MyList">My List</a>
     </nav>
     <div class="search">
-      <input type="text" placeholder="Search movies..." id="search">
+      <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
       <i class="fas fa-search" id="search_icon"></i>
       <div class="search_bx2">
       </div>
@@ -40,12 +42,12 @@
     </div>
     <form id="form1" action="#" method="get">
       <div class="user">
-        <img src="../img/user.png" onclick="toggleMenu()" alt="">
+        <img src="../img/user.webp" onclick="toggleMenu()" alt="">
       </div>
       <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
           <div class="user-info">
-            <img src="../img/user.png" id="user_img" alt="">
+            <img src="../img/user.webp" id="user_img" alt="">
             <h2 id="username"></h2>
           </div>
           <hr>
@@ -100,7 +102,7 @@
   </main>
 
   <!-- trending box2 start  -->
-  <div class="tranding_bx" style="margin-top: 20px;">
+  <div class="tranding_bx">
     <a href="#" class="active"><i class="fas fa-photo-video"></i> Movies <span></span></a>
   </div>
   <div class="cato_bx cato_bx2">
@@ -168,7 +170,7 @@
     </div>
     <div class="right_cato">
       <i class="fas fa-star"></i>
-      <input type="range" name="RangeChange" id="change_input" min="0" max="9.9">
+      <label for="change_input"></label><input type="range" name="RangeChange" id="change_input" min="0" max="9.9">
       <span>5.0</span>
     </div>
   </div>
