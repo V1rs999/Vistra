@@ -742,9 +742,10 @@ span .Policy a .show-modal:hover {
     background-color: #169c89;
 }
 
-@media (max-width:991px) {}
+@media (max-width: 991px) {
+}
 
-@media (max-width:477px) {
+@media (max-width: 477px) {
 
     .bodyLog {
         width: 387px;
@@ -811,12 +812,12 @@ span .Policy a .show-modal:hover {
     }
 
     .tc_wrap .tabs_content .tab_body {
-        height: calc(100%-140px);
+        height: calc(100% - 140px);
     }
 
 }
 
-@media (max-width:376px) {
+@media (max-width: 376px) {
     .bodyLog {
         width: 360px;
     }
@@ -850,7 +851,7 @@ span .Policy a .show-modal:hover {
 
 }
 
-@media (max-width:361px) {
+@media (max-width: 361px) {
     .bodyLog {
         width: 344px;
     }
