@@ -46,6 +46,14 @@ app.get("/MyFriends", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
 });
 
+app.get("/MyFriends", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
+});
+
+app.get("/helpSupport", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/helpSupport.html"));
+});
+
 app.use((req, res) => {
   res
     .status(404)
@@ -56,7 +64,7 @@ async function startApp() {
   try {
     await mongoose.connect(DB_URL, {
       useUnifiedTopology: true,
-      useNewUrlParser: true,
+      useNewUrlParser: true
     });
     app.listen(Port, () => console.log(`ServerStart on Port${Port}`));
   } catch (e) {

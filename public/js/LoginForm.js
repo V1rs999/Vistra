@@ -10,17 +10,20 @@ form1.addEventListener("submit", async (e) => {
     const response = await fetch("/auth/Login", {
       method: "post",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         email,
-        password,
-      }),
+        password
+      })
     });
 
     const data = await response.json();
-    console.log(data);
     if (response.ok) {
+      console.log(data.userId);
+      // Збереження об'єкту в локальне сховище після перетворення на рядок JSON
+      localStorage.setItem("user", JSON.stringify(data.user));
+      localStorage.setItem("userId", JSON.stringify(data.userId));
       window.location.href = "/home";
     }
 
@@ -79,56 +82,53 @@ const validateInputs1 = () => {
 };
 
 `use strict`;
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelectorAll('.show-modal');
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnsOpenModal = document.querySelectorAll(".show-modal");
 
-const openModal = function () {
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
+const openModal = function() {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 };
 
-const closeModal = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
+const closeModal = function() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
 };
 for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener('click', openModal);
+  btnsOpenModal[i].addEventListener("click", openModal);
 
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
 
-const escape = document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
-  } else {
-    console.log(e.key);
-  }
-});
-	
-var tab_lists = document.querySelectorAll(".tabs_list ul li");
-var tab_items = document.querySelectorAll(".tab_item"); 
+// const escape = document.addEventListener("keydown", function (e) {
+//   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+//     closeModal();
+//   } else {
+//     console.log(e.key);
+//   }
+// });
 
-tab_lists.forEach(function(list){
-  list.addEventListener("click", function(){
-    var tab_data = list.getAttribute("data-tc");
-    
-    tab_lists.forEach(function(list){
+const tab_lists = document.querySelectorAll(".tabs_list ul li");
+const tab_items = document.querySelectorAll(".tab_item");
+
+tab_lists.forEach(function(list) {
+  list.addEventListener("click", function() {
+    const tab_data = list.getAttribute("data-tc");
+
+    tab_lists.forEach(function(list) {
       list.classList.remove("active");
     });
     list.classList.add("active");
-    
-    tab_items.forEach(function(item){
-      var tab_class = item.getAttribute("class").split(" ");
-      if(tab_class.includes(tab_data)){
+
+    tab_items.forEach(function(item) {
+      const tab_class = item.getAttribute("class").split(" ");
+      if (tab_class.includes(tab_data)) {
         item.style.display = "block";
-      }
-      else{
+      } else {
         item.style.display = "none";
       }
-      
-    })
-    
-  })
-})
+    });
+  });
+});

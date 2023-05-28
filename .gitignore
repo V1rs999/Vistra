@@ -3,3 +3,6 @@
 /.package
 /.idea
 /.README.md
+node_modules
+/public/.dist
+/vscode

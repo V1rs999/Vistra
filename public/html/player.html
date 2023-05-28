@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link href="../css/player.css" rel="stylesheet">
@@ -12,7 +12,6 @@
   <!-- font-awesome cdn link  -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/MyList.css">
-  <link rel="icon" href="../img/fav.png">
   <title>Advanced Level Movies Website</title>
 
   <!--Import font-->
@@ -26,17 +25,17 @@
 
 <body>
   <header class="header">
-    <a href="/home" class="logo"><img src="../img/Vectorr.png" alt=""></a>
+    <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
 
     <nav class="navbar">
       <a href="/home">Home</a>
       <a href="/TvShow">TV Shows</a>
       <a href="/movie">Movies</a>
-      <a href="/MyFriends">My Friends</a>
+      <a href="/eror">My Friends</a>
       <a href="/MyList">My List</a>
     </nav>
     <div class="search">
-      <input type="text" placeholder="Search movies..." id="search">
+      <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
       <i class="fas fa-search" id="search_icon"></i>
       <div class="search_bx2">
       </div>
@@ -45,27 +44,27 @@
       <i class="fas fa-bell"></i>
     </div>
     <div class="user">
-      <img src="../img/user.png" onclick="toggleMenu()" alt="">
+      <img src="../img/user.webp" onclick="toggleMenu()" alt="">
     </div>
     <div class="sub-menu-wrap" id="subMenu">
       <div class="sub-menu">
         <div class="user-info">
-          <img src="../img/user.png" alt="">
-          <h2>Andrew</h2>
+          <img src="../img/user.webp" alt="">
+          <h2 id="username"></h2>
         </div>
         <hr>
 
-        <a href="eror" class="sub-menu-link">
+        <a href="/error" class="sub-menu-link">
           <img src="../img/user-solid.svg" alt="">
           <p>Edit Profile</p>
           <span>></span>
         </a>
-        <a href="eror" class="sub-menu-link">
+        <a href="/error" class="sub-menu-link">
           <img src="../img/gear-solid.svg" alt="">
           <p>Setting & Privacy</p>
           <span>></span>
         </a>
-        <a href="eror" class="sub-menu-link">
+        <a href="/helpSupport" class="sub-menu-link">
           <img src="../img/circle-info-solid.svg" alt="">
           <p>Help & Support</p>
           <span>></span>
@@ -87,31 +86,39 @@
   <h2 class="num">num</h2>
   <div class="like">♥</div>
   <div class="chat">chat</div>
-  <input class="input-chat" placeholder="write a message...">
+  <label>
+    <input class="input-chat" placeholder="write a message...">
+  </label>
   <div class="circle"></div>
   <div class="group"></div>
 
   <script>
-    var player = videojs("my-video", {
+    // Retrieve the URL parameter from the query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoUrl = urlParams.get("url");
+
+    console.log(videoUrl); // Check if the URL is correctly retrieved
+
+    const player = videojs("my-video", {
       techOrder: ["youtube"],
       sources: [
         {
           type: "video/youtube",
-          src: "https://music.youtube.com/watch?v=ba7mB8oueCY&list=RDTMAK5uy_lz2owBgwWf1mjzyn_NbxzMViQzIg8IAIg"
+          src: videoUrl // Set the retrieved URL as the video source
         }
       ],
       youtube: {
-        iv_load_policy: 3, // Приховувати підказки
-        modestbranding: 1, // Приховувати логотип YouTube
-        controls: 1, // Відображати елементи керування
-        rel: 0 // Відключити рекомендації на закінчення відео
+        iv_load_policy: 3,
+        modestbranding: 1,
+        controls: 1,
+        rel: 0
       },
       controlBar: {
-        progressControl: false // Відключити відображення прогрес бара
+        progressControl: false
       }
-
     });
   </script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

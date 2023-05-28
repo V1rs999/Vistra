@@ -1,148 +1,72 @@
-import {movies} from "../js/card_movies.js";
+fetch("/api/posts/")
+  .then((response) => response.json())
+  .then((data) => {
+    // Отримано дані з сервера
+    // Додайте карточки на сторінку
 
-let action1 = document.getElementById('action1');
-let action_bx = document.getElementById('action_bx');
+    // Приклад додавання карточок до контейнеру action_bx
+    const genres = [
+      { buttonId: "action1", containerId: "action_bx", genre: "action" },
+      { buttonId: "drama1", containerId: "drama_bx", genre: "drama" },
+      { buttonId: "comady1", containerId: "comady_bx", genre: "comady" },
+      { buttonId: "biography1", containerId: "biography_bx", genre: "biography" },
+      { buttonId: "documentary1", containerId: "documentary_bx", genre: "documentary" },
+      { buttonId: "crime1", containerId: "crime_bx", genre: "crime" }
+    ];
 
-action1.addEventListener('click', () => {
-    action1.classList.toggle('cato_button_active');
-    action_bx.classList.toggle('movie_box_active');
-});
-
-const action_array = movies.filter((e) => {
-    return e.genre == "action";
-});
-
-action_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
-    <a href="${url}">
-                <img src="${img}" alt="${title}">
-                <div class="content">
-                    <h2>${title}</h2>
-                    <div class="metadata">
-                        <span>${year}</span>
-                        <div class="rate">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-eye"></i>
-                            <i class="fas fa-star"></i>
-                            <span>${rate}</span>
-                        </div>
-                    </div>
+    const createCards = (array, container) => {
+      array.forEach((element) => {
+        const { picture, title, year, url, rate } = element;
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+        <a href="/player?url=${encodeURIComponent(url)}"> <!-- Add the URL as a query parameter -->  
+          <div>
+            <img src="${picture}" alt="${title}">
+          </div>
+        </a>
+          <div class="content">
+            <h2>${title}</h2>
+            <div class="metadata">
+                <span>${year}</span>
+                <div class="rate">
+                  <i class="fas fa-heart"></i>
+                  <i class="fas fa-eye"></i>
+                  <i class="fas fa-star"></i>
+                  <span>${rate}</span>
                 </div>
-            </a>
-    `
+            </div>
+          </div>
+        `;
 
-    action_bx.appendChild(card);
-});
+        
+        container.appendChild(card);
+        
+      });
+    };
 
-let crime1 = document.getElementById('crime1');
-let crime_bx = document.getElementById('crime_bx');
+    
+    const filterByGenre = (genre) => {
+      return data.filter((e) => e.genre == genre);
+    };
 
-crime1.addEventListener('click', () => {
-    crime1.classList.toggle('cato_button_active');
-    crime_bx.classList.toggle('movie_box_active');
-});
+  
+    
+    genres.forEach(({ buttonId, containerId, genre }) => {
+      const button = document.getElementById(buttonId);
+      const container = document.getElementById(containerId);
 
-const crime_array = movies.filter((e) => {
-    return e.genre == "crime";
-});
+      button.addEventListener("click", () => {
+        button.classList.toggle("cato_button_active");
+        container.classList.toggle("movie_box_active");
+      });
 
-crime_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
-    <a href="${url}">
-                <img src="${img}" alt="${title}">
-                <div class="content">
-                    <h2>${title}</h2>
-                    <div class="metadata">
-                        <span>${year}</span>
-                        <div class="rate">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-eye"></i>
-                            <i class="fas fa-star"></i>
-                            <span>${rate}</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-    `
+      const filteredData = filterByGenre(genre);
+      createCards(filteredData, container);
+    });
 
-    crime_bx.appendChild(card);
-});
-
-let biography1 = document.getElementById('biography1');
-let biography_bx = document.getElementById('biography_bx');
-
-biography1.addEventListener('click', () => {
-    biography1.classList.toggle('cato_button_active');
-    biography_bx.classList.toggle('movie_box_active');
-});
-
-const biography_array = movies.filter((e) => {
-    return e.genre == "biography";
-});
-
-biography_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
-    <a href="${url}">
-                <img src="${img}" alt="${title}">
-                <div class="content">
-                    <h2>${title}</h2>
-                    <div class="metadata">
-                        <span>${year}</span>
-                        <div class="rate">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-eye"></i>
-                            <i class="fas fa-star"></i>
-                            <span>${rate}</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-    `
-
-    biography_bx.appendChild(card);
-});
-
-let drama1 = document.getElementById('drama1');
-let drama_bx = document.getElementById('drama_bx');
-
-drama1.addEventListener('click', () => {
-    drama1.classList.toggle('cato_button_active');
-    drama_bx.classList.toggle('movie_box_active');
-});
-
-const drama_array = movies.filter((e) => {
-    return e.genre == "drama";
-});
-
-drama_array.forEach(element => {
-    const { img, title, year, url, rate } = element;
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
-    <a href="${url}">
-                <img src="${img}" alt="${title}">
-                <div class="content">
-                    <h2>${title}</h2>
-                    <div class="metadata">
-                        <span>${year}</span>
-                        <div class="rate">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-eye"></i>
-                            <i class="fas fa-star"></i>
-                            <span>${rate}</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-    `
-    drama_bx.appendChild(card);
-});
+    // Додайте карточки до інших контейнерів на аналогічний спосіб
+  })
+  .catch((error) => {
+    console.log("Помилка при отриманні даних з сервера:", error);
+  });

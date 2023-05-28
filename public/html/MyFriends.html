@@ -9,8 +9,7 @@
 
     <!-- font-awesome cdn link  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/MyFrineds.css">
-    <link rel="icon" href="../img/fav.png">
+    <link rel="stylesheet" href="../css/MyFriends.css">
     <title>Friends</title>
 
     <!--Import font-->
@@ -23,7 +22,9 @@
 
 <body>
     <header class="header">
-        <a href="/home" class="logo"><img src="../img/Vectorr.png" alt=""></a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="/home" class="logo"><img src="../img/Vectorr.webp" alt=""></a>
 
         <nav class="navbar">
             <a href="/home">Home</a>
@@ -33,7 +34,7 @@
             <a href="/MyList">My List</a>
         </nav>
         <div class="search">
-            <input type="text" placeholder="Search movies..." id="search">
+            <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
             <i class="fas fa-search" id="search_icon"></i>
             <div class="search_bx2">
             </div>
@@ -41,14 +42,14 @@
         <div class="bell">
             <i class="fas fa-bell"></i>
         </div>
-        <form action="#" method="get">
+        <form id="form1" action="#" method="get">
             <div class="user">
-                <img src="../img/user.png" onclick="toggleMenu()" alt="">
+                <img src="../img/user.webp" onclick="toggleMenu()" alt="">
             </div>
             <div class="sub-menu-wrap" id="subMenu">
                 <div class="sub-menu">
                     <div class="user-info">
-                        <img src="../img/user.png" id="user_img" alt="">
+                        <img src="../img/user.webp" id="user_img" alt="">
                         <h2 id="username"></h2>
                     </div>
                     <hr>
@@ -62,7 +63,7 @@
                         <p>Setting & Privacy</p>
                         <span>></span>
                     </a>
-                    <a href="/error" class="sub-menu-link">
+                    <a href="/helpSupport" class="sub-menu-link">
                         <img src="../img/circle-info-solid.svg" alt="">
                         <p>Help & Support</p>
                         <span>></span>
@@ -83,11 +84,12 @@
 
     <div class="search_f">
         <div id="search-container">
-            <input type="search" id="search-input" placeholder="Search New Friends Here.." />
+            <label for="search-input"></label><input type="search" id="search-input"
+                placeholder="Search New Friends Here.." />
             <button id="searching"><i class="fas fa-search"></i></button>
         </div>
     </div>
-    <button id="closebutton" style="margin-left: 60em;"><i class="fas fa-times"></i></button>
+    <button id="closebutton" class="closebutton"><i class="fas fa-times"></i></button>
     <div id="friendsmy"></div>
 
     <div class="friends_bx">
@@ -96,8 +98,17 @@
 
     <div id="adfriend"></div>
 
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // Отримання значення з локального сховища
+        const userData = localStorage.getItem("user");
+        const user = JSON.parse(userData);
+        document.getElementById("username").textContent = user.username;
+    </script>
+
     <script src="../js/script.js"></script>
     <script src="../js/MyFriends.js"></script>
 </body>
-
-</html>

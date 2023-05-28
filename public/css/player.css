@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
 .video-js .vjs-modal-dialog,
 .vjs-button > .vjs-icon-placeholder:before,
@@ -462,10 +463,7 @@
     font-size: inherit;
     line-height: inherit;
     list-style-position: outside;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .video-js.vjs-16-9,
@@ -1323,7 +1321,7 @@ body.vjs-full-window {
     min-width: 2em;
     width: auto;
     padding-left: 1em;
-    padding-right: 1em;
+    padding-right: 4em;
 }
 
 .vjs-live .vjs-time-control {
@@ -1388,13 +1386,19 @@ body.vjs-full-window {
     display: block;
 }
 
-video::-webkit-media-text-track-display {
-    transform: translateY(-3em);
+@keyframes vjs-spinner-spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.video-js.vjs-user-inactive.vjs-playing video::-webkit-media-text-track-display {
-    transform: translateY(-1.5em);
+
+@keyframes vjs-spinner-spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 
 .video-js .vjs-picture-in-picture-control {
     display: none;
@@ -1488,7 +1492,6 @@ video::-webkit-media-text-track-display {
     height: inherit;
     border-radius: inherit;
     opacity: 1;
-    border: inherit;
     border-color: transparent;
     border-top-color: #fff;
 }
@@ -1526,31 +1529,31 @@ video::-webkit-media-text-track-display {
     }
 }
 
+
 @keyframes vjs-spinner-spin {
     100% {
         transform: rotate(360deg);
     }
 }
 
-@-webkit-keyframes vjs-spinner-spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
 
 @keyframes vjs-spinner-fade {
     0% {
         border-top-color: #73859f;
     }
+
     20% {
         border-top-color: #73859f;
     }
+
     35% {
         border-top-color: #fff;
     }
+
     60% {
         border-top-color: #73859f;
     }
+
     100% {
         border-top-color: #73859f;
     }
@@ -1560,15 +1563,19 @@ video::-webkit-media-text-track-display {
     0% {
         border-top-color: #73859f;
     }
+
     20% {
         border-top-color: #73859f;
     }
+
     35% {
         border-top-color: #fff;
     }
+
     60% {
         border-top-color: #73859f;
     }
+
     100% {
         border-top-color: #73859f;
     }
@@ -1649,8 +1656,6 @@ video::-webkit-media-text-track-display {
 .video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active,
 .video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-volume-panel.vjs-volume-panel-horizontal:active,
 .video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-volume-panel.vjs-volume-panel-horizontal:hover {
-    width: auto;
-    width: initial;
 }
 
 .video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-subs-caps-button,

@@ -369,4 +369,3 @@ document.querySelector(".search_f").addEventListener("click", showFriendList);
 }  
   // Load selected friends f
   loadSelectedFriends();
-
