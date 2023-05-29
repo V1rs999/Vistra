@@ -12,21 +12,9 @@ html {
     overflow-x: hidden;
 }
 
-html::-webkit-scrollbar-thumb {
-    background-color: red;
-}
-
-html::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-html::-webkit-scrollbar {
-    width: 5px;
-}
-
 body {
     font-family: "Poppins", sans-serif;
-    background: rgb(39, 45, 96);
+    background: rgb(17, 16, 16);
     width: 100%;
     height: 100%;
     display: flex;
@@ -35,23 +23,18 @@ body {
     justify-content: center;
 }
 
-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
     height: 50px;
     width: 100%;
     padding: 0 5%;
-    background: rgb(54, 50, 50, 0.7);
+    background: rgb(54, 50, 50, 0.4);
     display: flex;
     align-items: center;
-    z-index: 9999;
+    z-index: 100;
     justify-content: space-between;
-    transition: 0.6s;
-}
-
-header.sticky {
-    background: rgb(17 16 16);
 }
 
 .logo {
@@ -77,6 +60,16 @@ header.sticky {
 
 .navbar a:hover {
     color: #fff;
+}
+
+.navbar a.active::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    bottom: -13px;
+    width: 120%;
+    height: 3px;
+    background-color: rgb(226, 8, 8);
 }
 
 .search {
@@ -287,235 +280,152 @@ header.sticky {
     cursor: pointer;
 }
 
-.to-top {
-    background: white;
-    position: fixed;
-    bottom: 16px;
-    right: 32px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.friends_bx {
+    width: 90%;
+    height: auto;
+    border-bottom: 2px solid rgb(184, 184, 184, 0.1);
+    margin: auto;
+    padding: 9px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.friends_bx p {
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    list-style: none;
+}
+
+.friends_bx i {
+    padding: 0px 5px;
+}
+
+.friends_bx .fas {
+    margin-right: 15px;
+}
+
+/* friends box active classes start  */
+
+.friends_bx .active {
+    font-size: 17px;
+    color: #fff;
+}
+
+/*Search Friend*/
+.search_f {
+    display: flex;
+    margin: 0 auto;
+    color: #fff;
+    width: 100em;
+    justify-content: center;
+}
+
+#search-container {
+    margin: 2em 0 2em 0;
+    width: 100em;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
-    color: #1f1f1f;
-    text-decoration: none;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .4s;
 }
 
-.to-top.active {
-    bottom: 32px;
-    pointer-events: auto;
-    opacity: 1;
+#search-container input {
+    background-color: transparent;
+    width: 40%;
+    border-bottom: 2px solid #fff;
+    padding: 1em 0.3em;
+    color: #fff;
 }
 
-.to-top:hover {
-    background-color: red;
+#search-container input:focus {
+    border-bottom-color: rgb(226, 8, 8);
 }
 
-.helpsup_container {
-    background: rgb(68, 68, 130);
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 4rem;
-    height: 30rem;
-    margin: 10rem auto;
-    border-radius: 1rem;
+#search-container button {
+    padding: 1em 1em;
+    margin-left: 0.5em;
+    background-color: transparent;
+    color: #fff;
 }
 
-.helpsup_aside {
-    background: rgb(129, 129, 203);
-    padding: 3rem;
-    border-radius: 1rem;
-    position: relative;
-    bottom: 7rem;
-    height: 38rem;
-    width: 19rem;
+#closebutton {
+    display: none;
+    background-color: transparent;
+    color: #fff;
 }
 
-.helpsup_aside h2 {
+.card {
+    background-color: transparent;
+    max-width: 60em;
+    margin-top: 1.5px;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 1em 0 1.5em rgba(1, 2, 68, 0.08);
+}
+
+.img-container {
     text-align: center;
-    margin-bottom: 1rem;
-    color: #fff;
 }
 
-.helpsup_aside p {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+.container {
+    max-width: 60em;
     color: #fff;
-}
-
-.helpsup_details li {
     display: flex;
-    gap: 1rem;
     align-items: center;
-    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.container h5 {
+    font-weight: 500;
+    margin: 0 40px;
+}
+
+.container button {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000000;
+    width: 55px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 2.7em;
+}
+
+.container button:active {
+    background-color: rgb(226, 8, 8);
     color: #fff;
 }
 
-.helpsup_form {
+.hide {
+    display: none;
+}
+
+.info-label {
+    color: #fff;
+    font-size: 15px;
+}
+
+.info-panel {
+    display: flex;
+    align-items: center;
+    max-width: 60em;
+    padding: 10px;
+    border-bottom: 2px solid rgb(184, 184, 184, 0.1);
+}
+
+#adfriend {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    margin-right: 4rem;
+    align-items: center;
 }
 
-.form_name {
+#friendsmy {
     display: flex;
-    gap: 1.2rem;
-}
-
-.helpsup_form input[type="text"] {
-    width: 50%;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 1rem;
-    background: #241e34;
-    color: #fff;
-}
-
-.helpsup_form .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border: 1px solid transparent;
-    font-weight: 500;
-    width: max-content;
-    margin-top: 1rem;
-    cursor: pointer;
-    background: #e81d1d;
-    color: #fff;
-}
-
-.helpsup_form .btn:hover {
-    background: transparent;
-    color: #fff;
-    border-color: #fff;
-}
-
-#menu-bar {
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 8px;
-    font-size: 30px;
-    padding: 8px 20px;
-    cursor: pointer;
-    display: none;
-    position: relative;
-    right: 32px;
-}
-
-textarea {
-    resize: none;
-}
-
-@media (max-width: 1082px) {
-    header .navbar a {
-        margin-right: 40px;
-        font-size: 16px;
-    }
-
-    header .logo img {
-        width: 50%;
-    }
-
-    .to-top {
-        right: 1%;
-    }
-}
-
-@media (max-width: 991px) {
-    #menu-bar {
-        display: initial;
-        font-size: 100%;
-        left: -2%;
-    }
-
-    header .logo img {
-        display: flex;
-        justify-content: center;
-    }
-
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background-color: #333;
-        border-top: 2px solid rgba(255, 255, 255, .2);
-        padding: 16px 24px;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-    .navbar a.active::before {
-        display: none;
-    }
-
-    header .navbar a {
-        display: block;
-        border-radius: 8px;
-        padding: 24px;
-        margin: 24px 0;
-        background-color: #222;
-    }
-
-    .sub-menu-wrap {
-        right: -2%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .helpsup {
-        padding-bottom: 0;
-    }
-
-    .helpsup_container {
-        gap: 1.5rem;
-        margin-top: 3rem;
-        height: auto;
-        padding: 1.5rem;
-    }
-
-    .helpsup_aside {
-        width: auto;
-        padding: 1.5rem;
-        bottom: 0;
-    }
-
-    .helpsup_form {
-        align-self: center;
-        margin-top: 1.5rem;
-    }
-}
-
-@media (max-width: 676px) {
-    .helpsup_container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        margin-top: 5rem;
-        padding: 0;
-
-    }
-
-    .helpsup_form {
-        margin: 0 1.5rem 3rem;
-    }
-
-    .form_name {
-        flex-direction: column;
-    }
-
-    .form_name input[type="text"] {
-        width: 100%;
-    }
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

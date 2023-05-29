@@ -42,6 +42,9 @@ app.get("/player", (req, res) => {
 app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/index.html"));
 });
+app.get("/MyFriends", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
+});
 
 app.get("/MyFriends", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
