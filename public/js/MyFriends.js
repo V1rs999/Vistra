@@ -357,13 +357,7 @@ for (let friend of friends.data) {
     closeButton.style.display = "none"; /* hide button closebutton */
   });
 
-
-  // Function to handle click event on the search_f div
-  function showFriendList() {
-    // Display the friend list
-    document.getElementById("friendsmy").style.display = "block";
-  }
-
+  
   // Add click event listener to the search_f div
   document.querySelector(".search_f").addEventListener("click", showFriendList);
 
