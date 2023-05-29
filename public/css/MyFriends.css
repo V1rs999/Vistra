@@ -1,3 +1,5 @@
+@import url(../css/index.css);
+
 * {
     padding: 0;
     margin: 0;
@@ -35,20 +37,6 @@ body {
     justify-content: center;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    padding: 0 3%;
-    background: rgb(54, 50, 50, 0.7);
-    display: flex;
-    align-items: center;
-    z-index: 9999;
-    justify-content: space-between;
-    transition: 0.6s;
-}
 
 header.sticky {
     background: rgb(17 16 16);
@@ -119,20 +107,6 @@ header.sticky {
     color: #fff;
 }
 
-.search .search_bx2 {
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    /* border: 1px solid #fff; */
-    top: 35px;
-    left: -10px;
-    background: rgb(184, 184, 184, 0.3);
-    border-radius: 10px;
-    overflow: auto;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s linear;
-}
 
 .search .search_bx2::-webkit-scrollbar {
     width: 7px;
@@ -472,24 +446,6 @@ header.sticky {
     color: red;
 }
 
-.to-top {
-    background: white;
-    position: fixed;
-    bottom: 16px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    color: #1f1f1f;
-    text-decoration: none;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .4s;
-}
 
 .to-top.active {
     bottom: 32px;
@@ -671,7 +627,7 @@ header.sticky {
     }
 }
 
-@media (max-width:477px) {
+@media (max-width: 477px) {
 
     .movie_bx_2 .card {
         width: 44%;
@@ -693,8 +649,6 @@ header.sticky {
 
 
     /* -------------------------------------- */
-
-
 
 
 }

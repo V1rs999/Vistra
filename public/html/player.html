@@ -93,30 +93,36 @@
 <div class="group"></div>
 
 <script>
+  const userData = localStorage.getItem("user");
+  const user = JSON.parse(userData);
+  document.getElementById("username").textContent = user.username;
+  
   // Retrieve the URL parameter from the query string
   const urlParams = new URLSearchParams(window.location.search);
   const videoUrl = urlParams.get("url");
 
-  console.log(videoUrl); // Check if the URL is correctly retrieved
 
   const player = videojs("my-video", {
     techOrder: ["youtube"],
     sources: [
       {
         type: "video/youtube",
-        src: videoUrl // Set the retrieved URL as the video source
+        src: videoUrl || "https://music.youtube.com/watch?v=c-0S68_ZLL8&list=RDAMVMM1PrbQAkWP0" // Set the retrieved URL as the video source
       }
     ],
     youtube: {
+      autoplay: 1,
       iv_load_policy: 3,
       modestbranding: 1,
       controls: 1,
       rel: 0
     },
     controlBar: {
-      progressControl: false
+      progressControl: true
     }
   });
+
+
 </script>
 <script src="../js/script.js"></script>
 </body>

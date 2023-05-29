@@ -39,19 +39,18 @@ fetch("/api/posts/")
           </div>
         `;
 
-        
+
         container.appendChild(card);
-        
+
       });
     };
 
-    
+
     const filterByGenre = (genre) => {
-      return data.filter((e) => e.genre == genre);
+      return data.filter((e) => e.genre === genre);
     };
 
-  
-    
+
     genres.forEach(({ buttonId, containerId, genre }) => {
       const button = document.getElementById(buttonId);
       const container = document.getElementById(containerId);
