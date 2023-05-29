@@ -496,6 +496,15 @@ textarea {
         align-self: center;
         margin-top: 1.5rem;
     }
+
+    .aside_image {
+        text-align: center;
+    }
+
+    .aside_image img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 676px) {
@@ -517,5 +526,14 @@ textarea {
 
     .form_name input[type="text"] {
         width: 100%;
+    }
+
+    .aside_image {
+        text-align: center;
+    }
+
+    .aside_image img {
+        display: block;
+        margin: 0 auto;
     }
 }
