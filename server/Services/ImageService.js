@@ -6,7 +6,8 @@ class ImageService {
     try {
       const fileName = uuid.v4() + ".webp";
       const filePath = path.resolve("../Vistra/public/img", fileName);
-      file.mv(filePath);
+      file.mv(filePath).then(r => {
+      });
       return fileName;
     } catch (e) {
       console.log(e);

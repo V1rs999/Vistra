@@ -72,4 +72,5 @@ async function startApp() {
   }
 }
 
-startApp();
+startApp().then(r => {
+});

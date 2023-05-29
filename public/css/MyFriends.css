@@ -358,7 +358,7 @@ header.sticky {
 .card {
     background-color: transparent;
     max-width: 60em;
-    margin-top: 1.5px;
+    margin-top: 2px;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 1em 0 1.5em rgba(1, 2, 68, 0.08);

@@ -1,5 +1,5 @@
 const UserModel = require("../models/User.js");
-const PostModel = require("../models/Post");
+require("../models/Post");
 
 class authService {
   async update(post) {
@@ -9,13 +9,6 @@ class authService {
     return UserModel.findByIdAndUpdate(post._id, post, {
       new: true
     });
-  }
-
-  async getOne(id) {
-    if (!id) {
-      throw new Error("ID can't be null");
-    }
-    return UserModel.findById(id);
   }
 }
 
