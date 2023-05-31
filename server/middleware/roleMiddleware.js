@@ -10,7 +10,7 @@ module.exports = function(roles) {
     try {
       const token = req.headers.authorization.split(" ")[1];
       if (!token) {
-        return res.redirect("/Login");
+        return res.redirect("/Login").json({ message: "Пользователь не авторизован" });
       }
       const { roles: userRoles } = jwt.verify(token, secret);
       let hasRole = false;
@@ -25,7 +25,7 @@ module.exports = function(roles) {
       next();
     } catch (e) {
       console.log(e);
-      return res.status(403).json({ message: "Пользователь не авторизован" });
+      return res.redirect("/Login").json({ message: "Пользователь не авторизован" });
     }
   };
 };
