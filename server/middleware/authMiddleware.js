@@ -8,12 +8,12 @@ module.exports = function(req, res, next) {
   try {
     const token = req.headers.authorization.split(" ")[1];
     if (!token) {
-      res.status(403).json({ message: "Користувач не авторизований" });
+      return res.redirect("/Login");
     }
     req.user = jwt.verify(token, secret);
     next();
   } catch (e) {
     console.log(e);
-    return res.status(403).json({ message: "Користувач не авторизований" });
+    return res.redirect("/Login");
   }
 };
