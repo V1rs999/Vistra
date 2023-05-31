@@ -5,7 +5,6 @@ const router = require("./routers/router.js");
 const authRouter = require("./routers/authRouter.js");
 const fileupload = require("express-fileupload");
 const path = require("path");
-const roleMiddleware = require("../server/middleware/roleMiddleware");
 
 const Port = 5000;
 const DB_URL =
@@ -19,13 +18,13 @@ app.use(fileupload({}));
 app.use("/api", router);
 app.use("/auth", authRouter);
 
-app.get("/home", roleMiddleware(["USER"]), (req, res) => {
+app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/home.html"));
 });
-app.get("/TvShow", roleMiddleware(["USER"]), (req, res) => {
+app.get("/TvShow", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/TvShow.html"));
 });
-app.get("/movie", roleMiddleware(["USER"]), (req, res) => {
+app.get("/movie", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/movie.html"));
 });
 app.get("/Login", (req, res) => {
@@ -34,24 +33,24 @@ app.get("/Login", (req, res) => {
 app.get("/Register", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/Register.html"));
 });
-app.get("/MyList", roleMiddleware(["USER"]), (req, res) => {
+app.get("/MyList", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyList.html"));
 });
-app.get("/player", roleMiddleware(["USER"]), (req, res) => {
+app.get("/player", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/player.html"));
 });
 app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/index.html"));
 });
-app.get("/MyFriends", roleMiddleware(["USER"]), (req, res) => {
+app.get("/MyFriends", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
 });
 
-app.get("/MyFriends", roleMiddleware(["USER"]), (req, res) => {
+app.get("/MyFriends", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
 });
 
-app.get("/helpSupport", roleMiddleware(["USER"]), (req, res) => {
+app.get("/helpSupport", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/helpSupport.html"));
 });
 

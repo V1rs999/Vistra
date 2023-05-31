@@ -2,6 +2,7 @@ const Router = require("express");
 const router = new Router();
 const PostConroller = require("../Controllers/PostController.js");
 const { check } = require("express-validator");
+
 router.post(
   "/posts",
   [
