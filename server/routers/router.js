@@ -2,9 +2,8 @@ const Router = require("express");
 const router = new Router();
 const PostConroller = require("../Controllers/PostController.js");
 const { check } = require("express-validator");
-const roleMiddleware = require("../middleware/roleMiddleware.js");
 router.post(
-  "/posts", roleMiddleware(["USER"]),
+  "/posts",
   [
     check("rate")
       .notEmpty()
@@ -13,8 +12,8 @@ router.post(
   ],
   PostConroller.create
 );
-router.get("/posts", roleMiddleware(["USER"]), PostConroller.getAll);
-router.get("/posts/:id", roleMiddleware(["USER"]), PostConroller.getOne);
-router.put("/posts", roleMiddleware(["USER"]), PostConroller.update);
-router.delete("/posts/:id", roleMiddleware(["USER"]), PostConroller.delete);
+router.get("/posts", PostConroller.getAll);
+router.get("/posts/:id", PostConroller.getOne);
+router.put("/posts", PostConroller.update);
+router.delete("/posts/:id", PostConroller.delete);
 module.exports = router;
