@@ -5,6 +5,7 @@ const router = require("./routers/router.js");
 const authRouter = require("./routers/authRouter.js");
 const fileupload = require("express-fileupload");
 const path = require("path");
+const roleMiddleware = require("../server/middleware/roleMiddleware");
 
 const Port = 5000;
 const DB_URL =
@@ -18,13 +19,13 @@ app.use(fileupload({}));
 app.use("/api", router);
 app.use("/auth", authRouter);
 
-app.get("/home", (req, res) => {
+app.get("/home", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/home.html"));
 });
-app.get("/TvShow", (req, res) => {
+app.get("/TvShow", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/TvShow.html"));
 });
-app.get("/movie", (req, res) => {
+app.get("/movie", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/movie.html"));
 });
 app.get("/Login", (req, res) => {
@@ -33,24 +34,24 @@ app.get("/Login", (req, res) => {
 app.get("/Register", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/Register.html"));
 });
-app.get("/MyList", (req, res) => {
+app.get("/MyList", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyList.html"));
 });
-app.get("/player", (req, res) => {
+app.get("/player", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/player.html"));
 });
 app.get("/index", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/index.html"));
 });
-app.get("/MyFriends", (req, res) => {
+app.get("/MyFriends", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
 });
 
-app.get("/MyFriends", (req, res) => {
+app.get("/MyFriends", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/MyFriends.html"));
 });
 
-app.get("/helpSupport", (req, res) => {
+app.get("/helpSupport", roleMiddleware(["User"]), (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "html/helpSupport.html"));
 });
 
