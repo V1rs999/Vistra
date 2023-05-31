@@ -7,7 +7,7 @@ const roleMiddleware = require("../middleware/roleMiddleware.js");
 
 
 authrouter.post(
-  "/registration",
+  "/registration", roleMiddleware(["USER"]),
   [
     check("username", "can't be emty").notEmpty(),
     check("email", "can't be emty").notEmpty(),
@@ -18,8 +18,8 @@ authrouter.post(
   ],
   authConroller.registration
 );
-authrouter.post("/Login", authConroller.login);
+authrouter.post("/Login", roleMiddleware(["USER"]), authConroller.login);
 authrouter.get("/users", roleMiddleware(["ADMIN"]), authConroller.getUsers);
-authrouter.get("/getMyList/:id", authConroller.getMylist);
-authrouter.put("/MyList", authConroller.updateMylist);
+authrouter.get("/getMyList/:id", roleMiddleware(["USER"]), authConroller.getMylist);
+authrouter.put("/MyList", roleMiddleware(["USER"]), authConroller.updateMylist);
 module.exports = authrouter;
