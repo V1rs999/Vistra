@@ -484,6 +484,50 @@ header.sticky {
     }
 }
 
+@media (max-width: 991px){
+    #menu-bar {
+        display: initial;
+        font-size: 100%;
+        left: -2%;
+    }
+
+    header .logo img {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: #333;
+        border-top: 2px solid rgba(255, 255, 255, .2);
+        padding: 16px 24px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .navbar a.active::before {
+        display: none;
+    }
+
+    header .navbar a {
+        display: block;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 24px 0;
+        background-color: #222;
+    }
+
+    .sub-menu-wrap {
+        right: -2%;
+    }
+}
+
 @media (max-width: 634px) {
 }
 
@@ -502,7 +546,7 @@ header.sticky {
 
     .bell,
     .user,
-    .search,
+    .fa-search,
     .profile {
         margin: 0 10px;
     }

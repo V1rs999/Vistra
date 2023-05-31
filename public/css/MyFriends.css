@@ -642,7 +642,7 @@ header.sticky {
 
     .bell,
     .user,
-    .search,
+    .fa-search,
     .profile {
         margin: 0 10px;
     }

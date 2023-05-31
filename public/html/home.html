@@ -31,10 +31,11 @@
     <a href="/MyFriends">My Friends</a>
     <a href="/MyList">My List</a>
   </nav>
-  <div class="search">
-    <label for="search"></label><input type="text" placeholder="Search movies..." id="search">
-    <i class="fas fa-search" id="search_icon"></i>
-    <div class="search_bx2">
+  <div class="active">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <div class="search-box">
+      <input type="text" placeholder=""/>
+      <input type="button" value="Search"/>
     </div>
   </div>
   <div class="bell">
@@ -93,15 +94,8 @@
       <button onclick="window.location.href='/MyList'"><i class="fas fa-plus"></i>ADD LIST</button>
       <button id="createRoomButton">CREATE ROOM</button>
     </div>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <button onclick="createRoom()">Create</button>
-      </div>
-    </div>
   </div>
+
   <div class="slider_btns">
     <div class="slider"></div>
     <div class="slider"></div>
@@ -142,41 +136,13 @@
 <a href="#" class="to-top">
   <i class="fas fa-chevron-up"></i>
 </a>
-<footer class="footer">
-  <a target="_blank" href="https://github.com/V1rs999/Vistra"><img src="../img/GitHub.svg" alt="GitHUB"></a>
-</footer>
-<script>
-  // Залишаю решту вашого скрипту
-  const createRoomButton = document.getElementById("createRoomButton");
-  const modal = document.getElementById("myModal");
-  const closeBtn = modal.querySelector(".close");
-
-  createRoomButton.addEventListener("click", function() {
-    modal.style.display = "block";
-  });
-
-  closeBtn.addEventListener("click", function() {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-
-  function createRoom() {
-    // Опрацьовувати логіку створення кімнати з введеним паролем
-    const password = document.getElementById("password").value;
-    console.log("Creating room with password:", password);
-  }
-</script>
 <script>
   // Отримання значення з локального сховища
   const userData = localStorage.getItem("user");
   const user = JSON.parse(userData);
   document.getElementById("username").textContent = user.username;
 </script>
+
 <script src="../js/trends.js" type="module"></script>
 <script src="../js/script.js"></script>
 </body>

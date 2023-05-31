@@ -2,14 +2,29 @@ let search = document.getElementById("search");
 let search_icon = document.getElementById("search_icon");
 let subMenu = document.getElementById("subMenu");
 
-search_icon.addEventListener("click", () => {
-  search.classList.toggle("search_input");
+
+let searchIcon = document.querySelector('.fa-search');
+let searchBox = document.querySelector('.search-box');
+let inputText = document.querySelector('input[type="text"]');
+
+searchIcon.addEventListener('click', function() {
+  if (searchBox.style.display === 'none') {
+    searchBox.style.display = 'block';
+    inputText.focus();
+    subMenu.classList.remove("open-menu");
+    menu.classList.remove("fa-times");
+    navbar.classList.remove("active");
+  } else {
+    searchBox.style.display = 'none';
+  }
 });
 
 // subMenu.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   subMenu.classList.toggle("open-menu");
+  searchBox.style.display = 'none';
+
 }
 
 // header slider start
@@ -99,29 +114,6 @@ if (a_z) {
   });
 }
 
-const tab_lists = document.querySelectorAll(".tabs_list ul li");
-const tab_items = document.querySelectorAll(".tab_item");
-
-tab_lists.forEach(function(list) {
-  list.addEventListener("click", function() {
-    const tab_data = list.getAttribute("data-tc");
-
-    tab_lists.forEach(function(list) {
-      list.classList.remove("active");
-    });
-    list.classList.add("active");
-
-    tab_items.forEach(function(item) {
-      const tab_class = item.getAttribute("class").split(" ");
-      if (tab_class.includes(tab_data)) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
-    });
-  });
-});
-
 window.addEventListener("scroll", function() {
   let header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
@@ -151,10 +143,13 @@ let navbar = document.querySelector(".navbar");
 window.onscroll = () => {
   menu.classList.remove("fa-times");
   navbar.classList.remove("active");
+  searchBox.style.display = 'none';
 };
 
 menu.addEventListener("click", () => {
   menu.classList.toggle("fa-times");
   navbar.classList.toggle("active");
+  subMenu.classList.remove("open-menu");
+  searchBox.style.display = 'none';
 });
 
