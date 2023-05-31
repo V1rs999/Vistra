@@ -20,7 +20,7 @@ module.exports = function(roles) {
         }
       });
       if (!hasRole) {
-        return res.status(403).json({ message: "У вас нет доступа" });
+        return res.redirect("/Login").json({ message: "У вас нет доступа" });
       }
       next();
     } catch (e) {
