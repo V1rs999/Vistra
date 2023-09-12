@@ -22,8 +22,8 @@ form1.addEventListener("submit", async (e) => {
     if (response.ok) {
       console.log(data.userId);
       // Збереження об'єкту в локальне сховище після перетворення на рядок JSON
-      localStorage.setItem("user", JSON.stringify(data.user));
-      localStorage.setItem("userId", JSON.stringify(data.userId));
+      sessionStorage.setItem("user", JSON.stringify(data.user));
+      sessionStorage.setItem("userId", JSON.stringify(data.userId));
       window.location.href = "/home";
     }
 
