@@ -35,8 +35,8 @@
   <div class="active">
     <i class="fa fa-search" aria-hidden="true"></i>
     <div class="search-box">
-      <input type="text" placeholder=""/>
-      <input type="button" value="Search"/>
+      <input type="text" placeholder="" />
+      <input type="button" value="Search" />
     </div>
   </div>
   <div class="bell">
@@ -198,7 +198,7 @@
 
 <script>
   // Отримання значення з локального сховища
-  const userData = localStorage.getItem("user");
+  const userData = sessionStorage.getItem("user");
   const user = JSON.parse(userData);
   document.getElementById("username").textContent = user.username;
 </script>

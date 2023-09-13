@@ -1,4 +1,4 @@
-const userData = localStorage.getItem("userId");
+const userData = sessionStorage.getItem("userId");
 const userId = JSON.parse(userData);
 
 fetch(`/auth/getMyList/${userId.userId}`)
